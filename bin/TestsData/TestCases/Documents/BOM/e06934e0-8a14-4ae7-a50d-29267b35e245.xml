@@ -1,0 +1,174 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>e06934e0-8a14-4ae7-a50d-29267b35e245</GID>
+    <Name>TC0007-5600-8</Name>
+    <Description>ΣΕΤ - ΤΔΑ Ελεγχος ICP διακόπτης CheckStockLevel για απενεργοποίηση του ελέγχου </Description>
+    <Comment>IMP-07628</Comment>
+  </TestCases>
+  <Actions>
+    <GID>05c3d9fc-1d78-4c82-82ae-a6549cad96b5</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>37e54557-65a5-414a-ac78-1a3b5fde4e2d</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4aac7fd1-12bd-4b58-a852-f36496449e39</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1b939ecf-1f2e-4a46-9015-ae7974ef28d0</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>72</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>380243ec-b1d9-404e-bc7b-c15cbe32716e</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>74</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>733f6c78-690f-4bac-8481-1bed0c094f9c</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="CheckStockLevel";columnValue="0"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CheckStockLevel";columnValue="false";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>53058ca7-894d-4fd0-ade3-8378940ae485</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value columnName="CheckStockLevel";columnValue="0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CheckStockLevel";columnValue="false";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a4d8c619-3364-4dee-8252-649fd9acaa18</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value columnName="CheckStockLevel";columnValue="0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CheckStockLevel";columnValue="0";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c63ba3cf-effd-4de5-b094-4a47c8901c35</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row tableName="ESFIDocumentTrade";position="0"</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFIDocumentTrade";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f090e49d-5b10-4f5a-880c-44821fc59569</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value columnName="CheckStockLevel";columnValue=1</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CheckStockLevel";columnValue="1";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2bf04386-5cef-4ef3-9d0a-1a1664cab651</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-5600-3</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-5600-3";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c521f275-5914-4d94-bec3-f84df64f7d7a</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>68</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message Απαιτείται η διαχείριση χρωμάτων για το Είδος TC0007-5600-5</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Απαιτείται η διαχείριση χρωμάτων για το Είδος TC0007-5600-5"</Params>
+  </Actions>
+  <Actions>
+    <GID>d86b9929-073f-41d5-bceb-166fd67e2bfc</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>69</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row tableName="ESFILineItem";position="2"</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="2";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+  </Actions>
+  <Actions>
+    <GID>b8a445a9-507d-42c6-88ab-6dec82fc0a28</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>70</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="fColorCode";columnValue="BL"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fColorCode";columnValue="BL";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>b8e3fb5e-201f-410a-9e55-a359a42bda4d</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>71</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="fSizeCode";columnValue="40"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fSizeCode";columnValue="40";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>fe87d74f-9836-429b-a65c-da5dafb922cf</GID>
+    <fTestCaseGID>e06934e0-8a14-4ae7-a50d-29267b35e245</fTestCaseGID>
+    <SeqNum>67</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+</NewDataSet>

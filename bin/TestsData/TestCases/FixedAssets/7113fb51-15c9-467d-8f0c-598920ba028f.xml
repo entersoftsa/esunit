@@ -1,0 +1,1052 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>7113fb51-15c9-467d-8f0c-598920ba028f</GID>
+    <Name>TC0009-2002 pending</Name>
+    <Description>Αγορές Παγίων ανα Υποκ/μα, μεταφορά με ΔΕΓ σε ΑΧ, εκτέλεση Αποσβέσεων και Έλεγχος Αναλυτικού Μητρώου Παγίων</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>efcdbc6b-9f18-4b71-9d9b-296ea8aeb78c</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΑΤΔ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0009-01-01";fSupplierGID="TC0009";ADAlternativeCode="TC0009-01-01";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>07458893-c26f-41a1-9794-7e0d9df40b5a</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line FA TC0009-2002 with Quantity="2";CurrencyNetValue="1000"</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-2002";Quantity="2";CurrencyNetValue="1000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>18eecbac-2b0b-4af4-8e31-84e373204479</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>aa2f9f91-5dff-4f44-aaf1-4bbce957a025</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΑΤΔ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b355a425-717e-4762-a330-e26b062f3390</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fAcqDocument1GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fAcqDocument1GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9ecb8a76-6981-472d-93ea-ca55bbde234f</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Acquisition Document To State 2</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="fAcqDocument1GID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ca971d23-f8ae-4a51-8534-d4fac0dbf02f</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00038</Name>
+    <Description>Calculate Depreciations 1/1 - 31/1</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-2002";fromDate="1/1";toDate="31/12";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>44f5d1ee-d34d-40cc-8ebe-5be2f0a3f5b7</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΑΤΔ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0009-02-01";fSupplierGID="TC0009";ADAlternativeCode="TC0009-02-01";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00ae801a-3139-42ed-8c1b-7a33eaf364b9</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fAcqDocument2GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fAcqDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e402cc0a-584c-4ea5-9b43-9165049f5b4e</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line FA TC0009-2002 with Quantity="2";CurrencyNetValue="1000"</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-2002";Quantity="2";CurrencyNetValue="1000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8e9112ee-09b6-4e3d-b1c4-57c1f3d32ff2</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΑΤΔ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>aaf600a8-b1b6-4062-9264-1fb016b82d39</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Acquisition Document To State 2</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="fAcqDocument2GID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ed64c801-0e8a-42dc-9ee8-2e10ee557a6c</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar ClosingPeriod</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="ClosingPeriod";sqlBody="select GID from ESGOFiscalPeriod where Type=2 and fCompanyCode = ##(ESCOMPANY) and Year(BeginDate)=(Year(GetDate()))";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f2b8d7d3-c81b-45ce-8769-7e2df9fefa33</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>50</SeqNum>
+    <Name>AC-00040</Name>
+    <Description>Execute BIT Αναλυτικό Μητρώο Παγίων ανά Πάγιο και Υποκ/μα</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PDATERANGE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;ESDateRange(FiscalYear, 0)&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;5&lt;/DefValue&gt;&lt;DefValue&gt;8&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFAFixedAsset\ItFADeprItemBalance"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>238f1ce5-dd81-4b99-8f54-b0c9cc1b36ac</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>45</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar OpeningPeriod</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="OpeningPeriod";sqlBody="select GID from ESGOFiscalPeriod where Type=1 and fCompanyCode = ##(ESCOMPANY) and Year(BeginDate)=(Year(GetDate())+1)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>215011ba-fe4c-48d5-902d-768e2fde0030</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>103</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΓΠΤ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΤ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cfd4bd01-6cf2-4938-8f99-add1c4afc340</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>104</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΓΠΛ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΛ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f439c133-a832-46b8-8e7d-5efbdd42c536</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>105</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΓΠΞ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΞ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>45a256bf-22d8-460d-a013-0e985351d094</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>107</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΑΤΔ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΑΤΔ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a9490b7f-f8a4-47d6-9a13-134e782822b7</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00021</Name>
+    <Description>Create New Stock Document ΔΕΓ</Description>
+    <fActionGID>e6274216-9c34-4346-830a-afa7cc3e409e</fActionGID>
+    <Params>fADDocumentTypeGID="ΔΕΓ";fADDocumentSeriesGID="TC0009-01-01";fSourceGID="TC0009-01";fSourceCustomerGID="";fSourceSupplierGID="";fSourceDebtorGID="";fSourceCreditorGID="";fSourceSiteGID="TC0009-01-01";fTargetGID="TC0009-01";fTargetCustomerGID="";fTargetSupplierGID="";fTargetDebtorGID="";fTargetCreditorGID="";fTargetSiteGID="TC0009-01-02"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>70e1dfeb-6399-4e80-839d-8c41422dfc4d</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line FA TC0009-2002 with Quantity="1"</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-2002";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>38807c36-1fd3-49ac-8316-fc07c9b1b9da</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΔΕΓ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7a4aec3d-3f00-443e-a674-ec08529d7b17</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΑΤΔ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fAcqDocument1GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e81c939f-e3ba-4d13-86f2-3f45caa810a2</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e5f65e4c-7232-4d6f-a825-2c91c9511975</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fDepreciationItemGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fDepreciationItemGID";variableName="Depr1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4b22d33e-ef9f-45c6-ba14-3a88f53c72d7</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value fDepreciationItemGID</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fDepreciationItemGID";columnValue="";variableName="Depr1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f64e770f-27a8-482d-8745-265c85f0efe0</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>10cb0130-3f92-41f0-8b7b-723a235a1c3c</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΑΤΔ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fAcqDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>216cb6ca-ce09-4c00-9f86-3622320ccb99</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00021</Name>
+    <Description>Create New Stock Document ΔΕΓ</Description>
+    <fActionGID>e6274216-9c34-4346-830a-afa7cc3e409e</fActionGID>
+    <Params>fADDocumentTypeGID="ΔΕΓ";fADDocumentSeriesGID="TC0009-02-01";fSourceGID="TC0009-02";fSourceCustomerGID="";fSourceSupplierGID="";fSourceDebtorGID="";fSourceCreditorGID="";fSourceSiteGID="TC0009-02-01";fTargetGID="TC0009-02";fTargetCustomerGID="";fTargetSupplierGID="";fTargetDebtorGID="";fTargetCreditorGID="";fTargetSiteGID="TC0009-02-02"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3d100623-6b36-4db9-b4e1-4b931e96c5a2</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line FA TC0009-2002 with Quantity="1"</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-2002";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fbeded4b-928b-46f1-bd57-fc1a6f2c7c14</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value fDepreciationItemGID</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fDepreciationItemGID";columnValue="";variableName="Depr2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8d4a0487-c3b3-42a0-8e38-f6619b76212e</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΔΕΓ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2067fda3-927c-475a-81db-72740580c933</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fDepreciationItemGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fDepreciationItemGID";variableName="Depr2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6d2a9454-30df-4271-bddc-af4ca54210b9</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>106</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΔΕΓ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΔΕΓ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cb70c05f-d1f1-4116-9512-879f64ae1418</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>102</SeqNum>
+    <Name>AC-00044</Name>
+    <Description>Check DataSet Column Values Αναλυτική κατάσταση κατά Θέση</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-01&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Κεντρικό&lt;/ESGOSites_Description&gt;
+    &lt;ESGOSitesWH_Code&gt;TC0009-01-02&lt;/ESGOSitesWH_Code&gt;
+    &lt;ESGOSitesWH_Description&gt;Πάγια Αποθήκη 2 Κεντρικού&lt;/ESGOSitesWH_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-2002&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-2002&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;1.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Ekmetaforas&gt;0&lt;/Ekmetaforas&gt;
+    &lt;Balance&gt;1.0000000000&lt;/Balance&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-01&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Κεντρικό&lt;/ESGOSites_Description&gt;
+    &lt;ESGOSitesWH_Code&gt;TC0009-01-01&lt;/ESGOSitesWH_Code&gt;
+    &lt;ESGOSitesWH_Description&gt;Πάγια Αποθήκη 1 Κεντρικού&lt;/ESGOSitesWH_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-2002&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-0001&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;2.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Ekmetaforas&gt;0&lt;/Ekmetaforas&gt;
+    &lt;Balance&gt;1.0000000000&lt;/Balance&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-02&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Υποκ/μα Αυτοτελές&lt;/ESGOSites_Description&gt;
+    &lt;ESGOSitesWH_Code&gt;TC0009-02-02&lt;/ESGOSitesWH_Code&gt;
+    &lt;ESGOSitesWH_Description&gt;Πάγια Αποθήκη 2 Υποκ/τος&lt;/ESGOSitesWH_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-0001&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-0001&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;1.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Ekmetaforas&gt;0&lt;/Ekmetaforas&gt;
+    &lt;Balance&gt;1.0000000000&lt;/Balance&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-02&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Υποκ/μα Αυτοτελές&lt;/ESGOSites_Description&gt;
+    &lt;ESGOSitesWH_Code&gt;TC0009-02-01&lt;/ESGOSitesWH_Code&gt;
+    &lt;ESGOSitesWH_Description&gt;Πάγια Αποθήκη 1 Υποκ/τος&lt;/ESGOSitesWH_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-0001&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-0001&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;2.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Ekmetaforas&gt;0&lt;/Ekmetaforas&gt;
+    &lt;Balance&gt;1.0000000000&lt;/Balance&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;APOGR&lt;/ID&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;EKMET&lt;/ID&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;ENTRIES&lt;/ID&gt;
+    &lt;DebitQty&gt;6.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;2.0000000000&lt;/CreditQty&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;RT&lt;/ID&gt;
+    &lt;DebitQty&gt;6.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;2.0000000000&lt;/CreditQty&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;BALANCE&lt;/ID&gt;
+    &lt;DebitQty&gt;4.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+  &lt;/GRANDTOTALS&gt;
+&lt;/NewDataSet&gt;"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4a9e9866-4332-4a0c-8369-3609e6ecdc1b</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>51</SeqNum>
+    <Name>AC-00044</Name>
+    <Description>Check DataSet Column Values Αναλυτικό Μητρώο Παγίων ανά Πάγιο και Υποκ/μα</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-01&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Κεντρικό&lt;/ESGOSites_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-2002&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESGOFiscalPeriod_SeqNum&gt;2&lt;/ESGOFiscalPeriod_SeqNum&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-2002&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItem_GLAccountData&gt;14 - Επιπλα και λοιπός Εξοπλισμός&lt;/ESFIItem_GLAccountData&gt;
+    &lt;ESFIItem_GLAccountData1&gt;14.00 - Επιπλα&lt;/ESFIItem_GLAccountData1&gt;
+    &lt;ESFIItem_GLAccountData2&gt;14.00.00 - Επιπλα&lt;/ESFIItem_GLAccountData2&gt;
+    &lt;ESFIItem_GLAccountData3&gt;14.00.00.0000 - Επιπλα&lt;/ESFIItem_GLAccountData3&gt;
+    &lt;ESFIItem_GLAccountCode1&gt;14&lt;/ESFIItem_GLAccountCode1&gt;
+    &lt;ESFIItem_GLAccountCode2&gt;14.00&lt;/ESFIItem_GLAccountCode2&gt;
+    &lt;ESFIItem_GLAccountCode3&gt;14.00.00&lt;/ESFIItem_GLAccountCode3&gt;
+    &lt;ESFIItem_GLAccountCode4&gt;14.00.00.0000&lt;/ESFIItem_GLAccountCode4&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;3.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_DebitValue&gt;1000.0000000000&lt;/ESFIItemPeriodics_DebitValue&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItemPeriodics_CreditValue&gt;200.0000000000&lt;/ESFIItemPeriodics_CreditValue&gt;
+    &lt;ESFIItemPeriodics_Balance&gt;2.0000000000&lt;/ESFIItemPeriodics_Balance&gt;
+    &lt;ESFIItemPeriodics_Axia_kthshs&gt;1000.0000000000&lt;/ESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;ESFIItemPeriodics_Aposvesthenta&gt;200.0000000000&lt;/ESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;ESFIItemPeriodics_Ypoloipo&gt;800.0000000000&lt;/ESFIItemPeriodics_Ypoloipo&gt;
+    &lt;ESFIItemPeriodics_Axia_kthshs_thetika&gt;1000.0000000000&lt;/ESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;ESFIItemPeriodics_Pistwtika&gt;0.000000000&lt;/ESFIItemPeriodics_Pistwtika&gt;
+    &lt;ESFIItemPeriodics_Aposveseis_total&gt;200.0000000000&lt;/ESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;ESFIItemPeriodics_Kostos_Ex&gt;0.0000000000&lt;/ESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;ESFIItemPeriodics_Aposvestea_Axia&gt;1000.000000000&lt;/ESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;ESFIItemPeriodics_Telikes_Aposveseis&gt;200.0000000000&lt;/ESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;ESFIItemPeriodics_Qty_Final&gt;2.0000000000&lt;/ESFIItemPeriodics_Qty_Final&gt;
+    &lt;ESFIItemPeriodics_Cost&gt;800.0000000000&lt;/ESFIItemPeriodics_Cost&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_DebitValue&gt;0&lt;/EKESFIItemPeriodics_DebitValue&gt;
+    &lt;APESFIItemPeriodics_DebitValue&gt;0&lt;/APESFIItemPeriodics_DebitValue&gt;
+    &lt;METESFIItemPeriodics_DebitValue&gt;0&lt;/METESFIItemPeriodics_DebitValue&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_CreditValue&gt;0&lt;/EKESFIItemPeriodics_CreditValue&gt;
+    &lt;APESFIItemPeriodics_CreditValue&gt;0&lt;/APESFIItemPeriodics_CreditValue&gt;
+    &lt;METESFIItemPeriodics_CreditValue&gt;0&lt;/METESFIItemPeriodics_CreditValue&gt;
+    &lt;EKESFIItemPeriodics_Balance&gt;0&lt;/EKESFIItemPeriodics_Balance&gt;
+    &lt;APESFIItemPeriodics_Balance&gt;0&lt;/APESFIItemPeriodics_Balance&gt;
+    &lt;METESFIItemPeriodics_Balance&gt;0&lt;/METESFIItemPeriodics_Balance&gt;
+    &lt;EKESFIItemPeriodics_Axia_kthshs&gt;0&lt;/EKESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;APESFIItemPeriodics_Axia_kthshs&gt;0&lt;/APESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;METESFIItemPeriodics_Axia_kthshs&gt;0&lt;/METESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;EKESFIItemPeriodics_Aposvesthenta&gt;0&lt;/EKESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;APESFIItemPeriodics_Aposvesthenta&gt;0&lt;/APESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;METESFIItemPeriodics_Aposvesthenta&gt;0&lt;/METESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;EKESFIItemPeriodics_Ypoloipo&gt;0&lt;/EKESFIItemPeriodics_Ypoloipo&gt;
+    &lt;APESFIItemPeriodics_Ypoloipo&gt;0&lt;/APESFIItemPeriodics_Ypoloipo&gt;
+    &lt;METESFIItemPeriodics_Ypoloipo&gt;0&lt;/METESFIItemPeriodics_Ypoloipo&gt;
+    &lt;EKESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/EKESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;APESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/APESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;METESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/METESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;EKESFIItemPeriodics_Pistwtika&gt;0&lt;/EKESFIItemPeriodics_Pistwtika&gt;
+    &lt;APESFIItemPeriodics_Pistwtika&gt;0&lt;/APESFIItemPeriodics_Pistwtika&gt;
+    &lt;METESFIItemPeriodics_Pistwtika&gt;0&lt;/METESFIItemPeriodics_Pistwtika&gt;
+    &lt;EKESFIItemPeriodics_Aposveseis_total&gt;0&lt;/EKESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;APESFIItemPeriodics_Aposveseis_total&gt;0&lt;/APESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;METESFIItemPeriodics_Aposveseis_total&gt;0&lt;/METESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;EKESFIItemPeriodics_Kostos_Ex&gt;0&lt;/EKESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;APESFIItemPeriodics_Kostos_Ex&gt;0&lt;/APESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;METESFIItemPeriodics_Kostos_Ex&gt;0&lt;/METESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;EKESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/EKESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;APESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/APESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;METESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/METESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;EKESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/EKESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;APESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/APESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;METESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/METESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;EKESFIItemPeriodics_Qty_Final&gt;0&lt;/EKESFIItemPeriodics_Qty_Final&gt;
+    &lt;APESFIItemPeriodics_Qty_Final&gt;0&lt;/APESFIItemPeriodics_Qty_Final&gt;
+    &lt;METESFIItemPeriodics_Qty_Final&gt;0&lt;/METESFIItemPeriodics_Qty_Final&gt;
+    &lt;EKESFIItemPeriodics_Cost&gt;0&lt;/EKESFIItemPeriodics_Cost&gt;
+    &lt;APESFIItemPeriodics_Cost&gt;0&lt;/APESFIItemPeriodics_Cost&gt;
+    &lt;METESFIItemPeriodics_Cost&gt;0&lt;/METESFIItemPeriodics_Cost&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Telikh_aposvestea_axia&gt;1000.000000000&lt;/Telikh_aposvestea_axia&gt;
+    &lt;Proodeytika_aposvesthnta&gt;200.0000000000&lt;/Proodeytika_aposvesthnta&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;3.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_DebitValue&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_DebitValue&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditValue&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_CreditValue&gt;
+    &lt;NPRTESFIItemPeriodics_Balance&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_Balance&gt;
+    &lt;NPRTESFIItemPeriodics_Axia_kthshs&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;NPRTESFIItemPeriodics_Aposvesthenta&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;NPRTESFIItemPeriodics_Ypoloipo&gt;800.0000000000&lt;/NPRTESFIItemPeriodics_Ypoloipo&gt;
+    &lt;NPRTESFIItemPeriodics_Axia_kthshs_thetika&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;NPRTESFIItemPeriodics_Pistwtika&gt;0.000000000&lt;/NPRTESFIItemPeriodics_Pistwtika&gt;
+    &lt;NPRTESFIItemPeriodics_Aposveseis_total&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;NPRTESFIItemPeriodics_Kostos_Ex&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;NPRTESFIItemPeriodics_Aposvestea_Axia&gt;1000.000000000&lt;/NPRTESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;NPRTESFIItemPeriodics_Telikes_Aposveseis&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;NPRTESFIItemPeriodics_Qty_Final&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_Qty_Final&gt;
+    &lt;NPRTESFIItemPeriodics_Cost&gt;800.0000000000&lt;/NPRTESFIItemPeriodics_Cost&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGOSitesWH_Code /&gt;
+    &lt;ESGOSitesWH_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;TC0009-02&lt;/ESGOSites_Code&gt;
+    &lt;ESGOSites_Description&gt;Πάγια Υποκ/μα Αυτοτελές&lt;/ESGOSites_Description&gt;
+    &lt;ESFIItem_Code&gt;TC0009-2002&lt;/ESFIItem_Code&gt;
+    &lt;ESFIItem_ItemDescription&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_ItemDescription&gt;
+    &lt;ESGOFiscalPeriod_SeqNum&gt;2&lt;/ESGOFiscalPeriod_SeqNum&gt;
+    &lt;ESFIItem_VAT_Percentage&gt;23.0000000000&lt;/ESFIItem_VAT_Percentage&gt;
+    &lt;ESFIItem_CoefStandard&gt;20.0000000000&lt;/ESFIItem_CoefStandard&gt;
+    &lt;ESFIItem_Basiko&gt;1&lt;/ESFIItem_Basiko&gt;
+    &lt;ESFIItem_Final_ItemCode&gt;TC0009-2002&lt;/ESFIItem_Final_ItemCode&gt;
+    &lt;ESFIItem_Final_ItemDescr&gt;Κλείσιμο Χρήσης - Απογραφή κατά Ποσότητα και Αξία&lt;/ESFIItem_Final_ItemDescr&gt;
+    &lt;ESFIItemPeriodics_Katastasi&gt;Ενεργό&lt;/ESFIItemPeriodics_Katastasi&gt;
+    &lt;ESFIItem_GLAccountData&gt;14 - Επιπλα και λοιπός Εξοπλισμός&lt;/ESFIItem_GLAccountData&gt;
+    &lt;ESFIItem_GLAccountData1&gt;14.00 - Επιπλα&lt;/ESFIItem_GLAccountData1&gt;
+    &lt;ESFIItem_GLAccountData2&gt;14.00.00 - Επιπλα&lt;/ESFIItem_GLAccountData2&gt;
+    &lt;ESFIItem_GLAccountData3&gt;14.00.00.0000 - Επιπλα&lt;/ESFIItem_GLAccountData3&gt;
+    &lt;ESFIItem_GLAccountCode1&gt;14&lt;/ESFIItem_GLAccountCode1&gt;
+    &lt;ESFIItem_GLAccountCode2&gt;14.00&lt;/ESFIItem_GLAccountCode2&gt;
+    &lt;ESFIItem_GLAccountCode3&gt;14.00.00&lt;/ESFIItem_GLAccountCode3&gt;
+    &lt;ESFIItem_GLAccountCode4&gt;14.00.00.0000&lt;/ESFIItem_GLAccountCode4&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;3.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_DebitValue&gt;1000.0000000000&lt;/ESFIItemPeriodics_DebitValue&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItemPeriodics_CreditValue&gt;200.0000000000&lt;/ESFIItemPeriodics_CreditValue&gt;
+    &lt;ESFIItemPeriodics_Balance&gt;2.0000000000&lt;/ESFIItemPeriodics_Balance&gt;
+    &lt;ESFIItemPeriodics_Axia_kthshs&gt;1000.0000000000&lt;/ESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;ESFIItemPeriodics_Aposvesthenta&gt;200.0000000000&lt;/ESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;ESFIItemPeriodics_Ypoloipo&gt;800.0000000000&lt;/ESFIItemPeriodics_Ypoloipo&gt;
+    &lt;ESFIItemPeriodics_Axia_kthshs_thetika&gt;1000.0000000000&lt;/ESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;ESFIItemPeriodics_Pistwtika&gt;0.000000000&lt;/ESFIItemPeriodics_Pistwtika&gt;
+    &lt;ESFIItemPeriodics_Aposveseis_total&gt;200.0000000000&lt;/ESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;ESFIItemPeriodics_Kostos_Ex&gt;0.0000000000&lt;/ESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;ESFIItemPeriodics_Aposvestea_Axia&gt;1000.000000000&lt;/ESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;ESFIItemPeriodics_Telikes_Aposveseis&gt;200.0000000000&lt;/ESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;ESFIItemPeriodics_Qty_Final&gt;2.0000000000&lt;/ESFIItemPeriodics_Qty_Final&gt;
+    &lt;ESFIItemPeriodics_Cost&gt;800.0000000000&lt;/ESFIItemPeriodics_Cost&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_DebitValue&gt;0&lt;/EKESFIItemPeriodics_DebitValue&gt;
+    &lt;APESFIItemPeriodics_DebitValue&gt;0&lt;/APESFIItemPeriodics_DebitValue&gt;
+    &lt;METESFIItemPeriodics_DebitValue&gt;0&lt;/METESFIItemPeriodics_DebitValue&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_CreditValue&gt;0&lt;/EKESFIItemPeriodics_CreditValue&gt;
+    &lt;APESFIItemPeriodics_CreditValue&gt;0&lt;/APESFIItemPeriodics_CreditValue&gt;
+    &lt;METESFIItemPeriodics_CreditValue&gt;0&lt;/METESFIItemPeriodics_CreditValue&gt;
+    &lt;EKESFIItemPeriodics_Balance&gt;0&lt;/EKESFIItemPeriodics_Balance&gt;
+    &lt;APESFIItemPeriodics_Balance&gt;0&lt;/APESFIItemPeriodics_Balance&gt;
+    &lt;METESFIItemPeriodics_Balance&gt;0&lt;/METESFIItemPeriodics_Balance&gt;
+    &lt;EKESFIItemPeriodics_Axia_kthshs&gt;0&lt;/EKESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;APESFIItemPeriodics_Axia_kthshs&gt;0&lt;/APESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;METESFIItemPeriodics_Axia_kthshs&gt;0&lt;/METESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;EKESFIItemPeriodics_Aposvesthenta&gt;0&lt;/EKESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;APESFIItemPeriodics_Aposvesthenta&gt;0&lt;/APESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;METESFIItemPeriodics_Aposvesthenta&gt;0&lt;/METESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;EKESFIItemPeriodics_Ypoloipo&gt;0&lt;/EKESFIItemPeriodics_Ypoloipo&gt;
+    &lt;APESFIItemPeriodics_Ypoloipo&gt;0&lt;/APESFIItemPeriodics_Ypoloipo&gt;
+    &lt;METESFIItemPeriodics_Ypoloipo&gt;0&lt;/METESFIItemPeriodics_Ypoloipo&gt;
+    &lt;EKESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/EKESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;APESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/APESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;METESFIItemPeriodics_Axia_kthshs_thetika&gt;0&lt;/METESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;EKESFIItemPeriodics_Pistwtika&gt;0&lt;/EKESFIItemPeriodics_Pistwtika&gt;
+    &lt;APESFIItemPeriodics_Pistwtika&gt;0&lt;/APESFIItemPeriodics_Pistwtika&gt;
+    &lt;METESFIItemPeriodics_Pistwtika&gt;0&lt;/METESFIItemPeriodics_Pistwtika&gt;
+    &lt;EKESFIItemPeriodics_Aposveseis_total&gt;0&lt;/EKESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;APESFIItemPeriodics_Aposveseis_total&gt;0&lt;/APESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;METESFIItemPeriodics_Aposveseis_total&gt;0&lt;/METESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;EKESFIItemPeriodics_Kostos_Ex&gt;0&lt;/EKESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;APESFIItemPeriodics_Kostos_Ex&gt;0&lt;/APESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;METESFIItemPeriodics_Kostos_Ex&gt;0&lt;/METESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;EKESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/EKESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;APESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/APESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;METESFIItemPeriodics_Aposvestea_Axia&gt;0&lt;/METESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;EKESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/EKESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;APESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/APESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;METESFIItemPeriodics_Telikes_Aposveseis&gt;0&lt;/METESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;EKESFIItemPeriodics_Qty_Final&gt;0&lt;/EKESFIItemPeriodics_Qty_Final&gt;
+    &lt;APESFIItemPeriodics_Qty_Final&gt;0&lt;/APESFIItemPeriodics_Qty_Final&gt;
+    &lt;METESFIItemPeriodics_Qty_Final&gt;0&lt;/METESFIItemPeriodics_Qty_Final&gt;
+    &lt;EKESFIItemPeriodics_Cost&gt;0&lt;/EKESFIItemPeriodics_Cost&gt;
+    &lt;APESFIItemPeriodics_Cost&gt;0&lt;/APESFIItemPeriodics_Cost&gt;
+    &lt;METESFIItemPeriodics_Cost&gt;0&lt;/METESFIItemPeriodics_Cost&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;Telikh_aposvestea_axia&gt;1000.000000000&lt;/Telikh_aposvestea_axia&gt;
+    &lt;Proodeytika_aposvesthnta&gt;200.0000000000&lt;/Proodeytika_aposvesthnta&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;3.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_DebitValue&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_DebitValue&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;1.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditValue&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_CreditValue&gt;
+    &lt;NPRTESFIItemPeriodics_Balance&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_Balance&gt;
+    &lt;NPRTESFIItemPeriodics_Axia_kthshs&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_Axia_kthshs&gt;
+    &lt;NPRTESFIItemPeriodics_Aposvesthenta&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Aposvesthenta&gt;
+    &lt;NPRTESFIItemPeriodics_Ypoloipo&gt;800.0000000000&lt;/NPRTESFIItemPeriodics_Ypoloipo&gt;
+    &lt;NPRTESFIItemPeriodics_Axia_kthshs_thetika&gt;1000.0000000000&lt;/NPRTESFIItemPeriodics_Axia_kthshs_thetika&gt;
+    &lt;NPRTESFIItemPeriodics_Pistwtika&gt;0.000000000&lt;/NPRTESFIItemPeriodics_Pistwtika&gt;
+    &lt;NPRTESFIItemPeriodics_Aposveseis_total&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Aposveseis_total&gt;
+    &lt;NPRTESFIItemPeriodics_Kostos_Ex&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_Kostos_Ex&gt;
+    &lt;NPRTESFIItemPeriodics_Aposvestea_Axia&gt;1000.000000000&lt;/NPRTESFIItemPeriodics_Aposvestea_Axia&gt;
+    &lt;NPRTESFIItemPeriodics_Telikes_Aposveseis&gt;200.0000000000&lt;/NPRTESFIItemPeriodics_Telikes_Aposveseis&gt;
+    &lt;NPRTESFIItemPeriodics_Qty_Final&gt;2.0000000000&lt;/NPRTESFIItemPeriodics_Qty_Final&gt;
+    &lt;NPRTESFIItemPeriodics_Cost&gt;800.0000000000&lt;/NPRTESFIItemPeriodics_Cost&gt;
+    &lt;ESFIItem_AssetType /&gt;
+    &lt;ESFIItem_fItemFamilyCode /&gt;
+    &lt;_ESFIItem_fItemFamilyCode /&gt;
+    &lt;ESFIZItemFamily_Description /&gt;
+    &lt;ESFIItem_fItemGroupCode /&gt;
+    &lt;_ESFIItem_fItemGroupCode /&gt;
+    &lt;ESFIZItemSubfamily_Description /&gt;
+    &lt;ESFIItem_fItemCategoryCode /&gt;
+    &lt;_ESFIItem_fItemCategoryCode /&gt;
+    &lt;ESFIZItemCategory_Description /&gt;
+    &lt;ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;_ESFIItem_fItemSubcategoryCode /&gt;
+    &lt;ESFIZItemSubCategory_Description /&gt;
+    &lt;ESGOSitesWH_Code /&gt;
+    &lt;ESGOSitesWH_Description /&gt;
+    &lt;ESGLAccount_Code /&gt;
+    &lt;ESGLAccount_Name /&gt;
+    &lt;ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;_ESFIItemPeriodics_DA_DocumentCode /&gt;
+    &lt;ESFIItemPeriodics_DA_RegistrationDate /&gt;
+    &lt;ESFIItemPeriodics_DA_TradeAccountName /&gt;
+    &lt;ESGOProject_Code /&gt;
+    &lt;ESGOProject_Name /&gt;
+    &lt;ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;_ESFIItemPeriodics_fBusinessUnitCode /&gt;
+    &lt;ESGOZBusinessUnit_Description /&gt;
+    &lt;ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;_ESFIItemPeriodics_fActivityCode /&gt;
+    &lt;ESGOZBusinessActivity_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension1Code /&gt;
+    &lt;ESGOZDimension1_Description /&gt;
+    &lt;ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;_ESFIItemPeriodics_fDimension2Code /&gt;
+    &lt;ESGOZDimension2_Description /&gt;
+  &lt;/CUMUL&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;APOGR&lt;/ID&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+    &lt;Axia_kthshs&gt;0&lt;/Axia_kthshs&gt;
+    &lt;Aposvesthenta&gt;0&lt;/Aposvesthenta&gt;
+    &lt;Ypoloipo&gt;0&lt;/Ypoloipo&gt;
+    &lt;Axia_kthshs_thetika&gt;0&lt;/Axia_kthshs_thetika&gt;
+    &lt;Pistwtika&gt;0&lt;/Pistwtika&gt;
+    &lt;Aposveseis_total&gt;0&lt;/Aposveseis_total&gt;
+    &lt;Kostos_Ex&gt;0&lt;/Kostos_Ex&gt;
+    &lt;Aposvestea_Axia&gt;0&lt;/Aposvestea_Axia&gt;
+    &lt;Telikes_Aposveseis&gt;0&lt;/Telikes_Aposveseis&gt;
+    &lt;Qty_Final&gt;0&lt;/Qty_Final&gt;
+    &lt;Cost&gt;0&lt;/Cost&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;EKMET&lt;/ID&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+    &lt;Axia_kthshs&gt;0&lt;/Axia_kthshs&gt;
+    &lt;Aposvesthenta&gt;0&lt;/Aposvesthenta&gt;
+    &lt;Ypoloipo&gt;0&lt;/Ypoloipo&gt;
+    &lt;Axia_kthshs_thetika&gt;0&lt;/Axia_kthshs_thetika&gt;
+    &lt;Pistwtika&gt;0&lt;/Pistwtika&gt;
+    &lt;Aposveseis_total&gt;0&lt;/Aposveseis_total&gt;
+    &lt;Kostos_Ex&gt;0&lt;/Kostos_Ex&gt;
+    &lt;Aposvestea_Axia&gt;0&lt;/Aposvestea_Axia&gt;
+    &lt;Telikes_Aposveseis&gt;0&lt;/Telikes_Aposveseis&gt;
+    &lt;Qty_Final&gt;0&lt;/Qty_Final&gt;
+    &lt;Cost&gt;0&lt;/Cost&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;ENTRIES&lt;/ID&gt;
+    &lt;DebitQty&gt;6.0000000000&lt;/DebitQty&gt;
+    &lt;DebitValue&gt;2000.0000000000&lt;/DebitValue&gt;
+    &lt;CreditQty&gt;2.0000000000&lt;/CreditQty&gt;
+    &lt;CreditValue&gt;400.0000000000&lt;/CreditValue&gt;
+    &lt;Balance&gt;4.0000000000&lt;/Balance&gt;
+    &lt;Axia_kthshs&gt;2000.0000000000&lt;/Axia_kthshs&gt;
+    &lt;Aposvesthenta&gt;400.0000000000&lt;/Aposvesthenta&gt;
+    &lt;Ypoloipo&gt;1600.0000000000&lt;/Ypoloipo&gt;
+    &lt;Axia_kthshs_thetika&gt;2000.0000000000&lt;/Axia_kthshs_thetika&gt;
+    &lt;Pistwtika&gt;0.000000000&lt;/Pistwtika&gt;
+    &lt;Aposveseis_total&gt;400.0000000000&lt;/Aposveseis_total&gt;
+    &lt;Kostos_Ex&gt;0.0000000000&lt;/Kostos_Ex&gt;
+    &lt;Aposvestea_Axia&gt;2000.000000000&lt;/Aposvestea_Axia&gt;
+    &lt;Telikes_Aposveseis&gt;400.0000000000&lt;/Telikes_Aposveseis&gt;
+    &lt;Qty_Final&gt;4.0000000000&lt;/Qty_Final&gt;
+    &lt;Cost&gt;1600.0000000000&lt;/Cost&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;RT&lt;/ID&gt;
+    &lt;DebitQty&gt;6.0000000000&lt;/DebitQty&gt;
+    &lt;DebitValue&gt;2000.0000000000&lt;/DebitValue&gt;
+    &lt;CreditQty&gt;2.0000000000&lt;/CreditQty&gt;
+    &lt;CreditValue&gt;400.0000000000&lt;/CreditValue&gt;
+    &lt;Balance&gt;4.0000000000&lt;/Balance&gt;
+    &lt;Axia_kthshs&gt;2000.0000000000&lt;/Axia_kthshs&gt;
+    &lt;Aposvesthenta&gt;400.0000000000&lt;/Aposvesthenta&gt;
+    &lt;Ypoloipo&gt;1600.0000000000&lt;/Ypoloipo&gt;
+    &lt;Axia_kthshs_thetika&gt;2000.0000000000&lt;/Axia_kthshs_thetika&gt;
+    &lt;Pistwtika&gt;0.000000000&lt;/Pistwtika&gt;
+    &lt;Aposveseis_total&gt;400.0000000000&lt;/Aposveseis_total&gt;
+    &lt;Kostos_Ex&gt;0.0000000000&lt;/Kostos_Ex&gt;
+    &lt;Aposvestea_Axia&gt;2000.000000000&lt;/Aposvestea_Axia&gt;
+    &lt;Telikes_Aposveseis&gt;400.0000000000&lt;/Telikes_Aposveseis&gt;
+    &lt;Qty_Final&gt;4.0000000000&lt;/Qty_Final&gt;
+    &lt;Cost&gt;1600.0000000000&lt;/Cost&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;BALANCE&lt;/ID&gt;
+    &lt;DebitQty&gt;4.0000000000&lt;/DebitQty&gt;
+    &lt;DebitValue&gt;1600.0000000000&lt;/DebitValue&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+    &lt;Axia_kthshs&gt;0&lt;/Axia_kthshs&gt;
+    &lt;Aposvesthenta&gt;0&lt;/Aposvesthenta&gt;
+    &lt;Ypoloipo&gt;0&lt;/Ypoloipo&gt;
+    &lt;Axia_kthshs_thetika&gt;0&lt;/Axia_kthshs_thetika&gt;
+    &lt;Pistwtika&gt;0&lt;/Pistwtika&gt;
+    &lt;Aposveseis_total&gt;0&lt;/Aposveseis_total&gt;
+    &lt;Kostos_Ex&gt;0&lt;/Kostos_Ex&gt;
+    &lt;Aposvestea_Axia&gt;0&lt;/Aposvestea_Axia&gt;
+    &lt;Telikes_Aposveseis&gt;0&lt;/Telikes_Aposveseis&gt;
+    &lt;Qty_Final&gt;0&lt;/Qty_Final&gt;
+    &lt;Cost&gt;0&lt;/Cost&gt;
+  &lt;/GRANDTOTALS&gt;
+&lt;/NewDataSet&gt;"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>592632a8-2fed-44a2-be3f-78bc3c997dcd</GID>
+    <fTestCaseGID>7113fb51-15c9-467d-8f0c-598920ba028f</fTestCaseGID>
+    <SeqNum>52</SeqNum>
+    <Name>AC-00040</Name>
+    <Description>Execute BIT Αναλυτική κατάσταση κατά Θέση</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PDATERANGE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;ESDateRange(FiscalYear, 0)&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;5&lt;/DefValue&gt;&lt;DefValue&gt;6&lt;/DefValue&gt;&lt;DefValue&gt;8&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFAFixedAsset\ItFixedAssetPositioning"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>7011d2cc-77b4-4963-a976-38da35d62590</GID>
+    <Name>TC0007-0021-10</Name>
+    <Description>Invalid States - New document state 1 &amp; move to state 2 &amp; move to state 0</Description>
+    <Comment>IMP-07932</Comment>
+  </TestCases>
+  <Actions>
+    <GID>f681c454-1964-4fb0-a548-538250b11a49</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f997c72c-572a-443d-b582-b5a4cfe3d97f</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f33f000f-72c1-479b-9526-d2c0ab8366a5</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b8b28ede-6019-4d0e-b49b-f5a1b5e4a6cd</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>999496fd-9d5c-4def-8c44-542d5bfa00a3</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bf44175e-02e5-4d0c-8212-07834fc7449b</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>89d356e0-c3c6-4a33-a3b4-7232970ad5a4</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Move Document To State</Name>
+    <Description>Move Document To State 2</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc1";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cbfcbb54-d2df-4e99-bc06-72aebf685888</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="σε κατάσταση 'Προσωρινό' έχει οριστεί ως μη επιτρεπτή"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac527e9d-72c3-4967-b46b-c5e1e64d9014</GID>
+    <fTestCaseGID>7011d2cc-77b4-4963-a976-38da35d62590</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Move Document To State</Name>
+    <Description>Move Document To State 0</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc1";toState="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+</NewDataSet>

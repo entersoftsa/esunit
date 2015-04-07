@@ -1,0 +1,177 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>2277a9ff-9b60-48c3-aaac-a1187415f25c</GID>
+    <Name>TC0007-0019-10</Name>
+    <Description>Καταχώρηση παραστατικού με είδη με Χρώμα / Μέγεθος - με Αντίθετη διακίνηση - ΔΡΠ</Description>
+    <Comment>BUG-10425</Comment>
+  </TestCases>
+  <Actions>
+    <GID>691015dd-bf32-4e2f-873e-e633a361afba</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d1bd4869-7b00-4072-a3d0-f0fb4359a7f9</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΔΡΠ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΔΡΠ";fADDocumentSeriesGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>342a4bb0-2a06-4fa1-90a5-9be9d840b9e3</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1c0de437-e130-4de2-9ace-f08a5ec7bb2c</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007-0019-01  LineType=6</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0019-01";UdfValue1="2";UdfValue5="200"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8160f3b4-8611-47a0-8358-a269a1da7344</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5991d4fd-da0a-4fe4-a7c0-4d20f3bf4ebd</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFIItemEntry</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="tESFIItemEntry";sqlBody="SELECT i.Code, sum(p.ESFIItemPeriodics_PendingSalesOrders) qty FROM ESFIItemEntry_ESFIItemPeriodics p inner join ESFIItem i on p.fItemGID = i.GID where fDocumentGID = @vDoc1 group by i.Code order by i.Code";sqlParameterNames="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81373efe-1dfa-4332-812f-c9568eef1c66</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values tESFIItemEntry</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="
+&lt;NewDataSet&gt;
+  &lt;tESFIItemEntry&gt;
+    &lt;Code&gt;TC0007-0019-01&lt;/Code&gt;
+    &lt;Qty&gt;1&lt;/Qty&gt;
+  &lt;/tESFIItemEntry&gt;
+&lt;/NewDataSet&gt;
+  ";excludeGuidTypeColumns="0";excludeDateTypeColumns="0";excludeDateTimeTypeColumns="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>46a31434-0302-4157-ba21-87fcb8d3eabe</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document vdoc1</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a738b6f6-8cae-4f2a-9696-d369aca4ea7b</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a88e274f-8706-45bf-81eb-2604409b6950</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vTradeAcc</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vTradeAcc";sqlBody="select gid from esfitradeaccount where code = 'TC0007' and fcompanycode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9ccb72e8-740d-487a-97a0-0fc170778297</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>665b6801-6769-42ef-b1df-19ecdc2108c0</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007-0019-01  LineType=7</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="7";fItemGID="TC0007-0019-01";UdfValue1="1";UdfValue5="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5aa01ef8-08e5-497f-bbf0-31101158d6d6</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFIItemEntry</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="tESFIItemEntry";sqlBody="SELECT i.Code, sum(p.ESFITradeAccountPeriodics_PendingOrders) val
+FROM ESFIItemEntry_ESFITradeAccountPeriodics p inner join ESFIItem i on p.fItemGID = i.GID where fDocumentGID = @vDoc1 group by i.Code order by i.Code";sqlParameterNames="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4c5f13f2-d410-4e68-a8ee-2340d556322d</GID>
+    <fTestCaseGID>2277a9ff-9b60-48c3-aaac-a1187415f25c</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values tESFIItemEntry</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="
+&lt;NewDataSet&gt;
+  &lt;tESFIItemEntry&gt;
+    &lt;Code&gt;TC0007-0019-01&lt;/Code&gt;
+    &lt;val&gt;100&lt;/val&gt;
+  &lt;/tESFIItemEntry&gt;
+&lt;/NewDataSet&gt;
+  ";excludeGuidTypeColumns="0";excludeDateTypeColumns="0";excludeDateTimeTypeColumns="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

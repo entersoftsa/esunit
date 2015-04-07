@@ -1,0 +1,207 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>21cedf21-388a-48c0-b731-61ac4ce4e537</GID>
+    <Name>TC0007-1007-05</Name>
+    <Description>Ελεγχος Μικτής Έκπτωσης - Μεταφορά σε Εκπτωση 2</Description>
+    <Comment>BUG-09728
+Παράμετρος Εταιρείας:
+Διαχείριση Παραστατικών / Ανάθεση Μικτής Έκπτωσης : Έκπτωση 2
+</Comment>
+  </TestCases>
+  <Actions>
+    <GID>81545f35-fc23-45fb-82d6-176d80a0f067</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>018bfc7f-c616-4e3e-b472-66295a92488e</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΑΠΛ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΠΛ";fADDocumentSeriesGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>baf9ce03-09c4-4b52-92fa-e10ba26f99fb</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1007";Quantity="1";Price="85"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f7597fa7-c98d-4b8c-b66c-098dd22ffdc0</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 85</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="85";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4f420822-12ec-4e74-82b0-c41a6ed566b3</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4beabdae-fdc3-47e2-94c8-41ad7a67bfa5</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>69a214c5-47c0-46b1-9243-50ff33ab1754</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>58388502-9b5b-4ece-be8f-578d454e8061</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4fd96acd-eaf2-4bfb-9e4d-66b586d65b8e</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column GrossDiscount = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="GrossDiscount";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc263ade-6b9c-4a80-9a79-6e47cda57256</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Discount1 = 50</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Discount1";columnValue="50";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b88b7690-f394-4754-b2a0-48e8baa7c247</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1Value = 34,555</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1Value";columnValue="34,555";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5a17395b-3a31-464e-9c35-e38ee3808735</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2Value = 1,095</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2Value";columnValue="1,095";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>14719770-64b4-4f41-a3aa-42e39d26d291</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column GrossDiscountValue = 1,34</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="GrossDiscountValue";columnValue="1,34";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc142243-1715-4c69-a1ac-29706a7e0573</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ec02f9d7-1d99-49b5-9f35-61804745a992</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column CurrencyTotalValue = 41,16</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTotalValue";columnValue="41,16";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>72fad3e6-2fc7-4d93-8078-dfc407c8320b</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00019</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="41,16"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>64c4a662-59d3-4494-bcca-9826e3753ff1</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ddd1a774-a045-4b2c-981b-c4cf808cfe10</GID>
+    <fTestCaseGID>21cedf21-388a-48c0-b731-61ac4ce4e537</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign columnName="GrossDiscount";columnValue="3,153"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="GrossDiscount";columnValue="3,153";variableName=""</Params>
+  </Actions>
+</NewDataSet>

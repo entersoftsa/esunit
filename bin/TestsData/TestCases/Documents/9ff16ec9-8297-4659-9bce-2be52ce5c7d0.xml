@@ -1,0 +1,173 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</GID>
+    <Name>TC0007-0051</Name>
+    <Description>Προμήθειες Πωλητών - Έλεγχος προμηθειών επί αξίας προ επιβαρύνσεων</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>5080f79e-8855-4702-8f4d-d1330682971a</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0051"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>720932e1-8ba1-4f75-acb3-e8811567632a</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line TC0007-0051 </Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0051";Price="100";Discount1="10"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>49502fde-54c4-45ce-b63b-1634bdbf2252</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>32b24faa-d022-459c-9097-a6aec13f66b6</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΤΔΑ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cec99343-2b97-4e76-b879-2b82fd1a6df3</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>65a3216f-1917-49cb-b3de-995e04e23fc7</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c703441f-0a80-4485-ada9-4c6907bc4da3</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row 0 ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>001fafdc-c38b-4eec-b6fc-f4e9b4e7d959</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column CommissionValue=9</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CommissionValue";columnValue="9";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1bdf7ac5-29bb-4e81-ae85-3dd72f643e67</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar CommissionValue1</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CommissionValue1";sqlBody="select isnull(CommissionValue,0) from esfiitementry_esfisalespersonperiodics where fdocumentgid = @fSourceDocumentGID";sqlParameterNames="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>df84367f-3a91-4b06-8ff6-9e6afc29482b</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CommissionValue1=9</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CommissionValue1";variableValue="9";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>71bf4fff-4f20-436d-b286-a4a71e9e07d6</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar CommissionValue2</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CommissionValue2";sqlBody="select CommissionValue from esfiitementry_esfitradeaccountperiodics where fdocumentgid = @fSourceDocumentGID";sqlParameterNames="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a1b31bf9-d539-48fe-af03-0cd8d7673737</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar CommissionValue3</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CommissionValue3";sqlBody="select CommissionValue from esfiitementry_esfiitemperiodics where fdocumentgid = @fSourceDocumentGID";sqlParameterNames="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7ebd8767-bff7-4d2c-8cb4-5d8aef2cc92a</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CommissionValue2=9</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CommissionValue2";variableValue="9";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>41b5ebdb-c704-4a37-be91-f17efa4dd326</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CommissionValue3=9</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CommissionValue3";variableValue="9";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1748722e-4d52-40df-96e9-69d87a7e311f</GID>
+    <fTestCaseGID>9ff16ec9-8297-4659-9bce-2be52ce5c7d0</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocumentGID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

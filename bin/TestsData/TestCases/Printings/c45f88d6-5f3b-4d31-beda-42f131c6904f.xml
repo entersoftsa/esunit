@@ -1,0 +1,690 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>c45f88d6-5f3b-4d31-beda-42f131c6904f</GID>
+    <Name>TC0010-0101</Name>
+    <Description>Check Tax Signature - Print - analytic fields </Description>
+    <Comment>IMP-08308</Comment>
+  </TestCases>
+  <Actions>
+    <GID>8b3604c9-6f03-4128-a78e-7fd3d700ed8b</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c45f6473-1e5f-4e6e-b824-fcda4ceaffe2</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-0101";fCustomerGID="TC0010-0100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0967f6e5-f2fb-408c-80bf-f4b49ab22d05</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0001";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b556deb6-6b1f-4edf-9bae-44ff61ec13e4</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>62a34965-ab78-463c-bccf-e558e7098521</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48ccd457-8838-478d-9dde-1c253738a64e</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4d4697aa-b3a4-42cc-80f0-4bf763e3b00a</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0e72b73c-6b53-4065-92e4-c767b9204615</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>78</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fCancelDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e2d6d81f-e85b-438c-8cd7-d9378d698f68</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ae3bd07f-b0ca-4dd4-adea-24ed528a6960</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value ADPrinted</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="ADPrinted";columnValue="1";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a4157c95-8955-40a3-ae69-01953c2d5754</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentKind</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentKind";columnValue="221";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ec0b8166-c402-43dd-b962-7992dbe0a0da</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountA</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountA";columnValue="100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c699fdf6-f89b-4fc6-8064-dc1689f49868</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentSeries</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentSeries";columnValue="TC0010-0101";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2221ae56-8e82-4e38-a8a4-7a7fbfffe362</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_TotalAmount</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_TotalAmount";columnValue="578.50";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6d875711-1138-4ec2-a369-3956940efaac</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountB</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountB";columnValue="100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d267db3e-bbcd-43d3-a96f-8a4c5663dabe</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountC</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountC";columnValue="100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e95f3df7-5f85-4f45-a4f3-9d346581fa8f</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountD</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountD";columnValue="100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>aabb8428-20af-4c3a-b143-9ecb41e8d0f3</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountE</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountE";columnValue="100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>76c85799-0842-4bfd-a780-dc3cbd06fba9</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountA</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountA";columnValue="6.50";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>02995a03-9c45-4822-bb90-d0559636b074</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountB</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountB";columnValue="13.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9cafbfdd-dcb7-4c5a-9992-326b67e00784</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountC</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountC";columnValue="23.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7f39c565-830a-4ac3-b71d-5ba601a05dd6</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountD</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountD";columnValue="36.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4828a3da-2240-4222-9091-1083e25dfaa0</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_CurrencyCode</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_CurrencyCode";columnValue="EUR";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ea8bac2b-6638-49b0-acb3-676004a203c3</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RecipientTaxRegistrationNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RecipientTaxRegistrationNumber";columnValue="094396444";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0bf225bc-5196-43e6-b9e9-a7171d894e01</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RecipientMail</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RecipientMail";columnValue="TC0010-0100@entersoft.gr";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bcbf1d18-c48b-40de-b055-6524cdd649a9</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value ADReferenceCodeList</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ADReferenceCodeList";columnValue="TC0010-0100";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8dc3af02-3f58-42ba-b41c-c1cac9efce97</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RelativeDocument</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RelativeDocument";columnValue="TC0010-0100";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2e78c4a1-2059-422a-a23e-b651a95fc15d</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value ADStringField1</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ADStringField1";columnValue="TC0010-0100";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7786dbe8-5a67-4304-81e3-3d2e0deb9616</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value ADStringField2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ADStringField2";columnValue="TC0010-0100";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>93be88d9-7a7f-491e-b84e-2e0da1500e42</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_ExemptionVatArticle</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_ExemptionVatArticle";columnValue="TC0010-0100";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fd17e02a-186c-4592-b01b-c034322dc1b7</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_CustomerReceiptsCardNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_CustomerReceiptsCardNumber";columnValue="TC0010-0100";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>26b0d5da-3f73-43cb-b4b0-2de0ebe537bf</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>Cancel Document</Name>
+    <Description>Cancel Document</Description>
+    <fActionGID>cf1d8e48-21ec-4f25-8cac-017eab86979a</fActionGID>
+    <Params>variableNameOfDocumentToCancel="fSourceDocumentGID";registrationDateOfCancelingDocument="";cancelingSerieCode="TC0010-0101";variableNameOfCancelingDocument="fCancelDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e627f3d6-2336-4c7f-a926-b7589f064835</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document Canceled ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fCancelDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>10214d40-f577-47a1-8534-048fca822a7f</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>58</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>23f07291-6527-4b1e-baa8-ef25de73da91</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>59</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentKind</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentKind";columnValue="215";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>df1356e8-c5ed-449b-b090-58a41eed9a5f</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>60</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentSeries</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentSeries";columnValue="TC0010-0101";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>025ca32a-6752-4066-95ba-a7301f73d3ce</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>62</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountA</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountA";columnValue="-100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d862d3b8-065e-412d-806d-f098e434f6d8</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountB</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountB";columnValue="-100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>96e6aa00-9a79-4356-aa39-81dafccaf25b</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>64</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountC</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountC";columnValue="-100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0e469d19-ae8c-41b0-9bbf-273a332b2391</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>65</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountD</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountD";columnValue="-100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f3140f53-b910-4e99-88d5-9cb0b01ab091</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>66</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_NetAmountE</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_NetAmountE";columnValue="-100.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a5f5c3eb-cf90-4a1b-b50c-3c1ef78b3545</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>67</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountA</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountA";columnValue="-6.50";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e1403745-4ff2-472c-9f7c-eccbd262a0be</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>68</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountB</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountB";columnValue="-13.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>61a15952-ec89-4800-8e0c-735f91811789</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>69</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountC</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountC";columnValue="-23.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ca882236-d4a6-443a-bc5d-17c8a15d2127</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>70</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_VatAmountD</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_VatAmountD";columnValue="-36.00";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>12fa8aa1-4b5c-4b55-b68f-bd2bd63678d3</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>71</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_TotalAmount</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_TotalAmount";columnValue="-578.50";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>95f874c3-c126-4729-9119-de7e740326ae</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>72</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_CurrencyCode</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_CurrencyCode";columnValue="EUR";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48cb0b44-8ba8-4b82-8d60-60f59fd83a9b</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>73</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RecipientTaxRegistrationNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RecipientTaxRegistrationNumber";columnValue="094396444";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57863041-a201-49de-9766-01b8e4442385</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>74</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RecipientMail</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RecipientMail";columnValue="TC0010-0100@entersoft.gr";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>21d99318-dc8c-405e-bbac-1e17d387e5e9</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>75</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_RelativeDocument</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_RelativeDocument";columnValue="";tableName="";variableName="";variableNameForValue="vADCode";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e094000e-c179-41f8-b490-527e6b81ce84</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>76</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_ExemptionVatArticle</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_ExemptionVatArticle";columnValue="TC0010-0100";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>56624489-df63-4857-b9f8-f165887a525c</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>77</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_CustomerReceiptsCardNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_CustomerReceiptsCardNumber";columnValue="TC0010-0100";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>88e0aa31-a190-4dd7-ae9c-d7425651ce23</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0002</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0002";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d9a43b6b-dc8f-4abd-a22d-b6bec2afa266</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0003</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0003";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b8d3d69c-4dd3-41a9-8537-7e1fb5666bcd</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0004</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0004";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fe04a341-eab3-4aa2-9fc3-35b6297bf756</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0005</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0005";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>145838d6-147e-4347-b688-8f0a2a7fcd56</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vADNumber</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="ADNumber";variableName="vADNumber"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3f2efddb-fc3a-471a-928e-8b0fb1a3e731</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentNumber";columnValue="";tableName="";variableName="";variableNameForValue="vADNumber";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>972c3a25-094d-431c-a0a6-618ed5ae6ee3</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value TDSL_eField_DocumentNumber</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TDSL_eField_DocumentNumber";columnValue="";tableName="";variableName="";variableNameForValue="vCADNumber";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cabbd1ba-4962-4bfc-b980-a94d51f60c78</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vADCode</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="ADCode";variableName="vADCode"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bddad135-7d49-48ef-a047-e4341d4bb1cd</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>47</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vCADNumber</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vCADNumber";sqlBody="select cast(adnumber as integer) from ESFIDocumentTrade where GID = @fCancelDocumentGID";sqlParameterNames="fCancelDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac677e3b-a3cf-46dc-9b69-c5ce309a4002</GID>
+    <fTestCaseGID>c45f88d6-5f3b-4d31-beda-42f131c6904f</fTestCaseGID>
+    <SeqNum>79</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,179 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>05f90704-2313-4db0-b102-82c551a76b3b</GID>
+    <Name>TC0000-0009</Name>
+    <Description>Login - Insert - Update - Delete Document Stock - Recache </Description>
+    <Comment>IMP-06560</Comment>
+  </TestCases>
+  <Actions>
+    <GID>06d54d1c-a7f4-47a6-ad9d-c661ed1791d4</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>eb5f928c-87f1-4f84-97c9-5db8580c24c5</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00021</Name>
+    <Description>Create New Stock Document ΔΕΝ</Description>
+    <fActionGID>e6274216-9c34-4346-830a-afa7cc3e409e</fActionGID>
+    <Params>fADDocumentTypeGID="ΔΕΝ";fADDocumentSeriesGID="TC0000";fSourceGID="1";fSourceCustomerGID="";fSourceSupplierGID="";fSourceDebtorGID="";fSourceCreditorGID="";fSourceSiteGID="1";fTargetGID="3";fTargetCustomerGID="";fTargetSupplierGID="";fTargetDebtorGID="";fTargetCreditorGID="";fTargetSiteGID="3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ef3002b9-f9af-45eb-aae6-24db9c6fac35</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0000</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0000";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0c9f6af2-67fc-4bc5-9350-85ef23c13f4a</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c974d83f-0f23-4775-8278-fa700dfce743</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vSourceDocGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vSourceDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>852f178d-c3d1-45d1-a087-f786c1d3cc7e</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vSourceDocGID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f9e50060-6266-400c-851a-15c5293c1d14</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="vSourceDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9fe53902-9d6b-4198-bb52-5352de555dc5</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6792e2e2-9293-4a3b-8783-891e7c442d60</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Quantity = 2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cec7a9f0-9aaf-4e2a-a151-b898ac7094df</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f9db4102-fdf6-4300-b4ce-dc62b87006d6</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vSourceDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81a320e4-4dad-472e-81b0-8b1c65f0309d</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>27ad98e2-cdc6-4389-99bb-dbc988c4f524</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="vSourceDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>31ec0b47-2942-4c76-b53c-b9291dda846d</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>74494a4a-6953-4f68-abe2-8e6704112044</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>30967573-b83e-43db-9baf-2e0a42d2995b</GID>
+    <fTestCaseGID>05f90704-2313-4db0-b102-82c551a76b3b</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Quantity = 1</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="1";variableName=""</Params>
+  </Actions>
+</NewDataSet>

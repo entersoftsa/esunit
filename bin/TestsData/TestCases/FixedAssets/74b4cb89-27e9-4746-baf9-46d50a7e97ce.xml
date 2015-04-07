@@ -1,0 +1,642 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</GID>
+    <Name>TC0009-0013-1</Name>
+    <Description>Έλεγχος Αποσβέσεων ΕΛΠ-ΔΛΠ-Εναλ, (ΕΛΠ+Εναλ, Φθίνουσα μέθοδος, ΔΛΠ ωφέλιμο χρόνο ζωής) - θετικές μεταβολές κόστους</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>3585594b-ece5-4ae2-be01-2cdcbc19f7c5</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ae62b903-44a3-4092-9adf-7a135bb63b26</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΑΤΔ 1/1</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0007";fSupplierGID="TC0007";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>177ee132-75a2-4e3e-8fa9-99f08c111c5a</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item FA TC0009-0013</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-0013";Quantity="2";Price="500"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2e7afd0c-63a8-4741-994d-9ffa8d34479b</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f250db99-4ba6-4f7f-a3ac-ad8af4afe267</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/1 - 31/1</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/1";toDate="31/1";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57560b16-1644-4497-be40-2ba46d5f843a</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/2 - 29/2</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/2";toDate="29/2";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0fee4fb0-e31e-4d4f-b891-ddedff1b837e</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>58</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;1&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;2.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;1000.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;200.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;2&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;23.7800000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;23.8300000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;39.6200000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;3&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;4&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;24.6000000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;24.6500000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;40.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;5&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;6&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;24.6000000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;24.6500000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;40.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;7&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;8&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;9&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;24.6000000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;24.6500000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;40.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;10&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;11&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;24.6000000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;24.6500000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;40.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2012&lt;/Year&gt;
+  &lt;Month&gt;12&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;25.4100000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;25.4800000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;42.3500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2013&lt;/Year&gt;
+  &lt;Month&gt;12&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;209.9900000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;389.1500000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;249.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2014&lt;/Year&gt;
+  &lt;Month&gt;12&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;146.9900000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;-146.9900000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;124.9900000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2015&lt;/Year&gt;
+  &lt;Month&gt;12&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;102.9000000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;-102.9000000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;62.5000000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;depr&gt;
+  &lt;Year&gt;2016&lt;/Year&gt;
+  &lt;Month&gt;12&lt;/Month&gt;
+  &lt;Type&gt;0&lt;/Type&gt;
+  &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+  &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+  &lt;AcquisitionCost&gt;0.0000000000&lt;/AcquisitionCost&gt;
+  &lt;StdDepreciationValueReversed&gt;0.0000000000&lt;/StdDepreciationValueReversed&gt;
+  &lt;StandardDepreciationValue&gt;72.0300000000&lt;/StandardDepreciationValue&gt;
+  &lt;IASRevaluationValue&gt;0.0000000000&lt;/IASRevaluationValue&gt;
+  &lt;InfoReverseDeprDiffs&gt;0.0000000000&lt;/InfoReverseDeprDiffs&gt;
+  &lt;InformativeDepreciationValue&gt;-72.0300000000&lt;/InformativeDepreciationValue&gt;
+  &lt;KostosEx&gt;0.0000000000&lt;/KostosEx&gt;
+  &lt;AdditionalDepreciationValue&gt;0.0000000000&lt;/AdditionalDepreciationValue&gt;
+  &lt;IdlenessDepreciationValue&gt;0.0000000000&lt;/IdlenessDepreciationValue&gt;
+  &lt;AlternativeDepreciationValue&gt;31.2500000000&lt;/AlternativeDepreciationValue&gt;
+&lt;/depr&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>033b3e22-bd3b-4c5a-b172-5be65b01a0cb</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>59</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΓΠΛ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΛ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6b550568-dff9-4e95-9eee-a3c514828216</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΓΠΤ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΤ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2f776d69-b5b5-4e7f-892e-80a4751525a5</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>65</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΑΤΔ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΑΤΔ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0aab6ad2-6263-48d2-a4dd-f7e43cf4805c</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΓΔΤ 1/1</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΓΔΤ";fADDocumentSeriesGID="TC0007";ADRegistrationdate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bdd76877-7c18-4823-8fd3-54b73e511a9b</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item FA TC0009-0013</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0009-0013";Quantity="2";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>651c829e-54e0-4ba6-85df-cff5d63ca493</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>be71a99a-23db-4463-96a2-6fa4dd2fb96a</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΓΔΤ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΔΤ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>eab764c3-baa5-4307-b9d2-c929dec16f3d</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/3 - 31/3</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/3";toDate="31/3";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4992ea68-baa4-4d0b-a2d5-e28394801364</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/4 -3 0/4</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/4";toDate="30/4";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f0ec8664-0d6d-49ff-a9c5-3c7445f7e625</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/5 - 31/5</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/5";toDate="31/5";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3675043e-dea7-488c-ab14-da67746a0ac1</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/6 - 30/6</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/6";toDate="30/6";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00f326bd-2d2b-4434-8729-91307037ba4c</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/7 - 31/7</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/7";toDate="31/7";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>279b4cb6-edba-435a-9ccf-a3212b40c6c4</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>45</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/8 - 31/8</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/8";toDate="31/8";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c4f3f951-a6b7-4d95-bdf2-88dfa0608859</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/9 - 30/9</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/9";toDate="30/9";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>68f0c018-0f06-4f22-8f76-cec05f9e7566</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>47</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/10 - 31/10</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/10";toDate="31/10";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bd13d583-7461-4a0d-b54b-48d342fa4f26</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/11 - 30/11</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/11";toDate="30/11";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>073d9db8-0ea5-466e-ae3c-b8a06bb6b9e5</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>49</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/12 - 31/12</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/12";toDate="31/12";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d3aa8dd4-7ecc-44ee-b79c-c3a8bf278b49</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>50</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/1/2013 - 31/12/2013</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/1/2013";toDate="31/12/2013";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5d9cc475-ff56-4690-85ee-e299fe6ce1e9</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>51</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/1/2014 - 31/12/2014</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/1/2014";toDate="31/12/2014";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7c221343-e8ea-485b-b3f8-97e49ed0d6fc</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>60</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΓΠΞ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΞ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>35cf5fb6-e3fa-438b-a193-476af21fbc3e</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select depr1</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="depr";sqlBody="select 
+year(p.BeginDate) Year, 
+month(p.BeginDate) Month, 
+p.Type, 
+isnull(sum(v.ESFIItemPeriodics_DebitQty),0) AS DebitQty,
+isnull(sum(v.ESFIItemPeriodics_CreditQty),0) AS CreditQty,
+isnull(sum(v.ESFIItemPeriodics_AcquisitionCost),0) AcquisitionCost, 
+isnull(sum(v.ESFIItemPeriodics_StdDepreciationValueReversed),0) StdDepreciationValueReversed, 
+isnull(sum(v.ESFIItemPeriodics_StandardDepreciationValue),0) StandardDepreciationValue, 
+isnull(sum(v.ESFIItemPeriodics_IASRevaluationValue),0) IASRevaluationValue, 
+isnull(sum(v.ESFIItemPeriodics_InfoReverseDeprDiffs),0) InfoReverseDeprDiffs, 
+isnull(sum(v.ESFIItemPeriodics_InformativeDepreciationValue),0) InformativeDepreciationValue, 
+isnull(sum(v.ESFIItemPeriodics_CostOfGoodsSold + v.ESFIItemPeriodics_CostOfGoodsOtherwiseDispensed + v.ESFIItemPeriodics_CostOfGoodsSelfDispensed + v.ESFIItemPeriodics_CostOfGoodsConsumed),0) AS KostosEx,
+isnull(sum(v.ESFIItemPeriodics_AdditionalDepreciationValue),0) AS AdditionalDepreciationValue,
+isnull(sum(v.ESFIItemPeriodics_IdlenessDepreciationValue),0) AS IdlenessDepreciationValue,
+isnull(sum(v.ESFIItemPeriodics_AlternativeDepreciationValue),0) AS AlternativeDepreciationValue,
+isnull(sum(v.ESFIItemPeriodics_AltReverseDeprDiffs),0) AS AltReverseDeprDiffs
+from ESFIItemEntry_ESFIItemPeriodics v
+left join ESGOFiscalPeriod p on v.fFiscalPeriodGID = p.GID
+where 
+v.fDepreciationItemGID = @vDepr1
+group by year(p.BeginDate), month(p.BeginDate), p.Type";sqlParameterNames="vDepr1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>51c7b7c1-108a-4183-9f5e-41569fd89053</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDepr1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fDepreciationItemGID";variableName="vDepr1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8c731956-700f-4ce2-a9bf-b3ce755c811d</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>52</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/1/2015 - 31/12/2015</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/1/2015";toDate="31/12/2015";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>748182af-ad22-4885-88a9-b819cffa964a</GID>
+    <fTestCaseGID>74b4cb89-27e9-4746-baf9-46d50a7e97ce</fTestCaseGID>
+    <SeqNum>53</SeqNum>
+    <Name>Calculate Depreciations</Name>
+    <Description>Calculate Depreciations 1/1/2016 - 31/12/2016</Description>
+    <fActionGID>24102c3b-1fd2-4af3-942d-46690b40d2e0</fActionGID>
+    <Params>itemCodes="TC0009-0013";fromDate="1/1/2016";toDate="31/12/2016";official="1";alternative="1";informative="1";sponsorship="0";recalculate="2";isBudgetary="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

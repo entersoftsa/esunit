@@ -1,0 +1,238 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>88ebe607-7e82-47e1-a0b4-85ba9e050787</GID>
+    <Name>TC0007-3002-1</Name>
+    <Description>Πελάτης με Εμπορικούς όρους με διαφορ.δ/νση παράδοσης ανα υποκ.εταιρείας - Ελεγχος προτεινόμενης δ/νσης τιμολόγησεις - Αλλαγή Σειράς</Description>
+  </TestCases>
+  <Actions>
+    <GID>a273a4dc-94b9-47c8-906d-45a374f0b8c6</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bbfedf46-a08f-4624-8356-99d588121e32</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ series TC0007-1</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007-1";fCustomerGID="TC0007-3002";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e228aab3-71bb-49e0-bd87-c7f9109d4450</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESGOSites_TradeAccountSite.Code = 1</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="1";tableName="FK_ESFIDocumentTrade_ESGOSites_TradeAccountSite";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5e34165b-d268-4442-94c7-9f4a1e59f99f</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value fADDocumentSeriesGID =  TC0007-3</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fADDocumentSeriesGID";columnValue="TC0007-3";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>61934754-35e6-4a92-a3da-b6c843c0aab5</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESGOSites_DeliverySite.Code = 1</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="1";tableName="FK_ESFIDocumentTrade_ESGOSites_DeliverySite";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9d81791b-6057-48a1-ba92-6fb008d383df</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESFISalesPerson.Code = TC0007-3001</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="TC0007-3001";tableName="FK_ESFIDocumentTrade_ESFISalesPerson";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3fda008e-29c5-4bff-9802-7acec365e5ea</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESGOPerson_ESFIDocumentTrade_Transporter.Name = TC0007-3001</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Name";columnValue="TC0007-3001";tableName="FK_ESGOPerson_ESFIDocumentTrade_Transporter";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>232c2bb1-7b35-49d0-b95d-9090533bb367</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fShippingMethodCode";columnValue="TC0007-3001"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fShippingMethodCode";columnValue="TC0007-3001";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fcec553c-5475-47c5-b134-c38722ba667e</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fRouteCode";columnValue="TC0007-3001"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fRouteCode";columnValue="TC0007-3001";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c1dd044e-4a93-4bdb-8862-39fc60f81e7a</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fDeliveryTermsCode";columnValue="TC0007-3001"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fDeliveryTermsCode";columnValue="TC0007-3001";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>667b4adb-39db-46b6-b2e4-d0ba3c1e5a9d</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESGOSites_TradeAccountSite.Code = 3</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="3";tableName="FK_ESFIDocumentTrade_ESGOSites_TradeAccountSite";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ae56a390-881d-4c27-8419-253e8bdb1f23</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESGOSites_DeliverySite.Code = 3</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="3";tableName="FK_ESFIDocumentTrade_ESGOSites_DeliverySite";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>170ea3ec-1e27-4a42-a496-12c6434ba7c2</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESFIDocumentTrade_ESFISalesPerson.Code = TC0007-3003</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="TC0007-3003";tableName="FK_ESFIDocumentTrade_ESFISalesPerson";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>961d8ac9-ac02-4a70-9f15-7ae3ea20bfe0</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check Column Value FK_ESGOPerson_ESFIDocumentTrade_Transporter.Name = TC0007-3003</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Name";columnValue="TC0007-3003";tableName="FK_ESGOPerson_ESFIDocumentTrade_Transporter";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7e768b9d-7b7d-49ef-9924-d9b126bf23a4</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fShippingMethodCode";columnValue="TC0007-3003"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fShippingMethodCode";columnValue="TC0007-3003";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ba4b78f6-1c5f-4bd1-a28e-6e51450860b6</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fRouteCode";columnValue="TC0007-3003"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fRouteCode";columnValue="TC0007-3003";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>79ca72ad-2741-471d-b77e-9674df681dda</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fDeliveryTermsCode";columnValue="TC0007-3003"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fDeliveryTermsCode";columnValue="TC0007-3003";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3eb13358-acc2-4a2e-9322-c09f2a85c427</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vSourceDoc</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vSourceDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>92c188be-d9e4-447c-ac68-5f027b4f4218</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2c5c3c25-e186-43df-acfa-8d60232a71c0</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1ac1e1df-5bd4-4dda-b1c3-4c66a96be11a</GID>
+    <fTestCaseGID>88ebe607-7e82-47e1-a0b4-85ba9e050787</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vSourceDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

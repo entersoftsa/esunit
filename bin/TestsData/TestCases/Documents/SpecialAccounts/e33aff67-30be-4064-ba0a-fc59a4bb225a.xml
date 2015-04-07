@@ -1,0 +1,178 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>e33aff67-30be-4064-ba0a-fc59a4bb225a</GID>
+    <Name>TC0007-0010-04</Name>
+    <Description>Έλεγχος Ειδικών λογαριασμών - Μη Επιλέξιμοι Ειδικοί Λογαριασμοί</Description>
+  </TestCases>
+  <Actions>
+    <GID>b7e19333-c52d-4d9f-a670-84a2dc96cc93</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48a6653a-d782-4717-8609-9374293d4a3b</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0010"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e3319acc-107e-41a2-b698-dc3da7bf34bd</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0010</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0010";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d89f2474-cf1a-46e8-9733-32bb23503368</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8fb3d0b8-ade9-46dc-9d94-06a5024fb99d</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc38a189-cac1-4b2a-832a-5d61c566e3a3</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00036</Name>
+    <Description>Add Line Special Account</Description>
+    <fActionGID>017d2298-7b3c-49a7-ba26-7675740f388c</fActionGID>
+    <Params>fSpecialAccountGID="TC0007-0010-01";Percentage="";CurrencyValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b70968fd-2e7d-4176-8931-6fc39a7e46cb</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action Selectable = 1</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update asp set asp.Selectable = 1 from ESFIDocumentTypeAcceptableSpecialAccount asp inner join ESFISpecialAccount sp on asp.fSpecialAccountGID = sp.GID inner join ESFIDocumentType t on asp.fDocumentTypeGID = t.GID where t.Code = 'ΤΔΑ' and t.fCompanyCode = '001' and sp.Code like 'TC0007-0010%'";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>460fa9c7-de97-4ef2-a1b1-47b8eace08a9</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4b3e1866-6a37-43ad-8edf-9a305864177c</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00036</Name>
+    <Description>Add Line Special Account</Description>
+    <fActionGID>017d2298-7b3c-49a7-ba26-7675740f388c</fActionGID>
+    <Params>fSpecialAccountGID="TC0007-0010-02";Percentage="";CurrencyValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>879e9919-15cf-4098-b7fb-9be4a615074e</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action Selectable = 0</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update asp set asp.Selectable = 0 from ESFIDocumentTypeAcceptableSpecialAccount asp inner join ESFISpecialAccount sp on asp.fSpecialAccountGID = sp.GID inner join ESFIDocumentType t on asp.fDocumentTypeGID = t.GID where t.Code = 'ΤΔΑ' and t.fCompanyCode = '001' and sp.Code like 'TC0007-0010%'";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00e77704-0abe-4bb4-b2b6-d20cb1428d94</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>de9308e3-25c7-4b57-a6a0-bae0172eb9db</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d5ac0e63-6f71-4062-b016-2435db2d752b</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Quantity = 2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f53f8b03-3172-4f66-8371-70378163c854</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>304e1efa-c2c6-4787-90b5-f20597cc395b</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>35ab734c-8244-4051-b4bc-a359285c1d2c</GID>
+    <fTestCaseGID>e33aff67-30be-4064-ba0a-fc59a4bb225a</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+  </Actions>
+</NewDataSet>

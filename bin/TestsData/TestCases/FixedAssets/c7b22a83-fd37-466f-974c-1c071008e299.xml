@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>c7b22a83-fd37-466f-974c-1c071008e299</GID>
+    <Name>TC0009-1100</Name>
+    <Description>-------------- set ParamID 'InformativeCostChangesToAlternativeDepreciations'  TRUE ---------------------------------------------------------------------</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>3cab0f19-2cd7-4c39-a2e8-d87e7f90b378</GID>
+    <fTestCaseGID>c7b22a83-fd37-466f-974c-1c071008e299</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>34219f0b-22f4-4d43-b8f0-d7be178b69d0</GID>
+    <fTestCaseGID>c7b22a83-fd37-466f-974c-1c071008e299</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action  (delete param  'InformativeCostChangesToAlternativeDepreciations')</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vdel";sqlBody="delete ES00Params where ParamID = 'InformativeCostChangesToAlternativeDepreciations' and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9a8af5f3-38c8-41e0-83b4-24bd2a5b5de4</GID>
+    <fTestCaseGID>c7b22a83-fd37-466f-974c-1c071008e299</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Reset all caches</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e91eacf3-ea40-4bea-b7bb-c490fd71e720</GID>
+    <fTestCaseGID>c7b22a83-fd37-466f-974c-1c071008e299</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action  (set param  'InformativeCostChangesToAlternativeDepreciations' = TRUE)</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vINS";sqlBody="insert ES00Params values (NEWID(), 'InformativeCostChangesToAlternativeDepreciations', 1, ##(ESCOMPANY))";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

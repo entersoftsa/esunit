@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>f2197e91-f79c-44bf-8766-bcb299631628</GID>
+    <Name>TC0007-0021-99</Name>
+    <Description>Invalid States - delete invalid state </Description>
+    <Comment>IMP-07932</Comment>
+  </TestCases>
+  <Actions>
+    <GID>3a18ce56-8239-4d75-958c-e9f95606501f</GID>
+    <fTestCaseGID>f2197e91-f79c-44bf-8766-bcb299631628</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Reset all caches</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>071556ac-f6ba-4819-986d-aa7fa253ab0f</GID>
+    <fTestCaseGID>f2197e91-f79c-44bf-8766-bcb299631628</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action update ESFIDocumentType set InvalidStates = NULL</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vErr";sqlBody="update ESFIDocumentType set InvalidStates = NULL where InternationalID = 'ES.12000.01' and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+  </Actions>
+</NewDataSet>

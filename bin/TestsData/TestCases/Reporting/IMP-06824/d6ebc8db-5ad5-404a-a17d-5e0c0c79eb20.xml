@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>d6ebc8db-5ad5-404a-a17d-5e0c0c79eb20</GID>
+    <Name>00081</Name>
+    <Description>Ημερολόγια Πληρωτέων ανά ημέρα (ESFITradeAccount\Creditors\TACreJournalPerDay)</Description>
+    <Comment>IMP-06824</Comment>
+  </TestCases>
+  <Actions>
+    <GID>c4afa739-7881-4d8f-b45d-4a2d4914861d</GID>
+    <fTestCaseGID>d6ebc8db-5ad5-404a-a17d-5e0c0c79eb20</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="esmaster";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5730b14c-066b-46e9-a89c-846b9e559be5</GID>
+    <fTestCaseGID>d6ebc8db-5ad5-404a-a17d-5e0c0c79eb20</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT with default Params</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$|ESFITradeAccount\Creditors\TACreJournalPerDay"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6041e01f-fd5d-4a10-b552-39f84fc22c6c</GID>
+    <fTestCaseGID>d6ebc8db-5ad5-404a-a17d-5e0c0c79eb20</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT group by categories BU, BA, Dim1, Dim2</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;16&lt;/DefValue&gt;&lt;DefValue&gt;12&lt;/DefValue&gt;&lt;DefValue&gt;17&lt;/DefValue&gt;&lt;DefValue&gt;13&lt;/DefValue&gt;&lt;DefValue&gt;18&lt;/DefValue&gt;&lt;DefValue&gt;14&lt;/DefValue&gt;&lt;DefValue&gt;19&lt;/DefValue&gt;&lt;DefValue&gt;15&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFITradeAccount\Creditors\TACreBalanceTurnoverAnalysis"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

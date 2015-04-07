@@ -1,0 +1,304 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</GID>
+    <Name>TC0012-2100-03</Name>
+    <Description>Φορολογικές διαφορές από Παραστατικό Παγίων - Εισαγωγή Παραστατικού ΓΠΕ- Λογιστικοποίηση - Έλεγχος άρθρων  </Description>
+    <Comment>IMP-06373</Comment>
+  </TestCases>
+  <Actions>
+    <GID>d4203bef-e40b-43d1-9dfa-5464d48d4a6e</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>80393163-3bb7-4dce-b784-128e44efe6ee</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΑΤΔ </Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0012";fCustomerGID="";fSupplierGID="";fDebtorGID="";fCreditorGID="TC0012"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1ffc740a-109c-4053-be68-f238cd22ae5a</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap SourceDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="SourceDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>75eea2dc-b33f-44a1-9234-00ce43752c10</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0012-0010 (Χωρίς διαφορές)</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0012-0010";CurrencyNetValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1b125119-947b-4e13-97e9-83c6f22ce5fe</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0012-0011 (με διαφορές από πάγιο)</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0012-0011";CurrencyNetValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>972d0675-3ea8-49f3-9525-cf64942694aa</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΑΤΔ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9c4a85de-30a3-4405-9ad5-96ca826316ad</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document ΑΤΔ To State 2 (Λογιστικοποιημένο)</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="SourceDoc1";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>057c8697-0d84-4e42-b2fc-d850ff395ee9</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar AccDocDiff</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="AccDocDiff";sqlBody="Select GID from ESGLAccountingDocument Where fDocumentGID = @vDeprDocGID and ChartOfAccounts=2";sqlParameterNames="vDeprDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f14a6215-da28-44d2-90c4-ce7b410c96b7</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document AccDocNormal</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="AccDocNormal"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>67d62baa-4ffa-48da-a98b-b77658eb0d42</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check columnName="TotalValue";columnValue="40"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TotalValue";columnValue="40";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9df4cba9-0cff-4bed-9f0b-b7cbd4b126c1</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document AccDocDiff</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="AccDocDiff"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fd48ae66-e9e0-4017-b0c8-ca68c8388d01</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check columnName="TotalValue";columnValue="12"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="TotalValue";columnValue="12";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3dbc950f-d1f5-4545-b0ed-19e2ba448e26</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00018</Name>
+    <Description>Execute SQL Select LedgerEntriesNormal</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="LedgerEntries";sqlBody="Select ac.Code, en.Debit, en.Credit from ESGLLedgerEntry en inner join ESGLAccount ac on en.fAccountGID = ac.GID where fAccountingDocumentGID = @AccDocNormal order by ac.Code";sqlParameterNames="AccDocNormal"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>888e2401-60cf-40f2-9bcf-96a950043196</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00044</Name>
+    <Description>Check DataSet Column Values LedgerEntriesNormal</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;14.99.00.0000&lt;/Code&gt;
+&lt;Debit&gt;0&lt;/Debit&gt;
+&lt;Credit&gt;40&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;57.99.99.0000&lt;/Code&gt;
+&lt;Debit&gt;40&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;/NewDataSet&gt;"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ffc2a351-1ecf-4c34-9e19-3a29b50275ce</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00018</Name>
+    <Description>Execute SQL Select LedgerEntriesDiff</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="LedgerEntries";sqlBody="Select ac.Code, en.Debit, en.Credit from ESGLLedgerEntry en inner join ESGLAccount ac on en.fAccountGID = ac.GID where fAccountingDocumentGID = @AccDocDiff order by ac.Code";sqlParameterNames="AccDocDiff"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2cfca8f5-8eaf-4a25-b5e1-7c5aa2626187</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00044</Name>
+    <Description>Check DataSet Column Values LedgerEntriesDiff</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;04.06.18.0010&lt;/Code&gt;
+&lt;Debit&gt;12&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;08.06.00.0000&lt;/Code&gt;
+&lt;Debit&gt;0&lt;/Debit&gt;
+&lt;Credit&gt;12&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;/NewDataSet&gt;"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>abc6f032-bd14-4582-a753-ebdd067b3ff0</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar AccDocNormal</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="AccDocNormal";sqlBody="Select GID from ESGLAccountingDocument Where fDocumentGID = @vDeprDocGID and ChartOfAccounts=0";sqlParameterNames="vDeprDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c8cee0a-b055-4138-97eb-8f92eba366db</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State 2 (Λογιστικοποιημένο)</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDeprDocGID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>645196dd-c75c-4de6-a8a1-790ac1d0b2e2</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΓΠΕ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΓΠΕ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e5a15a93-1e64-4883-98c7-2cd33af9b181</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00043</Name>
+    <Description>Delete Documentsof Document Type ΑΤΔ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΑΤΔ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>da1f3d10-3fae-4a72-9f9b-6a3aabdb6080</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00022</Name>
+    <Description>Create New Adjustment Document ΓΠΕ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΓΠΕ";fADDocumentSeriesGID="TC0012";fAccountGID="";fCustomerGID="";fSupplierGID="";fDebtorGID="";fCreditorGID="";fAccountSiteGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a35e7e6c-203e-451b-b094-8b0b652e0cc8</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0012-0010 (Χωρίς διαφορές)</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0012-0010";CurrencyNetValue="20"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9b80816b-a16b-4885-b19c-0a1c9a2b6ce1</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0012-0011 (με διαφορές από πάγιο)</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0012-0011";CurrencyNetValue="20"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a9b846f8-e27a-478c-95c1-41c8b009265d</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document </Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4af2e93f-ffb7-43d0-8844-36eefc439e58</GID>
+    <fTestCaseGID>978cd06c-5dd2-4fa4-a5bb-39a25be2f731</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vDeprDocGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDeprDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

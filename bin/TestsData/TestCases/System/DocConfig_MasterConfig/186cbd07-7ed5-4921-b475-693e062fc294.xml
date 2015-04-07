@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>186cbd07-7ed5-4921-b475-693e062fc294</GID>
+    <Name>TC0000-1001</Name>
+    <Description>MasterConfig - Έλεγχος Κανόνων μεταβάσεων χωρίς υπαρκτό source ή target Τύπο παραστατικού</Description>
+    <Comment>BUG-09829</Comment>
+  </TestCases>
+  <Actions>
+    <GID>d8e34cf9-4ea3-49dc-b436-38a00851fbf2</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>06582931-086c-4c02-a205-378d5fcd46f5</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar Check Null SourceDocumentType</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="NullSourceDocType";sqlBody="select isnull(count(1),0) from ESFIDocumentTransition where (fSourceDocumentTypeGID is null) ";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5e72ef53-cee0-47e3-972f-ad6f51702685</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value NullSourceDocType &lt;&gt;0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="NullSourceDocType";variableValue="0";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>03fac154-a99b-4ef4-ab8b-fcea83317d06</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar Check Null TargetDocumentType and TransitionType in (0,3,4)</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="NullTargetDocType";sqlBody="select isnull(count(1),0) from ESFIDocumentTransition tr 
+where (TransitionType in (0,3,4)) and (fTargetDocumentTypeGID is null) ";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e31d661d-a919-4868-bde1-b418b3fd92de</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value NullTargetDocType &lt;&gt;0  </Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="NullTargetDocType";variableValue="0";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9117b142-630d-468b-a2d1-73247cd73efb</GID>
+    <fTestCaseGID>186cbd07-7ed5-4921-b475-693e062fc294</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00006</Name>
+    <Description>Logoff</Description>
+    <fActionGID>d9558e6a-8364-474c-8c90-527180821879</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

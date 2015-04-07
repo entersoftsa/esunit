@@ -1,0 +1,146 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>c8376d7d-325e-49e2-a153-1d36d1d3f330</GID>
+    <Name>TC0010-1006-6</Name>
+    <Description>eInvoicing: Print and send email from TradeDeliveryData (Ranking SalesPerson)  </Description>
+  </TestCases>
+  <Actions>
+    <GID>dcbccc5a-a267-4baf-a6ac-26e2e3a3b8c7</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f19c074f-833a-4267-92bf-5ddff1f82fe6</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-1006";fCustomerGID="TC0010-1006";fSupplierGID="";fDebtorGID="";fCreditorGID="";fADBusinessUnitCode="TC0010-0002"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4e58403e-9f5f-4309-b9df-4af227d2247d</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-1000</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-1000";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e9895a34-81af-40a2-bf51-05628d72f5fc</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d7dae6c5-6fdb-4cdb-8b3a-5cb46c6ef52f</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>87ff9ff6-19a5-436c-9b86-1e451806e0ab</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>24e1ac4d-b36f-4159-8376-3c19b43dcef9</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e5eea481-7afc-4e99-a5a1-c010ad800380</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value emailTo</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="emailTo";variableValue="qtest9@entersoft.gr";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>559da8c0-452c-421b-8450-33294cf77d4c</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c6f9f7ca-bea6-4c8b-8561-068fb1b37b47</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value fTradeAccountSiteGID = 1</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountSiteGID";columnValue="";variableName="AccSiteGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ceed105e-50c5-401d-a14f-0b62f0480204</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar SalesPerGID </Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SalesPerGID";sqlBody="select GID from ESFISalesPerson where Code = 'TC0010-1006-1' and fcompanycode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>da01e797-fd3e-4840-9c29-9c51ce4ad530</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar AccSiteGID 4</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="AccSiteGID";sqlBody="select ESGOSites.GID from ESGOSites inner join ESFITradeAccount on esgosites.fPersonCodeGID = ESFITradeAccount.fPersonCodeGID where ESFITradeAccount.Code = 'TC0010-1006' and ESGOSites.Code = '4'";sqlParameterNames=""</Params>
+  </Actions>
+  <Actions>
+    <GID>5355331b-0d14-4b69-9a4f-72258fa931fd</GID>
+    <fTestCaseGID>c8376d7d-325e-49e2-a153-1d36d1d3f330</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value fSalesPersonGID</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fSalesPersonGID";columnValue="";variableName="SalesPerGID"</Params>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,148 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>e0990eff-6bd0-474c-b113-97ac61628dce</GID>
+    <Name>Load ESFICustomer_DEF</Name>
+    <Description>Load ESFICustomer_DEF</Description>
+  </TestCases>
+  <Actions>
+    <GID>2d5759b1-5227-438a-a0f0-ebef534d6923</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00031</Name>
+    <Description>bInvoke Load ESFICustomer_DEF</Description>
+    <fActionGID>db8ac2c4-7858-451a-aec3-7e9cb9c2b760</fActionGID>
+    <Params>formName="ESFICustomer_DEF";entityGID="";variableName="CustGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3b31be86-b116-4e57-8d07-e22b61ba1186</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>32bbdf49-15fb-46b8-a82b-8f1ccde064fd</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>20d8905d-15df-4b66-a81e-988f5d40edae</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00014</Name>
+    <Description>Execute Single Operation</Description>
+    <fActionGID>55be1d94-1870-46ee-8170-2a0241dc813a</fActionGID>
+    <Params>resultVariableName="dt";variable1Name="t2";operator="-";variable2Name="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00b8b061-6ac9-4eb8-b909-3615e73484d3</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Expected load time &lt;= 5000 ms</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="dt";variableValue="5000";operator="&lt;="</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>779ce60d-b7d6-4498-a5c4-042034eb9cf9</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00033</Name>
+    <Description>Close Entity Form</Description>
+    <fActionGID>d37b8173-ff20-429c-b7c7-ceacf8ed2d45</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5dfcec85-4367-41f7-ae75-c43d92a24d0b</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar CustGID</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CustGID";sqlBody="select gid from esfitradeaccount where code = 'PERF0001' and fcompanycode = ##(ESCOMPANY) and type=0";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9dcb9d4d-f622-42ad-9c2e-9869b37e0c26</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a51cb8db-88dc-4f27-aa9e-0e596e520548</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t1"</Params>
+  </Actions>
+  <Actions>
+    <GID>cf9e7403-2fcd-4602-9d6d-6d3b9ac7337a</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00031</Name>
+    <Description>bInvoke Load ESFICustomer_DEF</Description>
+    <fActionGID>db8ac2c4-7858-451a-aec3-7e9cb9c2b760</fActionGID>
+    <Params>formName="ESFICustomer_DEF";entityGID="";variableName="CustGID"</Params>
+  </Actions>
+  <Actions>
+    <GID>c19e1a7a-6075-4979-a57f-bbbb52b6abe3</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t2"</Params>
+  </Actions>
+  <Actions>
+    <GID>421cde50-605e-4cbb-9cf8-b21fffd3765c</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00014</Name>
+    <Description>Execute Single Operation</Description>
+    <fActionGID>55be1d94-1870-46ee-8170-2a0241dc813a</fActionGID>
+    <Params>resultVariableName="dt";variable1Name="t2";operator="-";variable2Name="t1"</Params>
+  </Actions>
+  <Actions>
+    <GID>ac45e34c-e471-4a5e-a205-7eb213e8df4d</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Expected load time &lt;= 1000 ms</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="dt";variableValue="1000";operator="&lt;="</Params>
+  </Actions>
+  <Actions>
+    <GID>553d0156-ea11-44cb-97fd-695f25846f7e</GID>
+    <fTestCaseGID>e0990eff-6bd0-474c-b113-97ac61628dce</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00033</Name>
+    <Description>Close Entity Form</Description>
+    <fActionGID>d37b8173-ff20-429c-b7c7-ceacf8ed2d45</fActionGID>
+  </Actions>
+</NewDataSet>

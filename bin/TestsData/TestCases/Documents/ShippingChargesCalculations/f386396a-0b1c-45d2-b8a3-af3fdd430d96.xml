@@ -1,0 +1,433 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</GID>
+    <Name>TC0007-0100-10</Name>
+    <Description>Έλεγχος Μεταφορικών - Μεταβολή Παραστατικού - Μεταβολές Ποσοτήτων - Ελεγχος Ογκοχρέωσης</Description>
+  </TestCases>
+  <Actions>
+    <GID>c4dd6843-b386-4c0e-b00b-f68859b8474f</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>33a16cbc-0a32-4e88-b197-7cc386b361b7</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>016f8bb9-823e-4790-8dd8-35bf5600ffd5</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a99cb91e-5a24-48ae-a0b1-5cec453958a7</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007-0100-1</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0100-1";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>020a10a7-1ecd-4b8a-b3f7-9e6c30e56731</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFIDocumentTrade</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFIDocumentTrade";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f63d5505-feef-4df7-8bf1-022adb152860</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="fShippingMethodCode";columnValue="TC0007-0100-1"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fShippingMethodCode";columnValue="TC0007-0100-1";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cac7eea9-b3ab-4db8-ab53-bdd20572a6f6</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyTransportCost";columnValue="12"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTransportCost";columnValue="12";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0a67940d-bd29-46c8-9772-2ac4aa3b754b</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6fab9856-aaf8-4290-bebe-d1d900a3388f</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyValue";columnValue="12"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="12";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2ce4713b-aec5-4b78-acc5-6c1ee1b7065a</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="Code";columnValue="TC0007-0100";tableName="FK_ESFILineSpecialAccount_ESFISpecialAccount"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="TC0007-0100";tableName="FK_ESFILineSpecialAccount_ESFISpecialAccount";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1d99339c-2ee3-4afd-afa4-d5c4cbbe8212</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007-0100-2</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0100-2";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4f3fee34-21be-4c25-b1b6-afa88a2ec0bc</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineItem 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48765ae4-63bb-4fbb-9900-a3bb4dda2165</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="Weight";columnValue="2"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Weight";columnValue="2";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7fe858fc-c847-4822-88b5-f224a0376e55</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineItem 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="1";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4f08b275-8122-4a96-8637-a00d48d103e7</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="Weight";columnValue="2"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Weight";columnValue="2";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d66fd5de-e8af-4c15-8145-4da71622411d</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFIDocumentTrade</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFIDocumentTrade";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>38469470-5305-4657-92ce-958a168b9045</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyTransportCost";columnValue="14"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTransportCost";columnValue="14";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c4e14e89-1816-4cda-a971-e6b70b731abe</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a4b199bf-0c71-4e95-b2ab-73a52eae927b</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyValue";columnValue="14"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="14";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f337a87e-0718-4d9b-ad51-b6d948cbbe87</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineItem 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0098a955-f6e1-4961-9603-c76e7bcb5b1a</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="Volume";columnValue="3"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Volume";columnValue="3";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b5d70508-e094-4a3b-b5e8-0e183a14071b</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineItem 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="1";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c85f0a2c-eb31-4105-85cd-9067399d9906</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFIDocumentTrade</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFIDocumentTrade";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6a335977-ae05-42ae-b275-5892bb05c19b</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyTransportCost";columnValue="16"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTransportCost";columnValue="16";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2d4b7ff9-a129-40c1-9460-3cfa3bba1bef</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>05978154-0a89-46aa-b38f-2e06f0e59a9f</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyValue";columnValue="16"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="16";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>64b376f0-f6d3-4d74-b593-392a22023658</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="Volume";columnValue="3"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Volume";columnValue="3";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6335f3f9-d944-4249-b18d-576399c4fee7</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>96eef06e-0f7e-417c-8540-65a4ee53d8cf</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineItem 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="1";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>43670c02-e173-4dc1-99fb-fb162430ced5</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFIDocumentTrade</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFIDocumentTrade";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b21d742a-7614-43c6-b567-8e8f2b72051a</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyTransportCost";columnValue="12"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTransportCost";columnValue="12";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>88e8b801-d4da-4dc3-908a-be6fb1f16898</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>11b9ce6b-675a-43e7-82dd-b867f4eaebb5</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="CurrencyValue";columnValue="12"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="12";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>65e472ad-1b83-4188-ab29-9de2077df180</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>Delete Row</Name>
+    <Description>Delete Row</Description>
+    <fActionGID>34f0c06c-d0e9-4f9e-95b8-c1e0db197382</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4949d52d-0654-425f-a002-00cf78cd50ad</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document vDoc1</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3a045352-16c0-48dd-8de3-d075a7f9888d</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Load Document</Name>
+    <Description>Load Document vDoc1 ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3e51d540-3663-4327-8948-d9ec0c04e371</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fc2d092f-67e3-4af6-bfb5-083de69ace6d</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row tableName="ESFILineLiquidityAccount";position="0"</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineLiquidityAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2f0f7115-e3c0-4826-b4e5-1986e0022076</GID>
+    <fTestCaseGID>f386396a-0b1c-45d2-b8a3-af3fdd430d96</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>Delete Row</Name>
+    <Description>Delete Row</Description>
+    <fActionGID>34f0c06c-d0e9-4f9e-95b8-c1e0db197382</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

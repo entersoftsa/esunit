@@ -1,0 +1,154 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>78920bb6-344d-4f45-82c4-5cf2947ae100</GID>
+    <Name>TC0001-0101 err</Name>
+    <Description>Μεταβάσεις - Απαγόρευση αλλαγής αξίας σε Source Παραστατικό ΜΕ σχέδιο ενημέρωσης με κλεισμένη ποσότητα </Description>
+    <Comment>Βγαίνει σφάλμα διότι ο έλεγχος αλλαγής της source γραμμής έχει υλοποιηθεί στο UI
+Κανόνας Μετάβασης : 151. ΠΑΡ=&gt;ΠΔΣ
+Πελάτης : TC0001
+Είδος : TC0001
+Παραστατικά : ΠΑΡ, ΠΔΣ με σειρές TC0001</Comment>
+  </TestCases>
+  <Actions>
+    <GID>70993447-2a41-4eb6-b520-bde82015fe89</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΠΑΡ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΠΑΡ";fADDocumentSeriesGID="TC0001";fCustomerGID="TC0001"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ae1c2712-49cb-46d7-971f-8c51a1e046ee</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Stock Line Item TC0001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0001";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4e11c3f7-3ff0-4001-9a11-f4425994f85d</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap ΠΑΡ fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f01be02-8343-430d-a41b-6a9d9d517616</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceLineItemGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2ae8986a-941d-494d-8f17-c5c9c2596599</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="TC0001-0100";pwdID="TC0001-0100";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>41a10c1a-6429-4c6a-b71d-9f1870c8bd3c</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document </Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5c47b6b5-ee77-4d4d-84b1-2228528b5e64</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00011</Name>
+    <Description>Transit Document 151. ΠΑΡ=&gt;ΠΔΣ</Description>
+    <fActionGID>5cae5eed-9d3c-499c-89f5-4214974ccc2a</fActionGID>
+    <Params>variableName="fSourceDocumentGID";transitionCode="151. ΠΑΡ=&gt;ΠΔΣ";variableNameOfTargetDocument="fTargetDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>11624cb8-24c3-4b7f-8866-8b2015947c59</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Source ΠΑΡ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e23934f1-2e7d-4bc3-9b3f-ef7f5b78d6b3</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row SourceLineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="";variableName="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2da1654d-dfd5-4123-8160-5d4091034687</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value set Price = 200</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Price";columnValue="200"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0187129c-2439-45f9-917f-378650ccbf39</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΠΑΡ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ad18555c-b0da-42a3-8771-19c39157d6ce</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value SourceLineItem ClosedQtyBaseMU</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="ClosedQtyBaseMU";columnValue="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d510f4ee-667c-434b-8288-9aa0f661d3a4</GID>
+    <fTestCaseGID>78920bb6-344d-4f45-82c4-5cf2947ae100</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Price = 100</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

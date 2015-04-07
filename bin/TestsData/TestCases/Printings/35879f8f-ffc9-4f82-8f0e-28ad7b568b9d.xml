@@ -1,0 +1,139 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</GID>
+    <Name>TC0010-1012-3</Name>
+    <Description>eInvoicing: REPRINT send email &amp; print PDF</Description>
+  </TestCases>
+  <Actions>
+    <GID>cc9232a2-95fe-4f4c-b0c6-ca922756ba15</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>75b0f565-61f8-4f47-97cf-608d6b26cbb9</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-1012-3";fCustomerGID="TC0010-1001";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>679690e0-691f-470d-a071-3979c359aef6</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-1000</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-1000";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7f63bc9a-cbe0-40ad-a3d3-98161c58c7eb</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>967c9dde-4aca-4f63-94df-b556ce7084d6</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc4c5900-033d-4a36-bf39-58d683d60d09</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>395164b1-3c56-4b57-8954-dc1573c6514d</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>016366bd-76bd-4fbb-b8aa-79af05e715e2</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value emailTo</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="emailTo";variableValue="qtest1@entersoft.gr";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d08465c5-a041-457e-b30e-09dd73f9fc2b</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>91d15e7b-e1f9-4875-b5a9-33d4f59e04ba</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3802ac3e-11c0-40ec-be5f-6da89095c04f</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a5721830-1f7b-47a3-9d5f-c06cc9809039</GID>
+    <fTestCaseGID>35879f8f-ffc9-4f82-8f0e-28ad7b568b9d</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value emailTo</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="emailTo";variableValue="qtest1@entersoft.gr";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

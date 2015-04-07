@@ -1,0 +1,436 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</GID>
+    <Name>TC0007-0003</Name>
+    <Description>Πράξεις Γραμμής Είδους - Σορτιμέντο με δύο γραμμές υπολογισμός - Διαστασιολόγιο με πολλές γραμμές</Description>
+    <Comment>BUG-07139</Comment>
+  </TestCases>
+  <Actions>
+    <GID>b53af0c8-5fb0-450e-919e-7a05817c73f8</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c7fee0ba-c721-41a1-9aec-89fb2211019c</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>44c0f349-a908-48a3-bc1b-b21e3ecf6f3a</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0003</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0003";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6b80c5b4-ffa0-466f-a560-4690f791f0c1</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4a28b8c4-694b-4915-9453-bb0807db126c</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign fItemMUGID ="TC0007-0003"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fItemMUGID";columnValue="TC0007-0003";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>98dcf5ef-fe0e-47af-9e9a-3342b696abbc</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 1</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="1";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>55a461ea-1063-4a9e-839d-0fbe8ed46892</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 1</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="1";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>db025005-0363-45fa-afa2-6a3e9a5ffd3d</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c3634493-5582-4a80-b703-1b34191d9703</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9abb48fa-2ad6-411b-bc96-7bb4190d1590</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>64715329-c06d-405a-99d1-a2f8830e681e</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document fSourceDocumentGID</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8de45d5b-01db-4659-813c-3dc24288f396</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>516a4125-43de-4d54-a457-ff8c20397857</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value QtyVariable1 = 2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="QtyVariable1";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>11c01090-dd9f-44a8-9701-9a2accbf9fd7</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 40</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="40";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>591e2c0f-a596-4231-a3ba-54fa8f89277e</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 40</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="40";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>12f4d112-764c-46e0-bc57-89e9417b081c</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value QtyVariable1 = 3</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="QtyVariable1";columnValue="3";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5c8433d7-6c17-4c1c-9b82-f736d7d137d9</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 60</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="60";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a9909a84-2110-48ed-945d-89ccaaaaee38</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 60</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="60";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e4f50069-451c-4600-a5f9-9ed7afd5dd83</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'BL' and fSizeCode = '35'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>68d1074b-e095-493e-91c5-85e18c4556ff</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8cf4c2cc-25e5-4164-bd6e-e1535d7bfcd9</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2a2a08c5-3b6a-47b5-be76-310466693186</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'GR' and fSizeCode = '36'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>54fd6b36-fbeb-4b86-9d44-f79322490326</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>186acdae-9893-44df-933b-d291a0fcbc9c</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c6fb37ba-6eaf-4de0-951d-94ddb593a12d</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f13af4c0-8c5c-4f16-8e8c-e691bd40dca6</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'BL' and fSizeCode = '35'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>eb87bed8-89ba-48f1-b185-adee8220092e</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'GR' and fSizeCode = '36'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>95496e52-5c36-4065-bb8c-cc104572eba3</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5aa5cabe-cd86-49da-b26d-5000d747dd45</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7804e0b5-694e-42d0-9f4c-5c1da030c276</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0f734355-4242-497e-ada3-1437606f92a9</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>54848109-6d1d-4a8d-aa02-27bd7a21370b</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'BL' and fSizeCode = '35'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c2aa097-672b-48bd-adde-0b6fa995aa05</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a4e46949-744e-4723-be65-a2f99a6100eb</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>adbad556-7ccb-43a2-b2cf-147683add1be</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESMMLineItemAnalysis 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESMMLineItemAnalysis";position="";variableName="";parentRelation="";childRelation="";filterExpression="fColorCode = 'GR' and fSizeCode = '36'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>958da849-11f3-4360-87f6-8e8c630f0362</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Quantity = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Quantity";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7775e860-7316-4c5d-8d34-a45a9b53a428</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column QtyBaseMU = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="QtyBaseMU";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c34b4351-74e2-4fa8-aa84-44a2b5e0bc92</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cb6c2efa-cdff-4213-8578-84141da942d1</GID>
+    <fTestCaseGID>6689a5e7-7319-4bc9-8e88-efe1647a0e12</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,534 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>84500c0b-06f4-41c9-8ac0-ff0a15556719</GID>
+    <Name>TC0004-0006 err</Name>
+    <Description>Αντιστοιχήσεις - Σενάριο ΑΤΔ=&gt;ΑΠΜ=&gt;ΕΦΠ έλεγχος ανοίγματος ΑΤΔ μετά την ακύρωση </Description>
+    <Comment>BUG-09969
+1) Πλέον το ΕΦΕ/ΕΦΠ δεν δημιουργεί καμία κίνηση (ούτε αντιστοίχησης)
+2) Στη γραμμή αξιογράφου του ΕΦΕ/ΕΦΠ 
+    - στο πεδίο fCancelledLineNoteGID κρατάμε την γραμμή αξιογράφου του ΑΕΠ που ακυρώνεται 
+    - και στο πεδίο CancelledLineNoteMatchingSign την φορά που είχε η γραμμή πριν ακυρωθεί
+3) Στη γραμμή αξιογράφου του ΑΕΠ/ΑΠΜ
+    - η γραμμή χαρακτηρίζεται ακυρωμένη isCancelled = 1
+    - και η φορά αντιστοίχηση CancelledLineNoteMatchingSign = 2
+4) Στις κινήσεις του ΑΕΠ/ΑΠΜ
+    - και στις δύο κινήσεις (με και χωρίς αξιόγραφο) η φορά αντιστοίχησης MatchingSign γίνεται 2
+    - στην κίνηση με αξιόγραφο γίνεται ανάθεση στον Χρηματικό λογ/σμό ο Αυτόματης Πρόβλεψης
+5) Επίσης διαγράφεται η αντιστοίχηση μεταξύ open (ΤΔΑ/ΑΤΔ) και close (ΑΕΠ/ΑΠΜ) παραστατικού (παίρνοντας πίσω τις ενημερώσεις που είχε κάνει)
+
+Επίσης όταν διαγράφεται ΕΦΕ/ΕΦΠ:
+Γινεται restore o χρηματικός λογ/σμός της κίνησης με αξιόγραφο, με τον χρηματικό λογ/σμό της γραμμής.</Comment>
+  </TestCases>
+  <Actions>
+    <GID>a6fef1e8-0d63-44bc-ae9a-abf55e91397a</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΑΤΔ 1/1</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0004";fSupplierGID="TC0004-0006";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81a57540-589b-45b4-bec3-869bcea5de10</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Stock Item TC0004</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0004";Quantity="1";TotalValue="200"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2b642a7b-d57b-433d-b995-45259913f08c</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fOpenDocument1GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fOpenDocument1GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4b2fdcbb-87f4-4c07-82ba-e4d0ed43d98c</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>33fdf65d-761f-4e12-88fa-391b143c1158</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8910a066-287c-43ee-937b-6e98255ca065</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00020</Name>
+    <Description>Insert New ΑΠΜ 1/2</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΠΜ";fADDocumentSeriesGID="TC0004";fSupplierGID="TC0004-0006";ADRegistrationDate="1/2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>11273923-297d-47c7-8a81-c9b87bd2c12d</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d0131ddb-d04e-48ca-81aa-367c38c75015</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fCloseDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b466cd91-c188-4888-a21d-96d3f9e21c03</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - CountMatching</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountMatching";sqlBody="select count(1) from ESFILiquidityAccountEntryMatching lem inner join ESFILiquidityAccountEntry en on lem.fCloseEntryGID = en.GID where en.fDocumentGID = @fCloseDocumentGID";sqlParameterNames="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8fa6cf3d-de29-46d4-980b-9df37ca945a6</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable CountMatching = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountMatching";variableValue="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00c26ca0-87e7-45a2-a307-2559d96ef6e4</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Add Document Note</Name>
+    <Description>Add Document Note TC0004-0006</Description>
+    <fActionGID>181f3981-d9a7-4e45-a1ab-a6e7c1fc477d</fActionGID>
+    <Params>Code="TC0004-0006";fNoteTypeCode="ΕΠ.ΠΛΗΡΩΤΕΑ";ReferenceNumber="TC0004-0006";IssueDate="1/2";DueDate="31/3";CurrencyValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81d82ff0-3d59-477c-a82e-5525424756ad</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00020</Name>
+    <Description>Insert New EΦΠ 1/3</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΕΦΠ";fADDocumentSeriesGID="TC0004";fSupplierGID="TC0004-0006";ADRegistrationDate="1/3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>714c1fce-7bf3-4535-a2c4-2f97962e5927</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Add Line Note</Name>
+    <Description>Add Line Note TC0004-0006</Description>
+    <fActionGID>d3edb7bf-c462-4b86-ae6f-bc74692f9c75</fActionGID>
+    <Params>fNoteGID="TC0004-0006";noteGIDVariableName="";CurrencyValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bf3f1bf1-f866-4a0b-b9e7-9cabb89b51a4</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1e63faca-80a3-4a54-8a44-9d849ceb212a</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΤΔ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;200&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;200&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ed102cfe-879b-42c7-9447-8b8839ece03d</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics";sqlBody="select c.code liqcode, left(p.DocumentCode,3) doccode, isnull(n.Code,'') notecode, p.MatchingSign, p.CurrencyValue, p.CurrencyClosedAmount, ESFILiquidityAccountPeriodics_ForecastedInflows forecastedinflows, ESFILiquidityAccountPeriodics_ForecastedOutflows forecastedoutflows
+from ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics p 
+inner join ESFICashAccount c on p.fLiquidityAccountGID = c.GID
+left join ESFINote n on p.fNoteGID = n.GID
+where p.fCompanyCode = ##(ESCOMPANY)
+order by p.ValeurDate, p.MatchingSign desc, c.Code, ISNULL(n.Code,'')";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e7ae8719-c226-42af-84df-ccb359a5cc8e</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics";sqlBody="select c.code liqcode, left(p.DocumentCode,3) doccode, isnull(n.Code,'') notecode, p.MatchingSign, p.CurrencyValue, p.CurrencyClosedAmount, ESFILiquidityAccountPeriodics_ForecastedInflows forecastedinflows, ESFILiquidityAccountPeriodics_ForecastedOutflows forecastedoutflows
+from ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics p 
+inner join ESFICashAccount c on p.fLiquidityAccountGID = c.GID
+left join ESFINote n on p.fNoteGID = n.GID
+where p.fCompanyCode = ##(ESCOMPANY)
+order by p.ValeurDate, p.MatchingSign desc, c.Code, ISNULL(n.Code,'')";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8a3b658d-ceee-4af2-9f26-fc8ed2529330</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΤΔ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;200&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;100&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;200&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;1&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;100&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;-100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΤΑΜΕΙΟ-1&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;TC0004-0006&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dfc5507d-fa61-4c47-8f46-4b74bb25d5fe</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics";sqlBody="select c.code liqcode, left(p.DocumentCode,3) doccode, isnull(n.Code,'') notecode, p.MatchingSign, p.CurrencyValue, p.CurrencyClosedAmount, ESFILiquidityAccountPeriodics_ForecastedInflows forecastedinflows, ESFILiquidityAccountPeriodics_ForecastedOutflows forecastedoutflows
+from ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics p 
+inner join ESFICashAccount c on p.fLiquidityAccountGID = c.GID
+left join ESFINote n on p.fNoteGID = n.GID
+where p.fCompanyCode = ##(ESCOMPANY)
+order by p.ValeurDate, p.MatchingSign desc, c.Code, ISNULL(n.Code,'')";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>609ffa94-eef9-49c8-9bb0-847a441bdd4f</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΤΔ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;200&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;200&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;2&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;-100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;TC0004-0006&lt;/notecode&gt;
+&lt;MatchingSign&gt;2&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>400c60cf-b31f-433c-949d-7807ab4a11ab</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fCloseDocument2GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fCloseDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8cc8878c-3cd0-4ce5-b436-77f28b326ca7</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - CountMatching </Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountMatching";sqlBody="select count(1) from ESFILiquidityAccountEntryMatching lem inner join ESFILiquidityAccountEntry en on lem.fCloseEntryGID = en.GID where en.fDocumentGID = @fCloseDocumentGID or  en.fDocumentGID = @fCloseDocument2GID";sqlParameterNames="fCloseDocumentGID,fCloseDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3602fcb2-0f96-476c-ab6b-ce2eaff42096</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable CountMatching = 0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountMatching";variableValue="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>359cf11b-6818-4e6d-97b7-e53d0097cdce</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΕΦΠ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΕΦΠ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>72d4fd4d-ffa5-43db-8f68-d0d48d635940</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>71</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΑΠΜ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΑΠΜ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bcabee80-7ab0-43f9-a3ad-c7768fd9c702</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>78</SeqNum>
+    <Name>Delete Documents of Document Type</Name>
+    <Description>Delete Documents of Document Type ΑΤΔ</Description>
+    <fActionGID>9cd18435-33b2-450b-a614-f32c9bac53be</fActionGID>
+    <Params>documentTypeCode="ΑΤΔ";fromDate="";toDate=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0a9bfed1-ad04-41f5-bb53-e8243f12aaaa</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics";sqlBody="select c.code liqcode, left(p.DocumentCode,3) doccode, isnull(n.Code,'') notecode, p.MatchingSign, p.CurrencyValue, p.CurrencyClosedAmount, ESFILiquidityAccountPeriodics_ForecastedInflows forecastedinflows, ESFILiquidityAccountPeriodics_ForecastedOutflows forecastedoutflows
+from ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics p 
+inner join ESFICashAccount c on p.fLiquidityAccountGID = c.GID
+left join ESFINote n on p.fNoteGID = n.GID
+where p.fCompanyCode = ##(ESCOMPANY)
+order by p.ValeurDate, p.MatchingSign desc, c.Code, ISNULL(n.Code,'')";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1b267c3c-73c8-42f7-8c55-71043dfac026</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - CountMatching </Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountMatching";sqlBody="select count(1) from ESFILiquidityAccountEntryMatching lem inner join ESFILiquidityAccountEntry en on lem.fCloseEntryGID = en.GID where en.fDocumentGID = @fCloseDocumentGID or  en.fDocumentGID = @fCloseDocument2GID";sqlParameterNames="fCloseDocumentGID,fCloseDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>32b9b92b-10c1-43f7-b136-0fae427ec4dd</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>70</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable CountMatching = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountMatching";variableValue="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dd0c04ae-b21f-4825-aed4-a868d4f4ac33</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>72</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics";sqlBody="select c.code liqcode, left(p.DocumentCode,3) doccode, isnull(n.Code,'') notecode, p.MatchingSign, p.CurrencyValue, p.CurrencyClosedAmount, ESFILiquidityAccountPeriodics_ForecastedInflows forecastedinflows, ESFILiquidityAccountPeriodics_ForecastedOutflows forecastedoutflows
+from ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics p 
+inner join ESFICashAccount c on p.fLiquidityAccountGID = c.GID
+left join ESFINote n on p.fNoteGID = n.GID
+where p.fCompanyCode = ##(ESCOMPANY)
+order by p.ValeurDate, p.MatchingSign desc, c.Code, ISNULL(n.Code,'')";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b984c06b-be16-47f7-81b7-eea2848c6a8b</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>76</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - CountMatching </Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountMatching";sqlBody="select count(1) from ESFILiquidityAccountEntryMatching lem inner join ESFILiquidityAccountEntry en on lem.fCloseEntryGID = en.GID where en.fDocumentGID = @fCloseDocumentGID or  en.fDocumentGID = @fCloseDocument2GID";sqlParameterNames="fCloseDocumentGID,fCloseDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>baa9e73b-1d4f-401a-9422-ba5d2972ab73</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>77</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable CountMatching = 0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountMatching";variableValue="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c8e5aa7a-f6cd-4526-a3b9-1731ed52bc8f</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΤΔ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;200&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;100&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;200&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;1&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;100&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;-100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΤΑΜΕΙΟ-1&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΠΜ&lt;/doccode&gt;
+&lt;notecode&gt;TC0004-0006&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;100&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;100&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>75624d53-d2b5-4d0d-99a7-0b24751e868e</GID>
+    <fTestCaseGID>84500c0b-06f4-41c9-8ac0-ff0a15556719</fTestCaseGID>
+    <SeqNum>73</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;liqcode&gt;ΠΡ-000&lt;/liqcode&gt;
+&lt;doccode&gt;ΑΤΔ&lt;/doccode&gt;
+&lt;notecode&gt;&lt;/notecode&gt;
+&lt;MatchingSign&gt;0&lt;/MatchingSign&gt;
+&lt;CurrencyValue&gt;200&lt;/CurrencyValue&gt;
+&lt;CurrencyClosedAmount&gt;0&lt;/CurrencyClosedAmount&gt;
+&lt;forecastedinflows&gt;0&lt;/forecastedinflows&gt;
+&lt;forecastedoutflows&gt;200&lt;/forecastedoutflows&gt;
+&lt;/ESFILiquidityAccountEntry_ESFILiquidityAccountPeriodics&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

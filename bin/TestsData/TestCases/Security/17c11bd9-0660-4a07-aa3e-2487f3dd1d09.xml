@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</GID>
+    <Name>SI000002</Name>
+    <Description>Άνοιγμα flag MISClosed σε κλειστή χρήση</Description>
+    <Comment>BUG-09752</Comment>
+  </TestCases>
+  <Actions>
+    <GID>9293e2e6-d206-490e-b6b8-052deec83e3e</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="SI000002";pwdID="SI000002";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2b4562f9-de1e-4256-8609-3bcc3947feae</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity ESGOCompany</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESGOCompany";keyVariableName="vCompany"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>69922ebd-3d86-48bf-9b2f-b01e24faad99</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vCompany";sqlBody="select gid from esgocompany where code = '001'";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2d7dc513-2cee-4257-8211-20f1b375d15d</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row ESGOFiscalYear 2010</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGOFiscalYear";position="";variableName="";parentRelation="";childRelation="";filterExpression="GID = 'B73EFD8C-31DF-4A73-8B2E-A98C6E76459D'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cfb9b0e6-7ad3-4ce7-beaf-aefccb3b9ab2</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row FK_ESGOFiscalPeriod_ESGOFiscalYear 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="";position="0";variableName="";parentRelation="";childRelation="FK_ESGOFiscalPeriod_ESGOFiscalYear";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>59284953-bc5c-434d-b0c2-3d8805d4ec18</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="MISClosed";columnValue="1"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="MISClosed";columnValue="1";tableName="";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1e2ae72c-040e-4c58-afd2-36ca4a8ff7b2</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="MISClosed";columnValue="0"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="MISClosed";columnValue="0";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4b1619f6-c5cf-4ec1-843c-eaa00f555f50</GID>
+    <fTestCaseGID>17c11bd9-0660-4a07-aa3e-2487f3dd1d09</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

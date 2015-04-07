@@ -1,0 +1,190 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>ab4119e4-b181-42fd-8b79-8b4311796b85</GID>
+    <Name>TC00040-00003</Name>
+    <Description>Ελεγχος αλλαγής χαρακτηρισμού κινημένου είδους από Παραγόμενο</Description>
+    <Comment>IMP-06791</Comment>
+  </TestCases>
+  <Actions>
+    <GID>72755314-fa18-425b-a1cf-8ca4b3b31131</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>122cff19-120a-4109-85fd-093e64397c66</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>49e40ef8-4d94-4304-b301-c123aa79ff30</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d5b43c54-8abf-4c7b-861a-be34e1b97e03</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0040-0003";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fc2c0df1-d8dc-495c-9a15-c74e9999ccd4</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>76b7cd2b-4c20-4905-bc09-4c7116e88e0c</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vItem</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fItemGID";variableName="vItem"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8e65b59b-83d9-4634-8997-4cc2e330d403</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESMMStockItem";keyVariableName="vItem"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3ab10090-f83c-4e25-ad3f-2b67dbe19e0f</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="AssemblyType";columnValue="0"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AssemblyType";columnValue="0";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>aff42d60-7d7b-4782-9724-5e1837995281</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>44a79e45-1bb7-45c6-b782-5f1a5769ce4a</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESMMStockItem";keyVariableName="vItem"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>14a846e5-6e14-461f-9c66-dec68599570b</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="AssemblyType";columnValue="1"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AssemblyType";columnValue="1";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0b181770-94e8-461e-b390-b2aeed105f16</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5a3010a2-7e4d-432b-82f5-f2d9be7b92a7</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESMMStockItem";keyVariableName="vItem"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>399b0ab2-1631-461d-a106-4320f019f6e3</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="AssemblyType";columnValue="2"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AssemblyType";columnValue="2";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cd3225d4-0699-4fa8-bf8a-ac07e2755c83</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>deb9d01a-04b1-4f30-a510-59d9d75c5d20</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0f701112-860b-465e-9e8b-930960d915d0</GID>
+    <fTestCaseGID>ab4119e4-b181-42fd-8b79-8b4311796b85</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Η τιμή του πεδίου [Τύπος σύνθεσης] δεν μπορεί να αλλάξει από/σε [Σετ], καθώς βρέθηκαν κινήσεις με αναφορά στο Είδος."</Params>
+  </Actions>
+</NewDataSet>

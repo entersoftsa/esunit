@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</GID>
+    <Name>TC0007-0021-03</Name>
+    <Description>Invalid States - New document Trade state 1 &amp; move to state 0</Description>
+    <Comment>IMP-07932</Comment>
+  </TestCases>
+  <Actions>
+    <GID>2482565b-779f-46f6-b499-52579aa9d873</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a85ac227-17dc-43a4-b390-6f8a28600e69</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0dc0d5eb-f643-46e8-bd08-34257d888da9</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4d7cd2d6-ee9f-4575-983a-fdb50f42b513</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9bb710ed-dec2-4f06-989d-bfedb951fe5b</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac3a8818-cb89-4369-ba0f-08fc2db6f1e3</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d470da93-fea6-4873-803b-06f7d4b7a5c5</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Move Document To State</Name>
+    <Description>Move Document To State 0</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc1";toState="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>02e51980-bd20-4741-a17a-5bed10ddf291</GID>
+    <fTestCaseGID>2a65f0ff-7a41-46e8-a833-a206fa61c47c</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="σε κατάσταση 'Προσωρινό' έχει οριστεί ως μη επιτρεπτή"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

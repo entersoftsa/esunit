@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</GID>
+    <Name>TC0000-1002</Name>
+    <Description>DocConfig - Έλεγχος σχεδίων ανάθεσης ΧΩΡΙΣ γραμμές ή με ΜΗ συστημικές γραμμες</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>ee6aa085-3255-4881-9ffb-7b92989cf3f8</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48c91225-b31e-4b53-a5dc-eb65a82af603</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar Check Null vLines</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vLines";sqlBody="select isnull(COUNT(1),0)
+from ESFIFillerProfile fp
+left join  ESFIFillerProfileAssignment fa on fa.fFillerProfileGID = fp.GID
+left join ESFIDocumentUpdateProfileLine dl on dl.fFillerProfileGID = fp.GID
+	left join ESFIDocumentUpdateProfile du on dl.fDocumentUpdateProfileGID = du.GID
+where 
+(fp.ESSystem = 1 and fa.gid is NULL and not dl.GID is null)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>72a02264-6bfe-4292-8aac-fedfe1b5e2fb</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value vLines = 0 (Σχέδια ανάθεσης με κενές γραμμές)</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vLines";variableValue="0";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c22eeb2-bf5f-487c-aca8-644a6922baea</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00006</Name>
+    <Description>Logoff</Description>
+    <fActionGID>d9558e6a-8364-474c-8c90-527180821879</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bf381845-6854-4936-86fa-73f70a6a9117</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar Check NON System vLines</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vLines";sqlBody="select isnull(COUNT(1),0)
+from ESFIFillerProfile fp
+left join  ESFIFillerProfileAssignment fa on fa.fFillerProfileGID = fp.GID
+left join ESFIDocumentUpdateProfileLine dl on dl.fFillerProfileGID = fp.GID
+	left join ESFIDocumentUpdateProfile du on dl.fDocumentUpdateProfileGID = du.GID
+where 
+(fp.ESSystem = 1 and not fa.gid is null and fa.ESSystem = 0 and not dl.GID is null)";sqlParameterNames=""</Params>
+  </Actions>
+  <Actions>
+    <GID>3448ddad-3190-4b10-b5c0-cd1a6695b148</GID>
+    <fTestCaseGID>a4322ee0-ac8f-40ca-8d98-e0287a142c51</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value vLines = 0 (Σχέδια ανάθεσης με ΜΗ συστημικές γραμμές)</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vLines";variableValue="0";operator=""</Params>
+  </Actions>
+</NewDataSet>

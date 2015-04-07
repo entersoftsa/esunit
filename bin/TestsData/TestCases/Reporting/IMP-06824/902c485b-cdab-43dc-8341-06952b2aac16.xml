@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>902c485b-cdab-43dc-8341-06952b2aac16</GID>
+    <Name>00042</Name>
+    <Description>Ισοζύγιο εισπρακτέων (ESFITradeAccount\Debtors\TADebBalanceDet)</Description>
+    <Comment>IMP-06824</Comment>
+  </TestCases>
+  <Actions>
+    <GID>859f45dc-8ce7-41e5-9e30-1bb2c8e64bb4</GID>
+    <fTestCaseGID>902c485b-cdab-43dc-8341-06952b2aac16</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="esmaster";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>20ab1b4a-3cc1-4658-b4f7-44ea9842cdaf</GID>
+    <fTestCaseGID>902c485b-cdab-43dc-8341-06952b2aac16</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT  with default Params</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$|ESFITradeAccount\Debtors\TADebBalanceDet"</Params>
+  </Actions>
+  <Actions>
+    <GID>e550d215-a4ed-46b5-a0aa-aa1af7d7e8e3</GID>
+    <fTestCaseGID>902c485b-cdab-43dc-8341-06952b2aac16</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT  group by categories BU, BA, Dim1, Dim2</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;12&lt;/DefValue&gt;&lt;DefValue&gt;13&lt;/DefValue&gt;&lt;DefValue&gt;14&lt;/DefValue&gt;&lt;DefValue&gt;15&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFITradeAccount\Debtors\TADebBalanceDet"</Params>
+  </Actions>
+</NewDataSet>

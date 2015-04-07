@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>a7ad69c8-d701-467b-b14a-d98ee01efc65</GID>
+    <Name>TC0050-0006</Name>
+    <Description>Credit Control - Ελεγχος Μέγιστου ποσού συναλλαγής</Description>
+  </TestCases>
+  <Actions>
+    <GID>6302f537-3f72-4a8b-aa9f-876226a0781a</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>144f0f87-c8f2-4900-a430-f7816ceb42f0</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2d716232-55db-4c1f-a761-c265e0bc7dca</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ 1/1</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0050-0002";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>76230a8b-1a57-419b-bfd9-2404a96fed05</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item 1230</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="1000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac544059-df89-4cec-a058-e68139f49d3e</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vCCP</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vCCP";sqlBody="select GID from ESFICreditControlProfile where code = 'TC0050-0006' and fCompanyCode = ##(ESCompany)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6799315d-fb04-4139-a23e-82a215b7f59c</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action Assign CCP</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vUpd";sqlBody="update ESFITradeAccount set fCreditControlProfileGID = @vCCP where Code = 'TC0050-0002' and Type = 0 and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames="vCCP"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d3d6302b-761c-4372-9a06-0505431779b3</GID>
+    <fTestCaseGID>a7ad69c8-d701-467b-b14a-d98ee01efc65</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Το ποσό συναλλαγής του παραστατικού υπερβαίνει το όριο που έχει καθοριστεί για τον συν/νο κατά: 230,00"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

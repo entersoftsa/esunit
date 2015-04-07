@@ -1,0 +1,267 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>0b6f60eb-7800-434c-872e-7927caa4c221</GID>
+    <Name>TC0004-0001</Name>
+    <Description>Αντιστοιχήσεις - Έλεγχος αντιστοίχησης close item με 0 Αξία</Description>
+    <Comment>Customer : TC0004
+StockItem : TC0004
+DocumentTypes : ΤΔΑ, ΑΕΠ  with DocumentSeries : TC0004</Comment>
+  </TestCases>
+  <Actions>
+    <GID>84c3bb49-0659-4b7a-bc27-005ae8a16cec</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>25f6ab39-d626-4e76-8e3f-d3c9317b5566</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Stock Item TC0004</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0004";Quantity="1";TotalValue="100"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>b528f4e4-edde-40a5-9f8a-e4aa3246cb5b</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fOpenDocument1GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fOpenDocument1GID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>8316b4cf-b43f-4eb3-a50d-6590577f1d4a</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>d234b030-b582-4df2-846f-7df09c769dcd</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>1fb7660c-7494-4c49-a437-5af99bf4a269</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>47</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - select fullfilled from ESFILiquidityAccountEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="FullFilled";sqlBody="select fullfilled from ESFILiquidityAccountEntry where fDocumentGID = @fCloseDocumentGID";sqlParameterNames="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>2484fcb1-fbf9-4b05-af61-345ded6f4105</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable FullFilled = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="FullFilled";variableValue="1"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>92152c0b-5803-49d0-a55a-2547f7e82ea9</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00020</Name>
+    <Description>Insert New ΑΕΠ</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΠ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>99679010-41a2-42a6-8f3b-89f95dfc5cf7</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00019</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="10"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>57c77d73-c304-4ac3-88dd-6fe950db71bc</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>470f94e7-c1db-4e56-b0f6-2f1e8611927a</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fCloseDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>7df09719-3371-4281-ba05-cf5c43b57cbf</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - select fullfilled from ESFILiquidityAccountEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="FullFilled";sqlBody="select isnull(fullfilled,0) from ESFILiquidityAccountEntry where fDocumentGID=@fCloseDocumentGID";sqlParameterNames="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>e8f52891-ec7e-452b-9dc7-f4dfaf325446</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable FullFilled = 0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="FullFilled";variableValue="0"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>ae75952e-86fe-47d7-8fab-a1b474f86efd</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΑΕΠ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>1717db24-671a-4ead-a113-fabebe115efb</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineLiquidityAccount 0 </Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineLiquidityAccount";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>dad444af-de1e-4eae-809a-7d11d4f00dc6</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Currency Value 0 </Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="0";variableName=""</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>46549a0e-a462-415d-9a90-e402c2f8437e</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>418b7f31-c5e8-4ae3-a266-c8a4a2a8646c</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>49</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>b6d70805-3e48-46d4-a1f5-808bf3486e54</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>51</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Stock Item TC0004</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0004";Quantity="1";TotalValue="100"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>083ad60d-2333-4bb1-a62c-678d7f37699e</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>52</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>7870b64d-db4e-476d-aa1e-b85c6a654d6d</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>53</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - CountMatching</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountMatching";sqlBody="select count(1) from ESFILiquidityAccountEntryMatching lem inner join ESFILiquidityAccountEntry en on lem.fCloseEntryGID = en.GID where en.fDocumentGID = @fCloseDocumentGID";sqlParameterNames="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>1ec3838b-4a6b-4933-be03-8089f5a36ca6</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>54</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable CountMatching = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountMatching";variableValue="1"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>6dd79023-d04b-476a-aefd-c63d7e7dde22</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>50</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fOpenDocument2GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fOpenDocument2GID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>09bb0c4e-e895-439a-a14e-6c262be4fd97</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>59</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fCloseDocumentGID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fCloseDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>aea9d0d1-0d1a-4c9f-b7b3-472e48f84d01</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>55</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fOpenDocument1GID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fOpenDocument1GID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>7666212b-8b20-4092-a439-9759e6a971ee</GID>
+    <fTestCaseGID>0b6f60eb-7800-434c-872e-7927caa4c221</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fOpenDocument2GID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fOpenDocument2GID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+</NewDataSet>

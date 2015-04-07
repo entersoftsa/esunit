@@ -1,0 +1,139 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</GID>
+    <Name>TC0007-0012-01 </Name>
+    <Description>Συμπλήρωση Γραμμής Είδους - Μηδενισμός Αξία κόστους από ΑΧ που ΔΕΝ αποτιμάται - Εισαγωγή παραστατικού</Description>
+    <Comment>IMP-05076</Comment>
+  </TestCases>
+  <Actions>
+    <GID>ed82db52-1493-4bc7-9f21-c23183651abf</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d0cfc25f-5c64-4ba5-8a68-913de19c1c30</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΑΤΔ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="TC0007";fSupplierGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>70806b9e-0670-447d-8a60-4d8aac4b062d</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0012</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0012";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ecc7776f-2d38-40f8-8a96-8a08aa886f3d</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocument1GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocument1GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac8010e9-ed23-4951-8ec6-4f466fa003ac</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1a37bc8a-93b8-4f54-9ba3-0c05c8896c04</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007-0012-02";fCustomerGID="TC0007";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>82da503f-1ad2-43ba-9562-89ad5ef29f9e</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0012</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0012";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>83e9b54f-4529-4d90-ad36-48da2e5088a1</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value CostValue = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CostValue";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c9375764-05c9-4dcb-a082-dc36b54f32c2</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocument2GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0fdf15ff-7dbf-4a23-864a-b85494cf1247</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0ba27f7a-7fe0-459a-9394-3527f731ac86</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocument2GID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocument2GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1011f084-1a7c-4424-b844-2b39a8c349f6</GID>
+    <fTestCaseGID>10dff7ca-cab7-4d88-8bac-6530d8ab7fae</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocument1GID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocument1GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

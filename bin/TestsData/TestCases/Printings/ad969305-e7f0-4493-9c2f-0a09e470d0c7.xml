@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</GID>
+    <Name>TC0010-0006-2</Name>
+    <Description>Check Tax Signature - Document checks before printing</Description>
+    <Comment>IMP-08320</Comment>
+  </TestCases>
+  <Actions>
+    <GID>087fb9cb-badd-4f33-9c64-64bf952c2f1c</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc39b9c9-9346-4143-a73d-4f34fb0a5528</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-0100";fCustomerGID="TC0010-0100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9801b636-c76c-4b38-b666-a0cb4c4c0d26</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0006</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0006";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>26d83e90-95e6-4ab9-b39a-83ddc2bbf6ab</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>adb608ac-87f5-40e8-9b4d-b9ae66ef39c2</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac81de4d-b3d7-4021-bc2e-d21c0c0aedce</GID>
+    <fTestCaseGID>ad969305-e7f0-4493-9c2f-0a09e470d0c7</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="[Εγγραφή [Γραμμή είδους- ]
+	Πεδίο [Κατ.ΦΠΑ] : [Δεν έχει δηλωθεί επίσημος κωδικός στην κατηγορία ΦΠΑ TC0010-0006 που είναι απαραίτητος όταν στην σειρά παρ/κού έχει προσδιοριστεί φορολογικό παρ/κό και τύπος διάταξης σήμανσης"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

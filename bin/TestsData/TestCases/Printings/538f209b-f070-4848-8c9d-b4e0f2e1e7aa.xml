@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</GID>
+    <Name>TC0010-0006-1 err</Name>
+    <Description>Check Tax Signature - Document checks before printing - Don't check series without signature</Description>
+    <Comment>IMP-08320</Comment>
+  </TestCases>
+  <Actions>
+    <GID>2b530574-cb9b-43f4-8f73-22cdfdc53944</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9af559f6-f9b8-4247-a9a1-27d41211e38d</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-0006";fCustomerGID="TC0010-0100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d7017ab3-b40e-4467-ac21-1e7a9e69e92c</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-0006</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-0006";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>afaaec21-6e47-4eda-b6bf-50abd48466c6</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ed9f3a57-bfa7-4f24-9dac-0c5527105630</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0e97832c-bedb-446b-ae91-800daf18424f</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Load Document</Name>
+    <Description>Load Document ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6016c322-8fe3-48e4-94be-6e8d7d550c37</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Print Document</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="";emailToVariableName="";emailCCVariableName="";emailSubjectVariableName="";emailBodyVariableName="";printerNameForReprint=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>23de7301-aa4d-4f61-adad-53da355e1d48</GID>
+    <fTestCaseGID>538f209b-f070-4848-8c9d-b4e0f2e1e7aa</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

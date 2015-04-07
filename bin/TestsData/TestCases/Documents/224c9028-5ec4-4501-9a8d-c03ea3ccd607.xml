@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</GID>
+    <Name>TC0007-0021-00</Name>
+    <Description>Invalid States - set invalid state 0 </Description>
+    <Comment>IMP-07932</Comment>
+  </TestCases>
+  <Actions>
+    <GID>7f72c10e-4cf3-4391-b951-6576f1bf9213</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity ESFIDocumentType</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESFIDocumentType";keyVariableName="vType"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>be595070-dbd5-4797-a9f5-6213f0e43202</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vType</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vType";sqlBody="select GID from ESFIDocumentType where InternationalID = 'ES.12000.01' and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1e6aa653-3a91-427e-a89f-1d1c738db61b</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value InvalidState = 0</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="InvalidStates";columnValue="0";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c5d949b5-f6c1-4983-b804-a219866b7622</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>83943cdc-a0fe-429c-9206-1ea0c4c407f4</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Reset all caches</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>05068d6c-0135-404a-b040-270a92f74c89</GID>
+    <fTestCaseGID>224c9028-5ec4-4501-9a8d-c03ea3ccd607</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action update set InvalidStates = 0 </Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vErr";sqlBody="update ESFIDocumentType set InvalidStates = 0 where InternationalID in ('ES.12000.01','ES.42000.02','ES.21000.01','ES.32000.01') and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+  </Actions>
+</NewDataSet>

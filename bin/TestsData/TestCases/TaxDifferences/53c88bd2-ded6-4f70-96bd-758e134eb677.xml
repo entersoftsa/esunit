@@ -1,0 +1,452 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>53c88bd2-ded6-4f70-96bd-758e134eb677</GID>
+    <Name>TC0012-0002</Name>
+    <Description>Φορολογικές διαφορές από Λογιστικά Άρθρα - Απαγορεύεται η μεταβολή ή διαγραφή source άρθρου/γραμμής που έχει γεννήσει διαφορές</Description>
+    <Comment>IMP-06378</Comment>
+  </TestCases>
+  <Actions>
+    <GID>fbbcf6b9-b48f-4afb-affd-4b64b46d3072</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>366189f8-c7de-442e-b9be-4e1de40cb26e</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00047</Name>
+    <Description>Add Ledger Entry 62.02.00.0023  100Χ</Description>
+    <fActionGID>743c30c6-452d-4b3e-8586-0f17bd797dd5</fActionGID>
+    <Params>fAccountGID="62.02.00.0023";Debit="100";Credit=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>456f2572-dc09-4b77-944f-d24ab0ce78f4</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00047</Name>
+    <Description>Add Ledger Entry 38.00.00.0000 100Π</Description>
+    <fActionGID>743c30c6-452d-4b3e-8586-0f17bd797dd5</fActionGID>
+    <Params>fAccountGID="38.00.00.0000";Debit="";Credit="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cdfad9f3-7db0-47e9-8e1f-a76bd6b6afc1</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00048</Name>
+    <Description>Save Entity ΛΣ</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>113c59d6-0dbb-413a-bc6a-4e098ec9985d</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00046</Name>
+    <Description>Create New Accounting Document ΛΣ</Description>
+    <fActionGID>7fcc300e-3660-4954-86c6-699075594277</fActionGID>
+    <Params>AccDocType="ΛΣ";RegistrationDate="";fJournalGID="";DocumentType="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8adc6432-85ac-4524-860a-835cb9418301</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00045</Name>
+    <Description>Create Tax Differences Entries 1/1 - 31/12</Description>
+    <fActionGID>bd84e87e-c299-42a7-819b-585fdd7fd64a</fActionGID>
+    <Params>beginDate="1/1";endDate="31/12";includeClosing="0";journalCode="01";accountSpecs="";createNewEntries="1";deleteOldEntries="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>abf7dc7d-8ece-45a1-ac05-22afaffbfcd9</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vAccDocGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f0d1f4cf-6e89-476d-9e1a-9ab9c6e33ad8</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ba45dc98-a3e4-4152-b4f1-295c535be066</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Reasoning</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Reasoning";columnValue="TC0012-0001 test";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c8008de6-b0fc-4b5d-a8e7-21faa621329a</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00048</Name>
+    <Description>Save Entity ΛΣ</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b6d97996-7557-4e5a-930f-b200eb3f32c1</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι διαγραφή</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b30d3f2d-1648-4261-88ae-955e457d303b</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>be5aa32e-7aeb-4fd3-a48b-ec1ee2ebfcc3</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00049</Name>
+    <Description>Delete Entity ΛΣ</Description>
+    <fActionGID>85f2a795-53c7-4d52-b551-b6e03d68b516</fActionGID>
+    <Params>entityID="ESGLLedgerEntry";keyVariableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e8dbf3b5-e515-4432-a1b3-c0599976e111</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι Μεταβολή Αιτιολογίας</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Αιτιολογία : Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών]"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7f17af52-9d1c-4f84-b0e8-1c0c91b1abef</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e2a55ede-20d0-46da-98e6-ec22221c605d</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESGLLedgerEntry 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGLLedgerEntry";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>51bccecb-3de1-402d-b3fa-dd0992f6cc42</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Debit = 999</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Debit";columnValue="999";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c1314e1-ecae-402c-861a-b7d25fec0715</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00048</Name>
+    <Description>Save Entity ΛΣ</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>777c624d-564e-4e93-b7e0-6e4dcbe9e967</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESGLLedgerEntry 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGLLedgerEntry";position="1";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81ff467d-9c59-4591-968d-340e40453ecf</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Credit = 999</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Credit";columnValue="999";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b8278e19-87a8-4b5a-8038-e955a9719995</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι Μεταβολή Αξίας Χρέωσης</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Αξία Χρέωσης: Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών]"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ca4a0413-86fd-498e-9e78-238262257a70</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5cce0930-8219-4c25-8375-0d2a79dc1d3c</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESGLLedgerEntry 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGLLedgerEntry";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3c5de0fb-5b26-4d81-91fb-b2c13b29dbfa</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00025</Name>
+    <Description>Delete Row 0</Description>
+    <fActionGID>34f0c06c-d0e9-4f9e-95b8-c1e0db197382</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e729bfe5-c6e4-4cc5-9f54-e4c4a7af9ac4</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι διαγραφή γραμμής που έχει γεννήσει φορολογική διαφορά</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f6edb4d1-066a-4463-8d9d-e3e2fb3f633c</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar vDiffDocGID</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vDiffDocGID";sqlBody="Select GID from ESGLAccountingDocument where fTaxDifferencesLedgerEntryGID = @vAccLineGID";sqlParameterNames="vAccLineGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f0c5258a-d7f6-4e35-ac58-a1bfb3c0e3ee</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vAccLineGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vAccLineGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cafb31dc-8d19-4f83-804a-5fc7f4054124</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>45</SeqNum>
+    <Name>AC-00049</Name>
+    <Description>Delete Entity ΛΣdiff</Description>
+    <fActionGID>85f2a795-53c7-4d52-b551-b6e03d68b516</fActionGID>
+    <Params>entityID="ESGLLedgerEntry";keyVariableName="vDiffDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c4691624-d6a7-46af-86dd-50cf8f832f7c</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>AC-00049</Name>
+    <Description>Delete Entity ΛΣ source</Description>
+    <fActionGID>85f2a795-53c7-4d52-b551-b6e03d68b516</fActionGID>
+    <Params>entityID="ESGLLedgerEntry";keyVariableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bb6bc5d6-84c8-457c-aa94-50fd65cea82c</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a6dbee38-997b-4e5c-8253-955cb8f73cd3</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESGLLedgerEntry 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGLLedgerEntry";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>499b67a3-e664-4279-a6d9-b79a0fa7f406</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Debit = 0</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Debit";columnValue="0";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8f33be63-a843-4f52-8907-1d0ff2412978</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Credit = -100</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Credit";columnValue="-100";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a0da9013-237f-46d9-b204-5e07aa44d29f</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00048</Name>
+    <Description>Save Entity ΛΣ</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d2f34825-e11e-4a75-ac73-28940c24119f</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι Μεταβολή φοράς γραμμής που έχει γεννήσει φορολογική διαφορά</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9499b42f-cc87-4dce-8739-ac0fd071c393</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Check Column Value</Name>
+    <Description>Check columnName="PerCentofTaxExclusion";columnValue="20"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="PerCentofTaxExclusion";columnValue="20";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6cefb99a-fb58-4533-a63f-304a4dc627a1</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>AC-00017</Name>
+    <Description>Load Accounting Document vAccDocGID</Description>
+    <fActionGID>405a0456-8814-48ae-b5ab-4b242e87a74c</fActionGID>
+    <Params>variableName="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4c233f1d-d43e-4d2c-ba59-1a72d8df97e3</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESGLLedgerEntry 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESGLLedgerEntry";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9a27ec2c-351c-4cad-b48c-ab0cb805779d</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value PerCentofTaxExclusion</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="PerCentofTaxExclusion";columnValue="99";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dea97265-cf52-46c1-82fd-d6508b2d0d23</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00048</Name>
+    <Description>Save Entity ΛΣ</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bd7fc693-af4c-4eff-a0ae-0cf15f28f002</GID>
+    <fTestCaseGID>53c88bd2-ded6-4f70-96bd-758e134eb677</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message Όχι Μεταβολή φοράς γραμμής που έχει γεννήσει φορολογική διαφορά</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="% Φορολογικής εξαίρεσης: Αδύνατη η μεταβολή, διότι η εγγραφή έχει ενημερώσει το Ημερολόγιο Φορολογικών Διαφορών"</Params>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,207 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>df497385-0b7d-488b-92eb-d87daec2c3e3</GID>
+    <Name>TC0010-1001</Name>
+    <Description>eInvoicing: Print and send email (Master email)</Description>
+  </TestCases>
+  <Actions>
+    <GID>0e793432-720e-404d-979f-2eea91ba0cb3</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>85d47910-a08a-4218-8447-9686d8d89db9</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0010-1001";fCustomerGID="TC0010-1001";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>93764851-8aa1-4168-8e8c-2c178bbf7751</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0010-1000</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0010-1000";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c8e16e36-0c99-42fd-845d-e00acfee2e8c</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>53c36d1c-0279-4d1e-af1f-45e0ec52ec61</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>406a895f-f08b-4b1b-9f9f-9dda9608c444</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00037</Name>
+    <Description>Print Document</Description>
+    <fActionGID>0f9ef8f2-7382-4a73-9f93-ed532b1955fb</fActionGID>
+    <Params>emailFromVariableName="emailFrom";emailToVariableName="emailTo";emailCCVariableName="emailCC";emailSubjectVariableName="emailSubject";emailBodyVariableName="emailBody"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0b1f9bd6-6819-4579-bd14-6c67239c4c53</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>50175d4c-98b9-4569-8d2e-0a59cc28ef94</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value emailTo</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="emailTo";variableValue="qtest1@entersoft.gr";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ab50532c-1038-43fd-99b9-e6e7a119deb6</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>969b9bff-5037-4433-8a7f-2c4848835c2a</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΔΑ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>792c4072-1ce9-4aef-a37e-46e6de2fd949</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value ADPrinted</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="ADPrinted";columnValue="1";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0b4e5333-4730-42ea-ad5c-3eaee9b7543c</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar pdf</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vDoc";sqlBody="select isnull(count(1),0) from es00documents doc
+inner join ESFIDocumentTrade tr on tr.GID = doc.fGID
+where 
+doc.fGID = @fSourceDocumentGID
+and
+FType = '.pdf' 
+and
+LEFT(doc.Title, LEN(tr.ADCode)) = tr.ADCode";sqlParameterNames="fSourceDocumentGID"</Params>
+  </Actions>
+  <Actions>
+    <GID>5aaeef9b-8513-4987-a410-a9938a2a1e04</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value exist pdf</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vDoc";variableValue="1";operator=""</Params>
+  </Actions>
+  <Actions>
+    <GID>513d7f6c-c76c-4ef8-bd71-84ac78d6ec0d</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar  a.txt</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vDoc";sqlBody="select isnull(count(1),0) from es00documents doc
+inner join ESFIDocumentTrade tr on tr.GID = doc.fGID
+where 
+doc.fGID = @fSourceDocumentGID
+and
+FType = '.txt' 
+and
+LEFT(doc.Title, LEN(tr.ADCode)) = tr.ADCode
+and 
+RIGHT(doc.Title,3) = '_a)'";sqlParameterNames="fSourceDocumentGID"</Params>
+  </Actions>
+  <Actions>
+    <GID>b14e2cbd-8a68-44b4-bb56-a9cfe3ed9f8b</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value exist a.txt</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vDoc";variableValue="1";operator=""</Params>
+  </Actions>
+  <Actions>
+    <GID>7a2a792f-7ceb-4478-8c87-ffedfac2d76d</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar  b.txt</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vDoc";sqlBody="select isnull(count(1),0) from es00documents doc
+inner join ESFIDocumentTrade tr on tr.GID = doc.fGID
+where 
+doc.fGID = @fSourceDocumentGID
+and
+FType = '.txt' 
+and
+LEFT(doc.Title, LEN(tr.ADCode)) = tr.ADCode
+and 
+RIGHT(doc.Title,3) = '_b)'";sqlParameterNames="fSourceDocumentGID"</Params>
+  </Actions>
+  <Actions>
+    <GID>a9e98902-b22d-4642-a1a8-4972255ca3d7</GID>
+    <fTestCaseGID>df497385-0b7d-488b-92eb-d87daec2c3e3</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value exist b.txt</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vDoc";variableValue="1";operator=""</Params>
+  </Actions>
+</NewDataSet>

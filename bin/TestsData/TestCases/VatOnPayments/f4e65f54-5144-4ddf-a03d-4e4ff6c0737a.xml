@@ -1,0 +1,320 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</GID>
+    <Name>TC0004-RO-00001</Name>
+    <Description>Vat on Payments - New flag Payment VAT Required - Liquidity Matchings (FAV-&gt;ICC)</Description>
+    <Comment>IMP-07669</Comment>
+  </TestCases>
+  <Actions>
+    <GID>43b6befe-59b3-4fb8-acad-f1ae6fafa05d</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases_RO";userID="admin";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>332b9c88-6ad0-4569-8df2-4876e5abad34</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create Entity</Name>
+    <Description>Create Entity</Description>
+    <fActionGID>392e7350-ee63-40d1-81c1-b2ae847b2ab6</fActionGID>
+    <Params>entityID="ESGOPerson"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7fc629c9-1c56-4e63-a451-de3a73c563f5</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="Name";columnValue="Test Vat on Payments"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Name";columnValue="Test Vat on Payments";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>38ac4d83-c235-4797-9598-08f1227312e5</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign columnName="PaymentVatRequired";columnValue="1"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="PaymentVatRequired";columnValue="1";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2b74ee3b-bb28-4395-8bf4-af4e5793128a</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vPerson</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vPerson"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a5717401-f178-4fa8-938f-57dd50fd9a32</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>89bbd61f-30c1-459b-81e2-860f1b09a978</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document FAV    (PaymentVatRequired=1)</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="FAV";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004";PaymentVatRequired="1";ADStringField1="FAV1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>51f6affe-099d-4961-91d8-3dd60e7ef705</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0004-0001-1</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0004-0001-1";Quantity="1";Price="1000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>662ce29c-101c-4d9e-ba48-1b1df0e8dc8a</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0004-0001-2</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0004-0001-2";Quantity="1";Price="1000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>265fad3f-487d-4eed-97d3-7991f44f05f5</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c19cfa3-6860-4f40-b3ed-cae58c0f672b</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar ESFITradeAccountEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vPaymentVatRequired";sqlBody="select isnull(PaymentVatRequired,0) from ESFITradeAccountEntry where fDocumentGID = @vOpenDoc";sqlParameterNames="vOpenDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e3cbf486-d55f-4c37-a664-abaf6a4abef8</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vOpenDoc</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vOpenDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6f763bf6-67d7-4498-ad1e-704ef66aca3e</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar ESFIItemEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vPaymentVatRequired";sqlBody="select Count(PaymentVatRequired) from ESFIItemEntry where fDocumentGID = @vOpenDoc and PaymentVatRequired = 1";sqlParameterNames="vOpenDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>849ff7d3-75ac-48a2-a5d4-20437e7bfb5c</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar ESFILiquidityAccountEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vPaymentVatRequired";sqlBody="select PaymentVatRequired from ESFILiquidityAccountEntry where fDocumentGID = @vOpenDoc";sqlParameterNames="vOpenDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>78cf5a9c-8c60-4589-870e-9eefa11ff094</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value PaymentVatRequired = True</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vPaymentVatRequired";variableValue="1";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6411d594-2e6b-4503-9504-6f017f73d631</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value PaymentVatRequired = True</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vPaymentVatRequired";variableValue="2";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>725a90b1-0bba-4488-9985-5d50f07f5baf</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value PaymentVatRequired = True</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vPaymentVatRequired";variableValue="1";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a83a68e8-6827-4ac3-a5c7-ef349f67f011</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Create New Cash Document</Name>
+    <Description>Create New Cash Document ICC (PaymentVatRequired=1)</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ICC";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004";PaymentVatRequired="1";ADStringField1="ICC1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>29cdc852-19d5-451b-9824-1aa71be201f1</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vCloseDoc</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vCloseDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7f60ceb0-e6f0-492d-8b5c-ba419583201b</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>726e0711-770e-4212-8b95-408097e56299</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="CASA-1";CurrencyValue="2480"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5b5300b4-6924-4fc0-81b0-6f41bdfce640</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar ESFILiquidityAccountEntry</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vPaymentVatRequired";sqlBody="select PaymentVatRequired from ESFILiquidityAccountEntry where fDocumentGID = @vCloseDoc";sqlParameterNames="vCloseDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2c043369-b050-4ce5-b71c-62e063232cfe</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value PaymentVatRequired = True</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vPaymentVatRequired";variableValue="1";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>18d55caa-76d8-411c-baf5-c84716841587</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Delete Entity</Name>
+    <Description>Delete Entity</Description>
+    <fActionGID>85f2a795-53c7-4d52-b551-b6e03d68b516</fActionGID>
+    <Params>entityID="ESGOPerson";keyVariableName="vPerson"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2487f555-05f6-41a1-80f1-feceb10c52ef</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Select vMatchDoc</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vMatchDoc";sqlBody="select 
+isnull(od.ADStringField1,'')  from ESFILiquidityAccountEntryMatching lem 
+inner join ESFILiquidityAccountEntry oen on lem.fOpenEntryGID = oen.GID 
+inner join ESFIDocumentDirectory od on oen.fDocumentGID = od.fDocumentGID
+inner join ESFILiquidityAccountEntry cen on lem.fCloseEntryGID = cen.GID 
+inner join ESFIDocumentDirectory cd on cen.fDocumentGID = cd.fDocumentGID
+where cen.fDocumentGID = @vCloseDoc";sqlParameterNames="vCloseDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bb4513c0-8884-4898-89ff-46e6232b8176</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Check Variable Value</Name>
+    <Description>Check Variable Value vMatchDoc = FAV1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="vMatchDoc";variableValue="FAV1";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0a34dcf2-dd59-43db-81c3-a65bf9bcab00</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document ICC</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vCloseDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ec7af013-4df2-4cc0-b35d-9a1013a79794</GID>
+    <fTestCaseGID>f4e65f54-5144-4ddf-a03d-4e4ff6c0737a</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document FAV</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vOpenDoc"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

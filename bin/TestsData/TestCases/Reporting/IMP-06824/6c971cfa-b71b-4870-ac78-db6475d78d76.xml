@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>6c971cfa-b71b-4870-ac78-db6475d78d76</GID>
+    <Name>00012</Name>
+    <Description>Ισοζύγιο Λογιστικής Εταιρειών με καθαρό αποτέλεσμα (ESGLAccount\GLAccBalanceTotal)</Description>
+    <Comment>IMP-06824</Comment>
+  </TestCases>
+  <Actions>
+    <GID>9ed9396c-9301-44cc-ac1c-9720c4a69ed3</GID>
+    <fTestCaseGID>6c971cfa-b71b-4870-ac78-db6475d78d76</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="esmaster";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c8355422-66a7-4a32-94b3-f5563f64cd7c</GID>
+    <fTestCaseGID>6c971cfa-b71b-4870-ac78-db6475d78d76</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT with default Params</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PFISCALYEARCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;Χρήση 2007&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESGLAccount\GLAccBalanceTotal"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e7467afb-dfe7-4270-ab40-71ee266986a0</GID>
+    <fTestCaseGID>6c971cfa-b71b-4870-ac78-db6475d78d76</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT group by categories BU, BA, Dim1, Dim2</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PFISCALYEARCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;Χρήση 2007&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESGLAccount\GLAccBalanceTotal"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

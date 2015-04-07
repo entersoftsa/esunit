@@ -1,0 +1,207 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>47febddc-24b8-4274-8471-15830d20fd9c</GID>
+    <Name>TC0007-0008-07</Name>
+    <Description>Έλεγχος Ειδικών λογαριασμών με ομαδοποίηση - Εξαρτάται από Είδος και Συν/νο - Διαφορετικός Εμπορικός Τομέας ανά γραμμή</Description>
+  </TestCases>
+  <Actions>
+    <GID>6bdf4391-a048-425f-ae96-68fcf6e15a31</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4eee003c-785e-440c-bd8c-6b25a6b36d49</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0008";fCustomerGID="TC0007-0008-02"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>36e74f48-7f9a-49d4-9c0c-244a43dc1d58</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0008-02</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0008-02";Quantity="1";Price="100";fBusinessUnitCode="TC0007-0008-01"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dc9ab28b-99a1-41ed-b723-bd645ac6db3c</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f3754f2c-84f7-4eef-9abc-c3a407a1b5f3</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=10 and fBusinessUnitCode='TC0007-0008-01'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>021dcd9e-98d8-41e4-bc6a-c8e757102ce4</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57119fdd-23b7-43e5-af78-ce3027ff0fb4</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document fSourceDocumentGID1</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>90b70f50-84bc-4ae6-9ed7-44abbd481083</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>917d2741-b322-4938-9fb9-9be0c384de2e</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ab7986cb-1e88-4dc0-89ba-7cde51d7cf72</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=20 and Percentage=10 and fBusinessUnitCode='TC0007-0008-01'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57b865e4-fa83-4d00-b384-59604234c94b</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f2115be-e19a-4d23-847a-3982ce44d8f6</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b030dd3d-e5b2-4724-aed0-8bf46cd0e8d8</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=10 and fBusinessUnitCode='TC0007-0008-02'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5302b34e-9ebc-4699-a4e2-52bbb028c40b</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=10 and fBusinessUnitCode='TC0007-0008-02'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bdd85847-b14e-4880-86b3-6429be9bf17e</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0008-02</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0008-02";Quantity="1";Price="100";fBusinessUnitCode="TC0007-0008-02"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fb595585-74e9-4979-82ce-2c14e6a93f43</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=0 and fBusinessUnitCode='TC0007-0008-01'"</Params>
+  </Actions>
+  <Actions>
+    <GID>c1f8ba7e-a124-4065-b160-cd77efb3b189</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=0 and fBusinessUnitCode='TC0007-0008-02'"</Params>
+  </Actions>
+  <Actions>
+    <GID>62c8fc9c-6c5c-43cf-981a-770d4a2f14b2</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=20 and Percentage=0 and fBusinessUnitCode='TC0007-0008-01'"</Params>
+  </Actions>
+  <Actions>
+    <GID>50ed33ea-1182-484d-a91a-fa1506c45a4f</GID>
+    <fTestCaseGID>47febddc-24b8-4274-8471-15830d20fd9c</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineSpecialAccount</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineSpecialAccount";position="";variableName="";parentRelation="";childRelation="";filterExpression="CurrencyValue=10 and Percentage=0 and fBusinessUnitCode='TC0007-0008-02'"</Params>
+  </Actions>
+</NewDataSet>

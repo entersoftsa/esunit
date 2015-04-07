@@ -1,0 +1,596 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>660bfb32-3bac-4f8b-97b4-824361a806aa</GID>
+    <Name>TC0004-0014</Name>
+    <Description>TC0004-0014</Description>
+  </TestCases>
+  <Actions>
+    <GID>09492c48-c898-4d6f-a3a3-0e648d9d176d</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0c3757e5-6f34-4204-b776-71f06881da64</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΑΕΣ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΣ";fADDocumentSeriesGID="TC0004";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f2de3189-9ffe-4059-b058-4bc9452c8d4d</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Detail</Name>
+    <Description>Add Detail</Description>
+    <fActionGID>5d54d7ad-682d-4616-9f70-573614cb28bb</fActionGID>
+    <Params>relationName="FK_ESFILineTradeAccount_ESFIDocumentAdjustment"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c9040925-2f7d-43d8-b281-f75b2e2e5531</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="LineType";columnValue="20";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>e3564825-ba34-45cf-854b-187ee6eb45c6</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>b9449a44-39c8-4a90-8c42-a4b477769a9d</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vTradeAcc</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vTradeAcc";sqlBody="select top 1 GID from esfitradeaccount where code = 'TC0004-0014' and fcompanycode = ##(ESCOMPANY)  and type = 0";sqlParameterNames=""</Params>
+  </Actions>
+  <Actions>
+    <GID>45cc713b-41da-47c9-b11b-9e99d269d6f4</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="2214";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>cd33380d-7953-4fac-b0fc-b685b3acefdd</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AlternativeDocumentCode";columnValue="ΤΠΥ7-00000157926";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>12655519-04f9-4ba0-a21a-e75bf87b5229</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="UDFString1";columnValue="5080246";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>061c92a3-f989-4e36-86d7-086c81ee0693</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ValeurDate";columnValue="9/5/2013";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>914caaf8-048d-4e8e-ac99-5361a032e777</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Add Detail</Name>
+    <Description>Add Detail</Description>
+    <fActionGID>5d54d7ad-682d-4616-9f70-573614cb28bb</fActionGID>
+    <Params>relationName="FK_ESFILineTradeAccount_ESFIDocumentAdjustment"</Params>
+  </Actions>
+  <Actions>
+    <GID>070d6945-032a-43ad-aae7-9943d75dfe7b</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="LineType";columnValue="20";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>759b11d5-b136-4abd-8a62-ffca0865918c</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>7a6a2251-4d50-462d-b34b-044b167ddaf1</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="536,3";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>3eb1431a-2e0c-464b-ab0a-96321429a7a0</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AlternativeDocumentCode";columnValue="ΤΠΥ7-00000136436";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>fbcc755f-4b75-4258-83db-df62406fbf9c</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="UDFString1";columnValue="5080263";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>a6c74959-bbf9-43c3-a078-dde92f98604c</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ValeurDate";columnValue="9/3/2013";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>6b8bbe10-5644-406e-953c-d1d823c8e53d</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>8a59c0b9-cb1e-44bb-977e-7000b190522f</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>b8f323f2-ec20-4fd9-bcce-10a9af741ff0</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΑΕΣ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΣ";fADDocumentSeriesGID="TC0004";ADRegistrationDate="1/1"</Params>
+  </Actions>
+  <Actions>
+    <GID>f83f75b4-e65a-4bcc-a167-f67b58e962e6</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΑΕΣ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΣ";fADDocumentSeriesGID="TC0004";ADRegistrationDate="1/1"</Params>
+  </Actions>
+  <Actions>
+    <GID>5963e24e-0434-4826-bf11-0588b1dbe648</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>Add Detail</Name>
+    <Description>Add Detail</Description>
+    <fActionGID>5d54d7ad-682d-4616-9f70-573614cb28bb</fActionGID>
+    <Params>relationName="FK_ESFILineTradeAccount_ESFIDocumentAdjustment"</Params>
+  </Actions>
+  <Actions>
+    <GID>f544e685-4adb-4ab5-ace7-5ed644ca1120</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="LineType";columnValue="20";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>a0766867-4b9a-4b54-924e-2e168e099e56</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>7928e5ff-14ca-4da1-8e36-21340c5c427a</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="436,5";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>97ba3672-b896-48df-a339-f3bc098218ec</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AlternativeDocumentCode";columnValue="ΤΠΥ7-00000088914";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>8c0c792c-8b62-496c-93ab-fe8ff4bf0132</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="UDFString1";columnValue="5080226";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>de770797-061f-481b-a608-146845d7bee3</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ValeurDate";columnValue="24/9/2012";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>958e09e1-b0ed-4166-8006-41ceb31cc741</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>c4b86a35-5679-4b5a-82a3-949303860c40</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>Create New Adjustment Document</Name>
+    <Description>Create New Adjustment Document ΑΕΣ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΣ";fADDocumentSeriesGID="TC0004";ADRegistrationDate="1/1"</Params>
+  </Actions>
+  <Actions>
+    <GID>4334ff20-743d-44a3-8554-10681c4c6d16</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>Add Detail</Name>
+    <Description>Add Detail</Description>
+    <fActionGID>5d54d7ad-682d-4616-9f70-573614cb28bb</fActionGID>
+    <Params>relationName="FK_ESFILineTradeAccount_ESFIDocumentAdjustment"</Params>
+  </Actions>
+  <Actions>
+    <GID>c36eb379-e5e4-41b9-9376-1d4e1a871f54</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="LineType";columnValue="20";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>dd7cddca-8d26-4da0-8a06-ddb913814e2c</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fTradeAccountGID";columnValue="";variableName="vTradeAcc";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>0f062bb6-01e4-4dd5-a90c-fc99c2830323</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CurrencyValue";columnValue="536,3";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>cc58d246-7561-4f6b-840e-2746398ad12e</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AlternativeDocumentCode";columnValue="ΤΠΥ7-00000097893";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>dfb07282-5e5e-4560-a336-a8010536860a</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="UDFString1";columnValue="5080270";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>a7c37ff2-9c2c-4e4d-84fe-e8f415c2d5ed</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ValeurDate";columnValue="27/11/2012";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>eb7c5917-0fbc-41ae-ac83-7a5e157d59af</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>d56c386c-9196-4eda-8a0d-c56f7c6f5928</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>Create New Cash Document</Name>
+    <Description>Create New Cash Document ΑΕΠ</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΠ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="14/5"</Params>
+  </Actions>
+  <Actions>
+    <GID>aae895e5-e7da-4c2e-8fad-2fd3e38bd2b3</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="1250";AlternativeDocumentCode="ΕΛΤΑ 104443981"</Params>
+  </Actions>
+  <Actions>
+    <GID>b9da2eac-e6f5-4815-bfb8-db0a20e680d0</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>9ca992f2-1d61-4cfe-8cb9-4bc86f8504a1</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΠΥ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΠΥ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="13/6";fADDimension1Code="TC0004-0014";ADApprovalCode="ΤΠΥ-030883"</Params>
+  </Actions>
+  <Actions>
+    <GID>b9ca4af9-5581-422d-8a4c-6bd0487e7b56</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>45</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0004";Quantity="1";CurrencyTotalValue="402,2"</Params>
+  </Actions>
+  <Actions>
+    <GID>1ccad406-440f-4ca2-8610-e2e8e52c4b27</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="1";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="402,2";AlternativeDocumentCode="ΠΑΡ-Υ01-62755";UDFString1="5153563";ValeurDate="1/9/2013"</Params>
+  </Actions>
+  <Actions>
+    <GID>ce1a9c12-8907-4baf-919e-dcb2d742af43</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>3383148a-c947-48c2-99b3-4b09e996aeca</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>49</SeqNum>
+    <Name>Create New Cash Document</Name>
+    <Description>Create New Cash Document ΑΕΠ</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΠ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="6/7"</Params>
+  </Actions>
+  <Actions>
+    <GID>b615d461-fbd6-46d7-867a-b6a2cd24f99a</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>50</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="1250";AlternativeDocumentCode="ΕΛΤΑ 104445036"</Params>
+  </Actions>
+  <Actions>
+    <GID>00c6b83f-18f0-438e-ba75-eb038b772244</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>51</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>1a38ebfb-6f27-4342-9441-3be9a76325d5</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>52</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΠΥ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΠΥ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="30/8";fADDimension1Code="TC0004-0014";ADApprovalCode="ΤΠΥ-068335"</Params>
+  </Actions>
+  <Actions>
+    <GID>8b242514-b932-4c70-aeef-07fce8e070e2</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>53</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0004";Quantity="1";CurrencyTotalValue="402,2"</Params>
+  </Actions>
+  <Actions>
+    <GID>1aa39a96-caac-48a5-954e-9c6d3afd2f07</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>54</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="1";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="402,2";AlternativeDocumentCode="ΠΑΡ-Υ01-62756";UDFString1="5153564";ValeurDate="2/11/2013"</Params>
+  </Actions>
+  <Actions>
+    <GID>39e55d38-cf8a-4304-9861-e193827004ec</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>55</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>2e64190f-f052-4165-93d2-b19b0a310f3b</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΠΥ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΠΥ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="17/10";fADDimension1Code="TC0004-0014";ADApprovalCode="ΤΠΥ-097982"</Params>
+  </Actions>
+  <Actions>
+    <GID>f44a4d25-1a9b-49c4-a021-1120cf777346</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>57</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0004";Quantity="1";CurrencyTotalValue="402,2"</Params>
+  </Actions>
+  <Actions>
+    <GID>cfe96fce-7920-43be-84ec-5ad7065dcf43</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>58</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="1";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="402,2";AlternativeDocumentCode="ΠΑΡ-Υ01-62757";UDFString1="5153565";ValeurDate="1/1/2014"</Params>
+  </Actions>
+  <Actions>
+    <GID>691141f8-78c3-49e2-b0da-f01be08aed4e</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>59</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>b19e7d77-3646-4b53-b3d7-409f159fc0c7</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>60</SeqNum>
+    <Name>Create New Cash Document</Name>
+    <Description>Create New Cash Document ΑΕΠ</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΠ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="17/10"</Params>
+  </Actions>
+  <Actions>
+    <GID>2d54237e-ef93-4307-b9f3-f2ce0650abea</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="1000";AlternativeDocumentCode="ΕΛΤΑ 104446612"</Params>
+  </Actions>
+  <Actions>
+    <GID>9e279a86-1416-46eb-a63e-0f10d1ed33d6</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>62</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>01c55bb7-d698-41a4-be63-98c1331d60b1</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>Create New Cash Document</Name>
+    <Description>Create New Cash Document ΑΕΠ</Description>
+    <fActionGID>07c4232c-8c25-4a61-acbd-2fa29800f47c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΕΠ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="21/11"</Params>
+  </Actions>
+  <Actions>
+    <GID>c20ab585-d6dc-432d-a4be-71a4f74686e0</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>64</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="700";AlternativeDocumentCode="ΕΛΤΑ 104247887"</Params>
+  </Actions>
+  <Actions>
+    <GID>9597cf3c-ddc3-45b1-8331-02f5aa3bd185</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>65</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>0ef76f83-9b3e-4b34-bdeb-db6aecd06fdd</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>66</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΠΥ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΠΥ";fADDocumentSeriesGID="TC0004";fCustomerGID="TC0004-0014";ADRegistrationDate="14/12";fADDimension1Code="TC0004-0014";ADApprovalCode="ΤΠΥ-140398"</Params>
+  </Actions>
+  <Actions>
+    <GID>06570dd8-6463-4a89-b650-a6259bc5ede3</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>67</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0004";Quantity="1";CurrencyTotalValue="402,2"</Params>
+  </Actions>
+  <Actions>
+    <GID>7959c321-e34e-4b34-8101-c5c79aa0b1ea</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>68</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="1";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="402,2";AlternativeDocumentCode="ΠΑΡ-Υ01-62758";UDFString1="5153566";ValeurDate="2/3/2014"</Params>
+  </Actions>
+  <Actions>
+    <GID>95a9fece-5594-4163-a0eb-6240013900d9</GID>
+    <fTestCaseGID>660bfb32-3bac-4f8b-97b4-824361a806aa</fTestCaseGID>
+    <SeqNum>69</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+</NewDataSet>

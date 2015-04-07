@@ -1,0 +1,183 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>eacd82da-b36b-4abd-81c9-3faf4df96147</GID>
+    <Name>TC0000-0004</Name>
+    <Description>Reset Cache - Κλειδώματα Περιόδων - Κύκλωμα Λογιστικής</Description>
+    <Comment>IMP-06132.
+</Comment>
+  </TestCases>
+  <Actions>
+    <GID>92a324f3-ef2b-4353-9de2-3370624b385e</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f7ef010f-dc63-4e8e-b31a-1dd60dfa1f1a</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΑΠΛ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΠΛ";fADDocumentSeriesGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6c1bfc0b-4cf4-4243-a10f-2e5a15fd322c</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="200"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5cdf5f07-7eb5-421d-a101-f537e270d8ab</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e2ba5c99-98f1-414c-a7f8-8d45a94c1efa</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c03c0717-4030-4814-a20c-b9433fe40962</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00019</Name>
+    <Description>Add Line Liquidity Account</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="200"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3e6b5dee-2966-429e-8b1d-89a1d51e38d3</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ffa6ccda-fb1c-4127-a6d1-896a897dc1b1</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action  Κλείδωμα Λογιστικής Περιόδου τρέχοντος μήνα</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update ESGOFiscalPeriod set FinancialClosed = 1 Where Type = 0 and YEAR(BeginDate) = YEAR(GETDATE()) and MONTH(BeginDate) = MONTH(GETDATE()) and fCompanyCode =  ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cda4f77e-e130-4c0f-acc4-58408283bb65</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>876294bf-5a1b-47e6-8937-294fbafaa26c</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value CompactLineItemsOnSave = 1</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="CompactLineItemsOnSave";columnValue="1";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3160b6fa-2566-40fd-9e89-1617ed460b03</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Σφάλμα : [Η περίοδος"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bdb626f5-cdab-4324-b47f-489f0661cffe</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="είναι κλειστή ώς προς την Γενική Λογιστική]"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a72fd2cf-12d0-48e3-a0dd-63c8d62f723f</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action Ξεκλείδωμα Περιόδου τρέχοντος μήνα</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update ESGOFiscalPeriod set FinancialClosed = 0,SalesClosed = 0, PurchaseClosed = 0,StockClosed = 0,FixAssetsClosed = 0,PayrollClosed = 0,PermanentClosed = 0,CostAccountingClosed = 0,MISClosed = 0,ReportingClosed = 0 Where Type = 0 and YEAR(BeginDate) = YEAR(GETDATE()) and MONTH(BeginDate) = MONTH(GETDATE()) and fCompanyCode =  ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>886f66b5-4b3e-4a8c-8ad4-988696978466</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>87e16175-b26f-46cd-8fe7-e2571cfc93d2</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="fSourceDocumentGID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>75d4c46f-3988-4b85-aff2-b9bef10c7608</GID>
+    <fTestCaseGID>eacd82da-b36b-4abd-81c9-3faf4df96147</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="fSourceDocumentGID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

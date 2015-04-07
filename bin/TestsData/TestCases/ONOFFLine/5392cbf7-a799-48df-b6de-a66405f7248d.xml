@@ -1,0 +1,145 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>5392cbf7-a799-48df-b6de-a66405f7248d</GID>
+    <Name>TC0005-0001</Name>
+    <Description>ONLINE - Μετάβαση παραστατικού trade με πάγιο με δημιουργία νέας κτήσης σε σειρά που συγχρονίζεται</Description>
+    <Comment>Supplier : TC0005-0001
+FA : TC0005-0001
+DocTrade ΑΔΠ, ΑΤΠ with series ONLINE</Comment>
+  </TestCases>
+  <Actions>
+    <GID>7b5e10da-4fc1-40ba-9294-322b5bc2c28d</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new DocTrade ΑΔΠ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΑΔΠ";fADDocumentSeriesGID="ONLINE";fSupplierGID="TC0005-0001"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>d5769dcf-7f76-4515-be07-64a78ca3fc4f</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line FA Item TC0005-0001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="8";fItemGID="TC0005-0001";Quantity="1";TotalValue="1000"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>356d27e2-5393-4950-a9fe-191e8afb5a60</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>515317c6-9cfb-4095-9e99-4170295600b1</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases_ONLINE</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases_ONLINE";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>077bad97-ba76-48fb-93e4-9906cb0585a7</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>46</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>84a06994-af2f-4ac7-b9e9-87e6931d183b</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>47</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar -select count(1) from ES00INBIN</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="inbin";sqlBody="select count(1) from ES00INBIN where PK = @fSourceDocumentGID and CTYPE = 1";sqlParameterNames="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>683bbd12-1301-4b3e-bf38-c81f72a06d3e</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable inbin = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="inbin";variableValue="1"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>597e2e48-2b43-4d7e-9e0d-42cd0e545edb</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>64</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fTargetDocumentGID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fTargetDocumentGID"</Params>
+    <Inactive>true</Inactive>
+  </Actions>
+  <Actions>
+    <GID>60f43bec-23ab-44b1-8caf-e17d69472a2a</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete fSourceDocumentGID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>true</Inactive>
+  </Actions>
+  <Actions>
+    <GID>22251472-2b6f-45e9-99e6-c3057a4af718</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>49</SeqNum>
+    <Name>AC-00011</Name>
+    <Description>Transit Document 102. ΑΔΠ=&gt;ΑΤΠ</Description>
+    <fActionGID>5cae5eed-9d3c-499c-89f5-4214974ccc2a</fActionGID>
+    <Params>variableName="fSourceDocumentGID";transitionCode="102. ΑΔΠ=&gt;ΑΤΠ";transitionDate="";transitionSerieCode="ONLINE";variableNameOfTargetDocument="fTargetDocumentGID";targetCompanyCode="";targetBranchCode=""</Params>
+  </Actions>
+  <Actions>
+    <GID>876758bc-90d9-4c70-a82a-85e5b78217b9</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar -select count(1) from ES00INBIN</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="inbin";sqlBody="select count(1) from ES00INBIN where PK = @fTargetDocumentGID and CTYPE = 1";sqlParameterNames="fTargetDocumentGID"</Params>
+  </Actions>
+  <Actions>
+    <GID>6855a463-66ce-4f70-89f6-92e5defa1dec</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>60</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable inbin = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="inbin";variableValue="1"</Params>
+  </Actions>
+  <Actions>
+    <GID>c91ce247-b192-4a6d-8101-5823fe76188d</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar -select count(1) from ES00INBIN</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="inbin";sqlBody="select count(1) from ES00INBIN where CTYPE = 4 and patindex('INSERT INTO%', XMLDAT)&gt;0 and objectid = 'ESFIDocumentTrade'";sqlParameterNames=""</Params>
+  </Actions>
+  <Actions>
+    <GID>df072cc9-bede-446e-bc09-b6f964975720</GID>
+    <fTestCaseGID>5392cbf7-a799-48df-b6de-a66405f7248d</fTestCaseGID>
+    <SeqNum>62</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable inbin = 1</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="inbin";variableValue="1"</Params>
+  </Actions>
+</NewDataSet>

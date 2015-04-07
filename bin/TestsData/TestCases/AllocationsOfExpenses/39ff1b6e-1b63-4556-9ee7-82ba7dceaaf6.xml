@@ -1,0 +1,550 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</GID>
+    <Name>TC0002-0007</Name>
+    <Description>Κατανομές Δαπανών - Μεταβολή λογιστικοποιημένου ΤΕΔ, μεταβολή Δαπάνης χωρίς κατανομή με Δαπάνηςμε υποχρεωτική κατανομή BU =&gt; Dim1 50%, Dim2 50% </Description>
+    <Comment>Supplier : TC0002-0001
+ItemExpense : TC0002-0005-00 &amp; TC0002-0005-02 with icp TC0002-0001
+AllocationProfile : TC0002-0005 with BU : TC0002-0005-01 and Dim1 : TC0002-0005-01, TC0002-0005-02 &amp; BU : TC0002-0005-02 and Dim2 : TC0002-0005-01, TC0002-0005-02
+DocumentType : ΤΕΔ with Characteristic : TC0002-0001 and DocumentSeries : TC0002-0001</Comment>
+  </TestCases>
+  <Actions>
+    <GID>0ba7a7ab-a70b-4f2b-95b0-a5a351370a52</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΤΕΔ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΕΔ";fADDocumentSeriesGID="TC0002-0001";fSupplierGID="TC0002-0001"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7bd96c23-075a-474f-a314-2a85b2cccab3</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Expense TC0002-0005-00 with CurrencyTotalValue = 100</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0002-0005-00";CurrencyTotalValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e766a0d1-7275-4cc3-b012-3203cb6264ed</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6949e4d2-62c6-4c46-a673-6ac73ea7ddd3</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceLineItemGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>61f271b4-f4cd-4b56-8bc0-b9e2f205470d</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1809c62f-b802-46a3-a7e0-08047941289b</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΤΕΔ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1de78d70-2dbd-44aa-a0d2-0948193d47b0</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΕΔ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>62d87679-5ee5-4787-937d-8bc0c0d8fd15</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f1851e5c-d0ea-4097-a991-2ffd6baf60dd</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check ESFILineItem: CurrencyTotalValue = "100"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTotalValue";columnValue="100";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48fc6311-d13f-42c6-8d86-16b767cfe060</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItemAllocation : Position 0 </Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItemAllocation";position="0";variableName="";parentRelation="";childRelation="FK_ESFILineItem_ESFILineItemAllocation"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>58ab22da-ddde-45cc-84a4-cf3bb1a33839</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check fBusinessUnitCode = "TC0002-0005-02"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fBusinessUnitCode";columnValue="TC0002-0005-02";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6fea0809-d656-4e0f-986e-6f590c46b2fb</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check fDimension2Code = "TC0002-0005-01"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fDimension2Code";columnValue="TC0002-0005-01";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9ec1027b-a573-4a68-89c9-2b8a144f9373</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyBaseValue = "40,65"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyBaseValue";columnValue="40,65";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ee20b06d-9720-4509-9cc7-8baef6e31522</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyNetValue = "40,65"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyNetValue";columnValue="40,65";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>53b2e6eb-5cc1-4c55-ba5c-03a88b9249d3</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyVATValue = "9,35"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyVATValue";columnValue="9,35";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f81aa935-93c7-4d79-a1f9-dbdd09dbd469</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyTotalValue = "50,00"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTotalValue";columnValue="50,00";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>559cfc53-ddff-4c3b-9559-5555a4df8175</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>24</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItemAllocation : Position 1</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItemAllocation";position="1";variableName="";parentRelation="";childRelation="FK_ESFILineItem_ESFILineItemAllocation"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>120df291-def8-4bc5-90b6-fa47f0d08888</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check fBusinessUnitCode = "TC0002-0005-02"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fBusinessUnitCode";columnValue="TC0002-0005-02";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8bd8936f-f5dc-4989-9c3b-3598e478905c</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>27</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check fDimension2Code = "TC0002-0005-02"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fDimension2Code";columnValue="TC0002-0005-02";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f349837-3056-4f1b-b76a-a4e6227215d4</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyBaseValue = "40,65"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyBaseValue";columnValue="40,65";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>eaf19be4-23d6-46a5-93d6-9f24658be604</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyNetValue = "40,65"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyNetValue";columnValue="40,65";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3a0469d6-3592-4f24-b9f1-34052c382256</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>31</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyVATValue = "9,35"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyVATValue";columnValue="9,35";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>db6d03a4-8c59-4763-9bd4-612f1b96455d</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check CurrencyTotalValue = "50,00"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="CurrencyTotalValue";columnValue="50,00";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ffa4a560-ae74-42a6-8b15-4abfcc03306c</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - select sum(CurrencyTotalValue) from ESFILineItemAllocation</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumCurrencyTotalValueOfLine1Allocations";sqlBody="select sum(CurrencyTotalValue) from ESFILineItemAllocation where fLineItemGID = @fSourceLineItemGID";sqlParameterNames="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b5bc61ad-4931-4e62-8480-7fe654dcc20a</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable SumCurrencyTotalValueOfLine1Allocation = "100,00"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumCurrencyTotalValueOfLine1Allocations";variableValue="100,00"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ffa19873-138d-4fb6-958d-072396cb22e0</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - select sum(CurrencyBaseValue) from ESFILineItemAllocation</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumCurrencyBaseValueOfLine1Allocations";sqlBody="select sum(CurrencyBaseValue) from ESFILineItemAllocation where fLineItemGID = @fSourceLineItemGID";sqlParameterNames="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b69eab73-4a9e-4236-ac1c-faad9ad5498b</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - select sum(CurrencyNetValue) from ESFILineItemAllocation</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumCurrencyNetValueOfLine1Allocations";sqlBody="select sum(CurrencyNetValue) from ESFILineItemAllocation where fLineItemGID = @fSourceLineItemGID";sqlParameterNames="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3592e966-97d2-4b20-a02d-cff91daec5ce</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - select sum(CurrencyVATValue) from ESFILineItemAllocation</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumCurrencyVATValueOfLine1Allocations";sqlBody="select sum(CurrencyVATValue) from ESFILineItemAllocation where fLineItemGID = @fSourceLineItemGID";sqlParameterNames="fSourceLineItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a751c0ca-ef7d-4b0b-94fb-1cbc79435771</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable SumCurrencyBaseValueOfLine1Allocations = "81,3"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumCurrencyBaseValueOfLine1Allocations";variableValue="81,3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ae194044-65a7-4429-a2b9-2538b2a7dac6</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable SumCurrencyNetValueOfLine1Allocations = "81,3"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumCurrencyNetValueOfLine1Allocations";variableValue="81,3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>19e92e00-b5e4-4abb-9265-66d411e1c673</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable SumCurrencyVATValueOfLine1Allocations = "18,70"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumCurrencyVATValueOfLine1Allocations";variableValue="18,70"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>08231ff4-1819-4ed9-a952-c3e44b859441</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Execute SQL Scalar - select sum(ESFIItemPeriodics_DebitValue) from ESFIItemEntry_ESFIItemPeriodics</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumOfESFIItemPeriodics_DebitValue0";sqlBody="select sum(ESFIItemPeriodics_DebitValue) from ESFIItemEntry_ESFIItemPeriodics where fDocumentLineGID = @fLineItemAllocation0";sqlParameterNames="fLineItemAllocation0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>baa95f1f-039e-4a9f-9c34-f81ddca4833d</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fLineItemAllocation0</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fLineItemAllocation0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>11426d4f-6f96-4b7a-86e3-07106535d17e</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fLineItemAllocation1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fLineItemAllocation1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2437e7e5-a7cb-4768-bdbe-791b08c02ae0</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value  - SumOfESFIItemPeriodics_DebitValue0 = "40,65"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumOfESFIItemPeriodics_DebitValue0";variableValue="40,65"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5fea032e-217e-4a67-871d-aaf2b6ace7b7</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - SumOfESFIItemPeriodics_DebitValue1 : select sum(ESFIItemPeriodics_DebitValue) from ESFIItemEntry_ESFIItemPeriodics</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="SumOfESFIItemPeriodics_DebitValue1";sqlBody="select sum(ESFIItemPeriodics_DebitValue) from ESFIItemEntry_ESFIItemPeriodics where fDocumentLineGID = @fLineItemAllocation1";sqlParameterNames="fLineItemAllocation1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2cfbbccb-b197-4fef-8f12-9bcc8b4ce54a</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value  - SumOfESFIItemPeriodics_DebitValue1 = "40,65"</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="SumOfESFIItemPeriodics_DebitValue1";variableValue="40,65"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d056dfc1-b12d-4407-b164-a950684b8252</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="fSourceDocumentGID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c466601d-4859-4ccc-a214-ede1d6f652fe</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>45</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar - fAccountingDocumentGID : select GID from ESGLAccountingDocument</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="fAccountingDocumentGID";sqlBody="select GID from ESGLAccountingDocument where fDocumentGID = @fSourceDocumentGID";sqlParameterNames="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>418c518b-efa3-442b-9ab5-d160f9d6fa41</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Item : TC0002-0005-02</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="fItemGID";columnValue="33342BA4-1509-44F5-8D0C-09A04156D851"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>49233049-f56d-4f3b-9b01-9eda3818bd90</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document ΤΕΔ</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>46fb04a5-b344-492c-8cca-a16c205c2ddc</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document ΤΕΔ</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>21f61a7e-886a-4e03-9268-1e2225425aac</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check fBusinessUnitCode = "TC0002-0005-02"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="fBusinessUnitCode";columnValue="TC0002-0005-02";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a75b69ef-a559-4f5e-8839-68b9ed0fd068</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>68</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1dc3903f-053e-4f5f-a90a-5c469b067931</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>47</SeqNum>
+    <Name>Execute SQL Select</Name>
+    <Description>Execute SQL Select LedgerEntries</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="LedgerEntries";sqlBody="Select ac.Code, en.Debit, en.Credit, isnull(en.fBusinessUnitCode,'-'),isnull(en.fDimension2Code,'-')  from ESGLLedgerEntry en inner join ESGLAccount ac on en.fAccountGID = ac.GID where fAccountingDocumentGID = @fAccountingDocumentGID order by ac.Code,en.fBusinessUnitCode, en.fDimension2Code";sqlParameterNames="fAccountingDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81a97064-cc19-4b9a-8e03-4b9178967998</GID>
+    <fTestCaseGID>39ff1b6e-1b63-4556-9ee7-82ba7dceaaf6</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;50.00.00.0000&lt;/Code&gt;
+&lt;Debit&gt;0&lt;/Debit&gt;
+&lt;Credit&gt;100&lt;/Credit&gt;
+&lt;fBusinessUnitCode&gt;-&lt;/fBusinessUnitCode&gt;
+&lt;fDimension2Code&gt;-&lt;/fDimension2Code&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;54.00.29.0023&lt;/Code&gt;
+&lt;Debit&gt;9.35&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;fBusinessUnitCode&gt;TC0002-0005-02&lt;/fBusinessUnitCode&gt;
+&lt;fDimension2Code&gt;TC0002-0005-01&lt;/fDimension2Code&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;54.00.29.0023&lt;/Code&gt;
+&lt;Debit&gt;9.35&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;fBusinessUnitCode&gt;TC0002-0005-02&lt;/fBusinessUnitCode&gt;
+&lt;fDimension2Code&gt;TC0002-0005-02&lt;/fDimension2Code&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;60.00.00.0000&lt;/Code&gt;
+&lt;Debit&gt;40.65&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;fBusinessUnitCode&gt;TC0002-0005-02&lt;/fBusinessUnitCode&gt;
+&lt;fDimension2Code&gt;TC0002-0005-01&lt;/fDimension2Code&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;60.00.00.0000&lt;/Code&gt;
+&lt;Debit&gt;40.65&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;fBusinessUnitCode&gt;TC0002-0005-02&lt;/fBusinessUnitCode&gt;
+&lt;fDimension2Code&gt;TC0002-0005-02&lt;/fDimension2Code&gt;
+&lt;/LedgerEntries&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="0";excludeDateTypeColumns="0";excludeDateTimeTypeColumns="0"</Params>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,160 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</GID>
+    <Name>TC0007-0010-01</Name>
+    <Description>Έλεγχος Ειδικών λογαριασμών - Μη Επιλέξιμοι Ειδικοί Λογαριασμοί</Description>
+  </TestCases>
+  <Actions>
+    <GID>3aabd2c1-bef9-4217-9b77-1c355a6e7c56</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1ac95804-cb5d-46ca-a4f2-826c36fec70e</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0010"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>79d03851-edee-4463-a895-35cec2117f6a</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0010</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0010";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>db3a751c-5281-43db-a3ac-73fb4a08d95b</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>20277e06-ffd8-489e-bb07-ae3aa62532ff</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a73712a4-3b59-45bd-bbaa-44dba474559e</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountSPLines";sqlBody="select isnull(count(1),0) from esfilinespecialaccount where fdocumentgid = @fSourceDocumentGID1";sqlParameterNames="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>acb48d08-388d-49a2-9d73-5323625d181b</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CountSPLines=0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountSPLines";variableValue="0";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>973f2e02-e6db-4dcc-a64f-41720b8d747a</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00010</Name>
+    <Description>Load Document fSourceDocumentGID1</Description>
+    <fActionGID>0aae5c10-c3be-424a-a4ed-8c3cb9371b7e</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c79ba8ff-9365-43ea-b070-4f43ae6a7358</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row ESFILineItem</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f72fe4d3-4184-4dfc-8a8e-a9276534224a</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Quantity = 2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>85ca6f48-8359-47ac-afb6-1102fa4f8843</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7e49f9bd-de63-41c9-82bc-7479a995f425</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountSPLines";sqlBody="select isnull(count(1),0) from esfilinespecialaccount where fdocumentgid = @fSourceDocumentGID1";sqlParameterNames="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5a77ef81-ee7e-4a86-a309-c219f96ed694</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CountSPLines=0</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountSPLines";variableValue="0";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0bef2f1c-bb3e-478b-8b30-a6647cf526d2</GID>
+    <fTestCaseGID>c250fc0f-f0e9-423d-a156-3d95719a0dbc</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocumentGID1</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

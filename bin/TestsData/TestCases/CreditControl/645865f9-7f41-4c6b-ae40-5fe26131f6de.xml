@@ -1,0 +1,251 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>645865f9-7f41-4c6b-ae40-5fe26131f6de</GID>
+    <Name>TC0050-0009</Name>
+    <Description>Credit Control - Ελεγχος Χρόνου καθυστέρησης - Καθυστερημένου ποσού, Λογιστικού Υπολοίπου, Εμπορικού Υπολοίπου</Description>
+  </TestCases>
+  <Actions>
+    <GID>6abed3d0-bdda-460d-8f3f-2ec32bb4b8db</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1";logindate="31/3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5768a855-c392-4122-a772-6c3318cc6663</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8ad1435e-1120-4859-b0a3-785def512c95</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ 1/1</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0050-0002";ADRegistrationDate="1/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3f9e1d52-620d-4f81-9a3c-fc7084d2d897</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item 615</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="500"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0af0c7fc-a214-4d75-b60e-3c9c445d358a</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Scalar</Name>
+    <Description>Execute SQL Scalar vCCP</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vCCP";sqlBody="select GID from ESFICreditControlProfile where code = 'TC0050-0009' and fCompanyCode = ##(ESCompany)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cd20e73c-1c4d-4f5b-80e8-ad63110159ab</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action Assign CCP</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vUpd";sqlBody="update ESFITradeAccount set fCreditControlProfileGID = @vCCP where Code = 'TC0050-0002' and Type = 0 and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames="vCCP"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7188e908-113b-48e4-8875-d090f6817a55</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ 1/2</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0050-0002";ADRegistrationDate="1/2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>13d2076b-616d-4ba8-9187-5aa9ef4c9c6d</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item 615</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="500"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8be5b22b-24de-42e6-ab1a-d921b49a981e</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b644ce75-34bf-4256-aea1-6520bd4ace81</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Add Line Liquidity Account</Name>
+    <Description>Add Line Liquidity Account 31/1</Description>
+    <fActionGID>6186ad17-23dd-4ac7-8ea4-c4ee2bf1cd22</fActionGID>
+    <Params>LineType="1";fLiquidityAccountGID="ΠΡ-000";CurrencyValue="615";ValeurDate="31/1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a9f57191-442d-4c44-8325-eaa5f411fbc2</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Ο επιλεγμένος συν/νος έχει υπερβεί το όριο Λογιστικού υπολοίπου κατά: 599,00.
+Ο επιλεγμένος συν/νος έχει υπερβεί το όριο Εμπορικού υπολοίπου κατά: 599,00.
+Ο επιλεγμένος συν/νος έχει υπερβεί το όριο υπολοίπου με ίδια αξιόγραφα κατά: 599,00.
+Ο επιλεγμένος συν/νος έχει υπερβεί το όριο καθυστερημένου ποσού κατά: 984,00 και το χρόνο καθυστέρησης υπολοίπου κατά: 28 ημέρες"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d67bb713-a2b2-4b14-b0d1-bdd65df97f84</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ 31/3</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0050-0002";ADRegistrationDate="31/3"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e62ceb82-3e92-4a05-a1ec-bba4969cf71e</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item 615</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="500"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>78e4b01f-da45-4f62-98e3-d591af56a660</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>81f9ddda-45c7-4b86-9c81-058bf44b1d4d</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Ο επιλεγμένος συν/νος έχει υπερβεί το όριο Λογιστικού υπολοίπου κατά: 230,00.
+Ο επιλεγμένος συν/νος έχει υπερβεί το όριο Εμπορικού υπολοίπου κατά: 230,00.
+Ο επιλεγμένος συν/νος έχει υπερβεί το όριο υπολοίπου με ίδια αξιόγραφα κατά: 230,00."</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a2b4806a-eabb-4418-af03-6920705a8e6a</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ 1/2</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0050-0002";ADRegistrationDate="1/2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e415ff85-0ec2-408e-ba2f-3f04849ececb</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item 369</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="300"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>faa3b5a5-d18a-400d-a21b-cb6e930f670f</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ab49a5a2-55ba-471f-9e28-bec2c280df97</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="docGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2d821e61-771d-43e5-80bc-1b7a427f62f5</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="docGID2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>80845fa3-dad1-4a5f-beb1-87be8f92d69e</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="docGID2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>addb418d-5f8b-4339-bf4f-3517ca9eb5a4</GID>
+    <fTestCaseGID>645865f9-7f41-4c6b-ae40-5fe26131f6de</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="docGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

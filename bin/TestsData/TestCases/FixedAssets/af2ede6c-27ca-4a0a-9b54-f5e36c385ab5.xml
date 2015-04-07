@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>af2ede6c-27ca-4a0a-9b54-f5e36c385ab5</GID>
+    <Name>TC0009-0010</Name>
+    <Description>-------------- set ParamID 'InformativeCostChangesToAlternativeDepreciations' to default ------------------------</Description>
+    <Comment />
+  </TestCases>
+  <Actions>
+    <GID>9bb37349-a224-400e-a799-e2dab7effcea</GID>
+    <fTestCaseGID>af2ede6c-27ca-4a0a-9b54-f5e36c385ab5</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>07c6f6b4-59af-4f96-b643-5af799797ba6</GID>
+    <fTestCaseGID>af2ede6c-27ca-4a0a-9b54-f5e36c385ab5</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="vdel";sqlBody="delete ES00Params where ParamID = 'InformativeCostChangesToAlternativeDepreciations' and fCompanyCode = ##(ESCOMPANY)";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>55761eb3-f519-484c-a1d6-0b6a7a388cc3</GID>
+    <fTestCaseGID>af2ede6c-27ca-4a0a-9b54-f5e36c385ab5</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Reset all caches</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

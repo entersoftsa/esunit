@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>bd4db3be-53bc-4c01-ad71-21130a857aa0</GID>
+    <Name>00076</Name>
+    <Description>Ισοζύγιο Σύγκρισης Ε.Λ.Π και Δ.Λ.Π. πληρωτέων (ESFITradeAccount\Creditors\TACreBalanceIASandNAS)</Description>
+    <Comment>IMP-06824</Comment>
+  </TestCases>
+  <Actions>
+    <GID>5042b197-2611-4cfb-962f-6ef580b12a38</GID>
+    <fTestCaseGID>bd4db3be-53bc-4c01-ad71-21130a857aa0</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="esmaster";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6fea2778-6849-49f0-8c9d-118fe6582a04</GID>
+    <fTestCaseGID>bd4db3be-53bc-4c01-ad71-21130a857aa0</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT with default Params</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$|ESFITradeAccount\Creditors\TACreBalanceIASandNAS"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57512a31-b55e-4905-9517-02521eba8433</GID>
+    <fTestCaseGID>bd4db3be-53bc-4c01-ad71-21130a857aa0</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT group by categories BU, BA, Dim1, Dim2</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;16&lt;/DefValue&gt;&lt;DefValue&gt;12&lt;/DefValue&gt;&lt;DefValue&gt;17&lt;/DefValue&gt;&lt;DefValue&gt;13&lt;/DefValue&gt;&lt;DefValue&gt;18&lt;/DefValue&gt;&lt;DefValue&gt;14&lt;/DefValue&gt;&lt;DefValue&gt;19&lt;/DefValue&gt;&lt;DefValue&gt;15&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFITradeAccount\Creditors\TACreBalanceIASandNAS"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

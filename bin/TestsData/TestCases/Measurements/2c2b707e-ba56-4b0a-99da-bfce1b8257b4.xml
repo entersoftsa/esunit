@@ -1,0 +1,160 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</GID>
+    <Name>Load ESMMStockItem_DEF </Name>
+    <Description>Load ESMMStockItem_DEF</Description>
+  </TestCases>
+  <Actions>
+    <GID>23992108-a60b-4b9d-907c-84e321b3271f</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00031</Name>
+    <Description>bInvoke Load ESMMStockItem_DEF </Description>
+    <fActionGID>db8ac2c4-7858-451a-aec3-7e9cb9c2b760</fActionGID>
+    <Params>formName="ESMMStockItem_DEF";entityGID="";variableName="ItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>97ffaa98-6862-4ff0-be88-cedff08fb218</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>08be63ac-c6a4-4c77-ad67-c5905f7f601f</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0abbfe3e-0d30-4113-95fa-674691127558</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00014</Name>
+    <Description>Execute Single Operation</Description>
+    <fActionGID>55be1d94-1870-46ee-8170-2a0241dc813a</fActionGID>
+    <Params>resultVariableName="dt";variable1Name="t2";operator="-";variable2Name="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1d399d70-6d46-4a99-8f02-9cf3585921dd</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Expected load time &lt;= 5000 ms</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="dt";variableValue="5000";operator="&lt;="</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8be35251-1f0c-470d-ac75-e43ab686f972</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00033</Name>
+    <Description>Close Entity Form</Description>
+    <fActionGID>d37b8173-ff20-429c-b7c7-ceacf8ed2d45</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1a340c98-48cd-4bb1-b0f3-473c6b8da6cc</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar ItemGID</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="ItemGID";sqlBody="select gid from esfiitem where code = 'PERF0001' and fcompanycode = ##(ESCOMPANY) and itemclass = 1";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dd29ad25-85f0-41d5-b3df-2aab271a36d2</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1993acb4-7102-45fc-beaf-588b89e389cb</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f635cfb-19c8-4e10-9e53-6ea117550da9</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00031</Name>
+    <Description>bInvoke Load ESMMStockItem_DEF </Description>
+    <fActionGID>db8ac2c4-7858-451a-aec3-7e9cb9c2b760</fActionGID>
+    <Params>formName="ESMMStockItem_DEF";entityGID="";variableName="ItemGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cdeb6408-3fa7-4b5b-b60c-4a55ea54ce28</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00032</Name>
+    <Description>Set Time In Heap</Description>
+    <fActionGID>d89f4f0a-7cd4-4735-b64f-af612964c788</fActionGID>
+    <Params>variableName="t2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ab0b0808-7e23-41c3-bfab-c2fd95c22cf6</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00014</Name>
+    <Description>Execute Single Operation</Description>
+    <fActionGID>55be1d94-1870-46ee-8170-2a0241dc813a</fActionGID>
+    <Params>resultVariableName="dt";variable1Name="t2";operator="-";variable2Name="t1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c3c24f4a-5ca0-40c4-ac25-c62977b7a008</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Expected load time &lt;= 1000 ms</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="dt";variableValue="1500";operator="&lt;="</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a8344e16-6fa8-4722-a14b-a9a836bb0037</GID>
+    <fTestCaseGID>2c2b707e-ba56-4b0a-99da-bfce1b8257b4</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00033</Name>
+    <Description>Close Entity Form</Description>
+    <fActionGID>d37b8173-ff20-429c-b7c7-ceacf8ed2d45</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

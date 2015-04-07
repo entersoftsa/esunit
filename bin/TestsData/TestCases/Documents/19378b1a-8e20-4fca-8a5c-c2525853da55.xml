@@ -1,0 +1,94 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>19378b1a-8e20-4fca-8a5c-c2525853da55</GID>
+    <Name>TC0007-0021-04</Name>
+    <Description>Invalid States - New document Stock state 1 &amp; move to state 0</Description>
+    <Comment>IMP-07932</Comment>
+  </TestCases>
+  <Actions>
+    <GID>daca8965-179f-46d3-89bd-6e0e916674a1</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b7e5d9af-a52e-47bc-804e-b5f0efb61f56</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e6af290b-093e-4f73-a3c7-e4e657cee3f8</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c54c23f2-5a43-4b47-b741-7ae002ebfb00</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c297c077-a1db-4717-aa5e-24d819dab47d</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6125116e-f6f3-4b71-826b-ed68637c6963</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Move Document To State</Name>
+    <Description>Move Document To State 0</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc1";toState="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>625c9a62-965b-4ac1-84a0-f1fb4a60d006</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="σε κατάσταση 'Προσωρινό' έχει οριστεί ως μη επιτρεπτή"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8d0532aa-6270-4bef-8962-b9effdf05977</GID>
+    <fTestCaseGID>19378b1a-8e20-4fca-8a5c-c2525853da55</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Stock Document</Name>
+    <Description>Create New Stock Document</Description>
+    <fActionGID>e6274216-9c34-4346-830a-afa7cc3e409e</fActionGID>
+    <Params>fADDocumentTypeGID="ΔΕΝ";fADDocumentSeriesGID="TC0007";fSourceGID="1";fSourceCustomerGID="";fSourceSupplierGID="";fSourceDebtorGID="";fSourceCreditorGID="";fSourceSiteGID="1";fTargetGID="1";fTargetCustomerGID="";fTargetSupplierGID="";fTargetDebtorGID="";fTargetCreditorGID="";fTargetSiteGID="1"</Params>
+  </Actions>
+</NewDataSet>

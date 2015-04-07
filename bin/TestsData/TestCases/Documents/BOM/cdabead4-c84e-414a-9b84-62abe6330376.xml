@@ -1,0 +1,95 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>cdabead4-c84e-414a-9b84-62abe6330376</GID>
+    <Name>TC0007-5600-10</Name>
+    <Description>Blister - Μικτό - ΠΑΡ=&gt;ΤΔΑ Ελεγχος ICP</Description>
+    <Comment>IMP-07568</Comment>
+  </TestCases>
+  <Actions>
+    <GID>448c7329-2bc8-49a3-8697-7df3e18739f3</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>72afa1ad-0d8f-4ac8-b8db-3d6e33983e30</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΠΑΡ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΠΑΡ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>187c781d-135d-45a6-ae33-c44281eb5b46</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>312c3741-278f-4f58-9bc5-722f66290b8f</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-5600-1</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-5600-1";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>48e8bcb0-0bb2-45f3-95fe-2a0b099e4e14</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>60</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ccc45d91-e416-4a04-a18c-d3a988ce3a97</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8a1f035f-5463-4b5d-ada6-85c96c8632fe</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>62</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message Παραβίαση ελέγχου που αφορά τον δείκτη 'Διαθέσιμο υπόλοιπο</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Παραβίαση ελέγχου που αφορά τον δείκτη 'Διαθέσιμο υπόλοιπο' για το είδος TC0007-5600-1 τον Α/Χ 1 και την εταιρεία 001"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>99f1d926-0c0d-4b05-a7dd-b18a04ff56d2</GID>
+    <fTestCaseGID>cdabead4-c84e-414a-9b84-62abe6330376</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>Transit Document</Name>
+    <Description>Transit Document 112. ΠΑΡ=&gt;ΤΔΑ</Description>
+    <fActionGID>5cae5eed-9d3c-499c-89f5-4214974ccc2a</fActionGID>
+    <Params>variableName="vDoc1";transitionCode="112. ΠΑΡ=&gt;ΤΔΑ";transitionDate="";transitionSerieCode="TC0007";variableNameOfTargetDocument="vDoc2";targetCompanyCode="";targetBranchCode=""</Params>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+</NewDataSet>

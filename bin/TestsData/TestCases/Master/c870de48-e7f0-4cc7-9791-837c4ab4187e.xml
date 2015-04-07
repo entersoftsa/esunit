@@ -1,0 +1,154 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>c870de48-e7f0-4cc7-9791-837c4ab4187e</GID>
+    <Name>TC00040-00002</Name>
+    <Description>Ελεγχος αλλαγής χαρακτηρισμού κινημένου είδους από ΣΕΤ</Description>
+    <Comment>IMP-06791</Comment>
+  </TestCases>
+  <Actions>
+    <GID>0b67ec71-8803-4194-9213-913e9e09180d</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+  </Actions>
+  <Actions>
+    <GID>fa954ff5-cca1-4086-8746-0a055095632f</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New Trade Document</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+  </Actions>
+  <Actions>
+    <GID>e6763586-ccc8-4c98-95da-4d0d1c6eb67b</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc"</Params>
+  </Actions>
+  <Actions>
+    <GID>1c2da7d3-29e2-4414-b5d4-64362c0dc176</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Item</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0040-0002";Quantity="1";Price="100"</Params>
+  </Actions>
+  <Actions>
+    <GID>2d4d1ea0-a0f5-4a3c-b1c9-fc99711f8ab3</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>e7d236b6-7b42-4676-9544-dc295babfbdb</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vItem</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fItemGID";variableName="vItem"</Params>
+  </Actions>
+  <Actions>
+    <GID>5a3fbea3-a09e-4ed5-aff5-5fc26256a88e</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESMMStockItem";keyVariableName="vItem"</Params>
+  </Actions>
+  <Actions>
+    <GID>37b698d6-6798-4e4c-bf20-3aa5b1e351a8</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="AssemblyType";columnValue="0"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AssemblyType";columnValue="0";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>a9789873-c2e7-4ae4-b441-5ebf9081162d</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>61c4e435-1322-4abf-b68c-8948c2ebc2c2</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Η τιμή του πεδίου [Τύπος σύνθεσης] δεν μπορεί να αλλάξει από/σε [Σετ], καθώς βρέθηκαν κινήσεις με αναφορά στο Είδος"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+  <Actions>
+    <GID>c19c7155-462c-4539-97dd-7c622c9958fe</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Load Entity</Name>
+    <Description>Load Entity</Description>
+    <fActionGID>73ca886c-9822-4ea0-8716-7c6d09c078a1</fActionGID>
+    <Params>entityID="ESMMStockItem";keyVariableName="vItem"</Params>
+  </Actions>
+  <Actions>
+    <GID>efef3331-32cf-424a-9996-f69c639d2622</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value columnName="AssemblyType";columnValue="2"</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="AssemblyType";columnValue="0";variableName="";treatEmptyColumnValueAsEmptyString="2"</Params>
+  </Actions>
+  <Actions>
+    <GID>bc5cc7e6-8f33-4623-b6a6-4f5d67c429f0</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Save Entity</Name>
+    <Description>Save Entity</Description>
+    <fActionGID>40bb5db2-a378-446d-a141-0d7ddbe7b85a</fActionGID>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e9cd976f-36c5-42ff-9676-9f44fb512662</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc"</Params>
+  </Actions>
+  <Actions>
+    <GID>3156f60d-101a-4d68-a28d-60b18688b722</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+  </Actions>
+  <Actions>
+    <GID>c13a3788-dd51-4044-b2f2-1ffc28d3d73c</GID>
+    <fTestCaseGID>c870de48-e7f0-4cc7-9791-837c4ab4187e</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>Check Exception Message</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Η τιμή του πεδίου [Τύπος σύνθεσης] δεν μπορεί να αλλάξει από/σε [Σετ], καθώς βρέθηκαν κινήσεις με αναφορά στο Είδος"</Params>
+    <Inactive>false</Inactive>
+  </Actions>
+</NewDataSet>

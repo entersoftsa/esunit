@@ -1,0 +1,137 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>feadf188-9b36-4655-9123-7eafab9a379b</GID>
+    <Name>TC0007-0010-05</Name>
+    <Description>Έλεγχος Ειδικών λογαριασμών - Μη Επιλέξιμοι Ειδικοί Λογαριασμοί - Έλεγχος μετάβασης </Description>
+  </TestCases>
+  <Actions>
+    <GID>25c8a0a8-cded-4836-a040-2b9aa28c2d7d</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>101998f2-f0d6-4a9a-b593-6c36b2300cde</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΠΑΡ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΠΑΡ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0010"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>39cfbbc1-06d6-46a7-b50c-8842c9298000</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0010</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0010";Quantity="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>61f15831-a312-4166-942b-8eadfafa3438</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>211f24f9-cb52-40f7-8f34-6d93d26890cb</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>857536b7-0f32-4831-a93d-2e4504977548</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="CountSPLines";sqlBody="select isnull(count(1),0) from esfilinespecialaccount where fdocumentgid = @fSourceDocumentGID1";sqlParameterNames="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7c158965-e2d1-4630-bb84-dea8044b89fe</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00013</Name>
+    <Description>Check Variable Value CountSPLines=4</Description>
+    <fActionGID>cdad6b3e-29de-4ea5-8d0c-7e4220911b94</fActionGID>
+    <Params>variableName="CountSPLines";variableValue="4";operator=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>92bdfe14-af12-4d03-83a0-0e26d60fb8d5</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00011</Name>
+    <Description>Transit Document</Description>
+    <fActionGID>5cae5eed-9d3c-499c-89f5-4214974ccc2a</fActionGID>
+    <Params>variableName="fSourceDocumentGID1";transitionCode="TC0007-0010";transitionDate="";transitionSerieCode="";variableNameOfTargetDocument="fTargetDocGID";targetCompanyCode="";targetBranchCode=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>true</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d0f89be4-b67d-4f9c-a7f8-88f1dff7756f</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocumentGID1</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d9f1692b-b3fb-4cd6-8447-6daca870c850</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00036</Name>
+    <Description>Add Line Special Account</Description>
+    <fActionGID>017d2298-7b3c-49a7-ba26-7675740f388c</fActionGID>
+    <Params>fSpecialAccountGID="TC0007-0010-01";Percentage="";CurrencyValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6f5b0fbc-9c30-47e6-b1ec-b530dd3d943a</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00036</Name>
+    <Description>Add Line Special Account</Description>
+    <fActionGID>017d2298-7b3c-49a7-ba26-7675740f388c</fActionGID>
+    <Params>fSpecialAccountGID="TC0007-0010-02";Percentage="";CurrencyValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>624a42cf-67a9-4d7b-9e88-dc01ebd1a1de</GID>
+    <fTestCaseGID>feadf188-9b36-4655-9123-7eafab9a379b</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00030</Name>
+    <Description>Check Exception Message</Description>
+    <fActionGID>bcbce4e1-7cea-413a-909f-d14ae3c200d4</fActionGID>
+    <Params>message="Ο βοηθητικός λογ/σμός δεν είναι αποδεκτός από τον τύπο παραστατικού"</Params>
+  </Actions>
+</NewDataSet>

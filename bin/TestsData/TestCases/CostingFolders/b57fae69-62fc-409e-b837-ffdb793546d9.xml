@@ -1,0 +1,180 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>b57fae69-62fc-409e-b837-ffdb793546d9</GID>
+    <Name>TC0014-0003</Name>
+    <Description>Πωλήσεις Τρίτων Χωρών</Description>
+    <Comment>IMP-06602</Comment>
+  </TestCases>
+  <Actions>
+    <GID>8fd475c5-f439-4689-b54b-c34eb1652acb</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4c9b0d61-c341-4fbb-95c2-ec96470c1a82</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>969466dc-fc64-4de0-ac77-c03de5688b74</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0014-0001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0014-0001";Quantity="10";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>22abc3e7-3d1f-4545-b519-0d0fce262ed6</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap vDoc3GID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc3GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>04c4fde8-a115-46f2-afdd-5fc17d84c12f</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>65</SeqNum>
+    <Name>AC-00016</Name>
+    <Description>Move Document To State 2</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc3GID";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6585cffa-f65e-4302-9aa3-e4a85bb4a899</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Insert new ΤΔΑ </Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0014";fCustomerGID="TC0014-0003"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>23d1d07b-b490-430d-a9b8-77c661807b55</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>77</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar vAccDocGID 0</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vAccDocGID";sqlBody="select GID from ESGLAccountingDocument where fDocumentGID = @vDoc3GID  and ChartOfAccounts=0";sqlParameterNames="vDoc3GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>607a8362-6c27-43b5-addb-684104105d6e</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>78</SeqNum>
+    <Name>AC-00018</Name>
+    <Description>Execute SQL Select LedgerEntries</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="LedgerEntries";sqlBody="select ESGLAccount.Code as Code, Debit, Credit from ESGLLedgerEntry inner join ESGLAccount on ESGLLedgerEntry.fAccountGID = ESGLAccount.GID where fAccountingDocumentGID = @vAccDocGID order by Code";sqlParameterNames="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>62f72114-56cc-492b-a6f9-6eecdbd75bd6</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>79</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values LedgerEntries</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;30.01.00.0000&lt;/Code&gt;
+&lt;Debit&gt;742.39&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;70.20.00.0023&lt;/Code&gt;
+&lt;Debit&gt;0&lt;/Debit&gt;
+&lt;Credit&gt;742.39&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="0";excludeDateTypeColumns="0";excludeDateTimeTypeColumns="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>382fc516-d036-46a7-a1d4-8e3c928ffafd</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>80</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar vAccDocGID 2</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="vAccDocGID";sqlBody="select GID from ESGLAccountingDocument where fDocumentGID = @vDoc3GID  and ChartOfAccounts=2";sqlParameterNames="vDoc3GID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>23dc5790-b9df-475a-8fd6-586bd659c3dc</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>81</SeqNum>
+    <Name>AC-00018</Name>
+    <Description>Execute SQL Select LedgerEntries</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="LedgerEntries";sqlBody="select ESGLAccount.Code as Code, Debit, Credit from ESGLLedgerEntry inner join ESGLAccount on ESGLLedgerEntry.fAccountGID = ESGLAccount.GID where fAccountingDocumentGID = @vAccDocGID order by Code,Debit,Credit";sqlParameterNames="vAccDocGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>09903d09-ae7f-48ea-98b2-8a169c572dc2</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>82</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values LedgerEntries</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;04.92.01.0000&lt;/Code&gt;
+&lt;Debit&gt;742.39&lt;/Debit&gt;
+&lt;Credit&gt;0&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;LedgerEntries&gt;
+&lt;Code&gt;08.92.01.0000&lt;/Code&gt;
+&lt;Debit&gt;0&lt;/Debit&gt;
+&lt;Credit&gt;742.39&lt;/Credit&gt;
+&lt;/LedgerEntries&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="0";excludeDateTypeColumns="0";excludeDateTimeTypeColumns="0"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>336853b4-0373-452d-88fd-4e86003a16d8</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>Assign Column Value</Name>
+    <Description>Assign Column Value</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="ADCurrencyReversedRate";columnValue="1,347";variableName="";treatEmptyColumnValueAsEmptyString="0"</Params>
+  </Actions>
+  <Actions>
+    <GID>20175ebf-5ee9-47ef-bed2-3712a1e3e33d</GID>
+    <fTestCaseGID>b57fae69-62fc-409e-b837-ffdb793546d9</fTestCaseGID>
+    <SeqNum>83</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc3GID"</Params>
+  </Actions>
+</NewDataSet>

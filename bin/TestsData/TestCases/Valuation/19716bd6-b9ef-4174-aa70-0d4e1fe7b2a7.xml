@@ -1,0 +1,283 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</GID>
+    <Name>TC0003-9002</Name>
+    <Description>Αποτίμηση - Ελεγχος Αποτελεσμάτων Αναλυτικών Προυπολογιστικών Αγορών σε Φάκελο</Description>
+  </TestCases>
+  <Actions>
+    <GID>631d53a4-0fd8-49d5-980c-d28d645b5eb5</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00018</Name>
+    <Description>Execute SQL Select Γραμμές ΔΠΚ Μήνα Ιανουαρίου 2010</Description>
+    <fActionGID>b5746858-1f7d-4c8e-81d0-2f56a85c2361</fActionGID>
+    <Params>tableNames="DPKLines";sqlBody="select l.LineType, it.Code ItemCode, left(l.alternativecode,4) alternativecode,  sum(l.Quantity) Quantity, sum(l.NetValue) NetValue from esfilineitem l inner join esfiitem it on l.fitemgid = it.gid inner join esfidocumentadjustment doc on l.fdocumentgid = doc.gid left join ESMMLineItemAnalysis anal on l.GID = anal.fMasterLineItemGID left join ESMMLot lot on anal.fLotGID = lot.GID where doc.adregistrationdate between '2010/1/1' and '2010/1/31' and doc.adcode like 'ΔΠΚ%'  group by l.LineType, it.Code, left(l.alternativecode,4) order by l.LineType, it.Code";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a7ed3183-0b50-4df6-b81f-d95afcffb583</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="TestCases_Valuation_3.8.17x";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b1418dbd-3ccb-4929-bd34-5aa57a8c901d</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-001'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-001' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1be2ddbd-8efb-424e-b9f2-a0ca7abc3dbf</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-002'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-002' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>be91f82e-5d4b-4add-88fc-329748eedda4</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-003'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-003' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3df91c98-1894-4c4a-a526-a0c3016172d0</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-004'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-004' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>24cc5211-ba7a-4243-af05-fca60966a223</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-005'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-005' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>02d3ea5b-c050-404d-a4e1-0a26fbb3f494</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-006'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-006' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ed8f6505-b553-4de5-82f1-0ef941530399</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-008'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-008' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d9f6024c-b906-4d66-a29f-bec589a69a29</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-009'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-009' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>58b438bc-ef06-4a24-9646-6138396afa2d</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-010'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-010' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5091ecef-e677-4ae6-80b0-ec34ecc81b97</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-011'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-011' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8941d51d-c120-4fb4-9983-a32501309edb</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-013'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-013' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5941cded-ba6c-4421-8e7e-f663859a040f</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-014'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-014' and Quantity = 5 and NetValue = 50 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7a8bbe8d-8b90-4e4c-b236-a555facd6b5b</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>19</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-016'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-016' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>62b75d5b-33ed-45f2-82af-4ae3d65a84b2</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>21</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-018'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-018' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3f1d5f30-08b1-446c-95e9-782afee19780</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>23</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-020'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-020' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4c36871a-70e7-42d4-88d9-391253fb2688</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>25</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-021'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-021' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bb7cf802-7672-4db6-ae27-5911bf305d3e</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>26</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-022'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-022' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>96dcf61a-fb3d-49cb-bc5a-0c10419a29b3</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>28</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-023'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-023' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0c4bb0ef-b13b-45fd-b7d0-2d02bc140c77</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>29</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-024'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-024' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f92e47d6-6416-444c-842a-f44d3fa82067</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>30</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-025'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-025' and Quantity = 10 and NetValue = 100 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>acb13e8d-0eb5-41fc-9396-18f896360b63</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-012'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-012' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4c0efa21-c233-491b-9494-91eee5642776</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>20</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '6' and ItemCode = 'TC0003-0002-017'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '6' and ItemCode = 'TC0003-0002-017' and Quantity = 2 and NetValue = 20 and alternativecode like 'ΑΔΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c108cc9c-bf18-4fba-8026-dab9309e9778</GID>
+    <fTestCaseGID>19716bd6-b9ef-4174-aa70-0d4e1fe7b2a7</fTestCaseGID>
+    <SeqNum>22</SeqNum>
+    <Name>AC-00012</Name>
+    <Description>Locate Row DPK Lines LineType = '7' and ItemCode = 'TC0003-0002-019'</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="DPKLines";position="";variableName="";parentRelation="";childRelation="";filterExpression="LineType = '7' and ItemCode = 'TC0003-0002-019' and Quantity = 1 and NetValue = 10 and alternativecode like 'ΚΦΠ%'"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

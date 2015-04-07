@@ -1,0 +1,428 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</GID>
+    <Name>TC0002-0015</Name>
+    <Description>Κατανομές Δαπανών - Ελεγχος ενημέρωσης όλων των διαστάσεων από γραμμές κατανομών</Description>
+    <Comment>BUG-10473</Comment>
+  </TestCases>
+  <Actions>
+    <GID>4b9be08e-0a3a-42b2-ab4b-aad24c5fed03</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Create New trade Document</Name>
+    <Description>Insert new ΤΕΔ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΕΔ";fADDocumentSeriesGID="TC0002-0001";fSupplierGID="TC0002-0001"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>47692c7a-85bd-4676-a189-1c89d194c2df</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Add Line Item</Name>
+    <Description>Add Line Expense TC0002 with CurrencyTotalValue = 100</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="5";fItemGID="TC0002";CurrencyTotalValue="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1136be79-070b-4162-938e-c3c3900c5b3c</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Set Column Value In Heap</Name>
+    <Description>Set Column Value In Heap vDoc1</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9e1d514d-b04a-4d85-846d-4bd17a45e64e</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login DB : ESTestCases</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f3a44e6-dced-44a8-864d-888ee7691a4a</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>Add Line Item Allocation</Name>
+    <Description>Add Line Item Allocation</Description>
+    <fActionGID>eca7a377-c8f1-4487-a949-e2f4663ac928</fActionGID>
+    <Params>fSiteGID="";fProjectGID="TC0002-0001";fBusinessUnitCode="TC0002-0001";fBusinessActivityCode="TC0002-0001";fDimension1Code="TC0002-0001";fDimension2Code="TC0002-0001";CurrencyBaseValue="";CurrencyTradeDiscountValue="";CurrencyChargesValue="";CurrencyTaxesValue="";CurrencyNetValue="";CurrencyVATValue="";CurrencyTotalValue="50";BaseValue="";TradeDiscountValue="";ChargesValue="";TaxesValue="";NetValue="";VATValue="";TotalValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>12d324a1-84b6-4f63-9dc2-66d1972c3d14</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>Add Line Item Allocation</Name>
+    <Description>Add Line Item Allocation</Description>
+    <fActionGID>eca7a377-c8f1-4487-a949-e2f4663ac928</fActionGID>
+    <Params>fSiteGID="";fProjectGID="TC0002-0002";fBusinessUnitCode="TC0002-0002";fBusinessActivityCode="TC0002-0002";fDimension1Code="TC0002-0002";fDimension2Code="TC0002-0002";CurrencyBaseValue="";CurrencyTradeDiscountValue="";CurrencyChargesValue="";CurrencyTaxesValue="";CurrencyNetValue="";CurrencyVATValue="";CurrencyTotalValue="50";BaseValue="";TradeDiscountValue="";ChargesValue="";TaxesValue="";NetValue="";VATValue="";TotalValue=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d4fdb771-edd8-446a-aaa9-2bec7514cf1d</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>Save Document</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4991e1df-74f1-42a2-bd74-ac48388eeda8</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>Locate Row</Name>
+    <Description>Locate Row 0</Description>
+    <fActionGID>0b465a4d-8d4f-414f-8884-f0ba496fb26a</fActionGID>
+    <Params>tableName="ESFILineItem";position="0";variableName="";parentRelation="";childRelation="";filterExpression=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9a166a25-aad1-44c0-8210-fbb1c863fd22</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>Move Document To State</Name>
+    <Description>Move Document To State 2</Description>
+    <fActionGID>a1971205-4734-49f9-a6d7-b2affa63e7af</fActionGID>
+    <Params>variableName="vDoc1";toState="2"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3cb256a1-eec6-4e74-9097-4500f6a52d82</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT Ισοζύγιο Εξόδων</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PDATERANGE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;ESDateRange(FiscalYear)&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PACCOUNTCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;4&lt;/DefValue&gt;&lt;DefValue&gt;5&lt;/DefValue&gt;&lt;DefValue&gt;6&lt;/DefValue&gt;&lt;DefValue&gt;7&lt;/DefValue&gt;&lt;DefValue&gt;8&lt;/DefValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;10&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFIItem\ItExpBalanceGlobal"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f9973252-c48f-49da-b280-690f5c55f260</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;1&lt;/ESGOSites_Code&gt;
+    &lt;ESFIItem_Code&gt;TC0002&lt;/ESFIItem_Code&gt;
+    &lt;ESGOProject_Code&gt;TC0002-0001&lt;/ESGOProject_Code&gt;
+    &lt;_ESGOZBusinessUnit_Code&gt;TC0002-0001&lt;/_ESGOZBusinessUnit_Code&gt;
+    &lt;ESGOZBusinessUnit_Description&gt;TC0002-0001&lt;/ESGOZBusinessUnit_Description&gt;
+    &lt;_ESGOZBusinessActivity_Code&gt;TC0002-0001&lt;/_ESGOZBusinessActivity_Code&gt;
+    &lt;ESGOZBusinessActivity_Description&gt;TC0002-0001&lt;/ESGOZBusinessActivity_Description&gt;
+    &lt;_ESGOZDimension1_Code&gt;TC0002-0001&lt;/_ESGOZDimension1_Code&gt;
+    &lt;ESGOZDimension1_Description&gt;TC0002-0001&lt;/ESGOZDimension1_Description&gt;
+    &lt;_ESGOZDimension2_Code&gt;TC0002-0001&lt;/_ESGOZDimension2_Code&gt;
+    &lt;ESGOZDimension2_Description&gt;TC0002-0001&lt;/ESGOZDimension2_Description&gt;
+    &lt;ESFIItemPeriodics_DebitValue&gt;40.6500000000&lt;/ESFIItemPeriodics_DebitValue&gt;
+    &lt;ESFIItemPeriodics_CreditValue&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditValue&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;0.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItemPeriodics_Balance&gt;40.6500000000&lt;/ESFIItemPeriodics_Balance&gt;
+    &lt;EKESFIItemPeriodics_DebitValue&gt;0&lt;/EKESFIItemPeriodics_DebitValue&gt;
+    &lt;APESFIItemPeriodics_DebitValue&gt;0&lt;/APESFIItemPeriodics_DebitValue&gt;
+    &lt;METESFIItemPeriodics_DebitValue&gt;0&lt;/METESFIItemPeriodics_DebitValue&gt;
+    &lt;EKESFIItemPeriodics_CreditValue&gt;0&lt;/EKESFIItemPeriodics_CreditValue&gt;
+    &lt;APESFIItemPeriodics_CreditValue&gt;0&lt;/APESFIItemPeriodics_CreditValue&gt;
+    &lt;METESFIItemPeriodics_CreditValue&gt;0&lt;/METESFIItemPeriodics_CreditValue&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_Balance&gt;0&lt;/EKESFIItemPeriodics_Balance&gt;
+    &lt;APESFIItemPeriodics_Balance&gt;0&lt;/APESFIItemPeriodics_Balance&gt;
+    &lt;METESFIItemPeriodics_Balance&gt;0&lt;/METESFIItemPeriodics_Balance&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;NPRTESFIItemPeriodics_DebitValue&gt;40.6500000000&lt;/NPRTESFIItemPeriodics_DebitValue&gt;
+    &lt;NPRTESFIItemPeriodics_CreditValue&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditValue&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;NPRTESFIItemPeriodics_Balance&gt;40.6500000000&lt;/NPRTESFIItemPeriodics_Balance&gt;
+    &lt;ESFIItem_ExpenseType /&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOSites_Code&gt;1&lt;/ESGOSites_Code&gt;
+    &lt;ESFIItem_Code&gt;TC0002&lt;/ESFIItem_Code&gt;
+    &lt;ESGOProject_Code&gt;TC0002-0002&lt;/ESGOProject_Code&gt;
+    &lt;_ESGOZBusinessUnit_Code&gt;TC0002-0002&lt;/_ESGOZBusinessUnit_Code&gt;
+    &lt;ESGOZBusinessUnit_Description&gt;TC0002-0002&lt;/ESGOZBusinessUnit_Description&gt;
+    &lt;_ESGOZBusinessActivity_Code&gt;TC0002-0002&lt;/_ESGOZBusinessActivity_Code&gt;
+    &lt;ESGOZBusinessActivity_Description&gt;TC0002-0002&lt;/ESGOZBusinessActivity_Description&gt;
+    &lt;_ESGOZDimension1_Code&gt;TC0002-0002&lt;/_ESGOZDimension1_Code&gt;
+    &lt;ESGOZDimension1_Description&gt;TC0002-0002&lt;/ESGOZDimension1_Description&gt;
+    &lt;_ESGOZDimension2_Code&gt;TC0002-0002&lt;/_ESGOZDimension2_Code&gt;
+    &lt;ESGOZDimension2_Description&gt;TC0002-0002&lt;/ESGOZDimension2_Description&gt;
+    &lt;ESFIItemPeriodics_DebitValue&gt;40.6500000000&lt;/ESFIItemPeriodics_DebitValue&gt;
+    &lt;ESFIItemPeriodics_CreditValue&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditValue&gt;
+    &lt;ESFIItemPeriodics_DebitQty&gt;0.0000000000&lt;/ESFIItemPeriodics_DebitQty&gt;
+    &lt;ESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/ESFIItemPeriodics_CreditQty&gt;
+    &lt;ESFIItemPeriodics_Balance&gt;40.6500000000&lt;/ESFIItemPeriodics_Balance&gt;
+    &lt;EKESFIItemPeriodics_DebitValue&gt;0&lt;/EKESFIItemPeriodics_DebitValue&gt;
+    &lt;APESFIItemPeriodics_DebitValue&gt;0&lt;/APESFIItemPeriodics_DebitValue&gt;
+    &lt;METESFIItemPeriodics_DebitValue&gt;0&lt;/METESFIItemPeriodics_DebitValue&gt;
+    &lt;EKESFIItemPeriodics_CreditValue&gt;0&lt;/EKESFIItemPeriodics_CreditValue&gt;
+    &lt;APESFIItemPeriodics_CreditValue&gt;0&lt;/APESFIItemPeriodics_CreditValue&gt;
+    &lt;METESFIItemPeriodics_CreditValue&gt;0&lt;/METESFIItemPeriodics_CreditValue&gt;
+    &lt;EKESFIItemPeriodics_DebitQty&gt;0&lt;/EKESFIItemPeriodics_DebitQty&gt;
+    &lt;APESFIItemPeriodics_DebitQty&gt;0&lt;/APESFIItemPeriodics_DebitQty&gt;
+    &lt;METESFIItemPeriodics_DebitQty&gt;0&lt;/METESFIItemPeriodics_DebitQty&gt;
+    &lt;EKESFIItemPeriodics_CreditQty&gt;0&lt;/EKESFIItemPeriodics_CreditQty&gt;
+    &lt;APESFIItemPeriodics_CreditQty&gt;0&lt;/APESFIItemPeriodics_CreditQty&gt;
+    &lt;METESFIItemPeriodics_CreditQty&gt;0&lt;/METESFIItemPeriodics_CreditQty&gt;
+    &lt;EKESFIItemPeriodics_Balance&gt;0&lt;/EKESFIItemPeriodics_Balance&gt;
+    &lt;APESFIItemPeriodics_Balance&gt;0&lt;/APESFIItemPeriodics_Balance&gt;
+    &lt;METESFIItemPeriodics_Balance&gt;0&lt;/METESFIItemPeriodics_Balance&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;NPRTESFIItemPeriodics_DebitValue&gt;40.6500000000&lt;/NPRTESFIItemPeriodics_DebitValue&gt;
+    &lt;NPRTESFIItemPeriodics_CreditValue&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditValue&gt;
+    &lt;NPRTESFIItemPeriodics_DebitQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_DebitQty&gt;
+    &lt;NPRTESFIItemPeriodics_CreditQty&gt;0.0000000000&lt;/NPRTESFIItemPeriodics_CreditQty&gt;
+    &lt;NPRTESFIItemPeriodics_Balance&gt;40.6500000000&lt;/NPRTESFIItemPeriodics_Balance&gt;
+    &lt;ESFIItem_ExpenseType /&gt;
+  &lt;/CUMUL&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;APOGR&lt;/ID&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;EKMET&lt;/ID&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;DebitQty&gt;0&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;ENTRIES&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0.0000000000&lt;/CreditValue&gt;
+    &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+    &lt;Balance&gt;81.3000000000&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;RT&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0.0000000000&lt;/CreditValue&gt;
+    &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0.0000000000&lt;/CreditQty&gt;
+    &lt;Balance&gt;81.3000000000&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;BALANCE&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;DebitQty&gt;0.0000000000&lt;/DebitQty&gt;
+    &lt;CreditQty&gt;0&lt;/CreditQty&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>89c8307a-5309-4596-8eb3-da8424e623ce</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT Ισοζύγιο Λογιστικής</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4$&lt;Param ID="PDATERANGE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;ESDateRange(FiscalYear)&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PLEDGERCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;60.00.00.0000&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;0&lt;/DefValue&gt;&lt;DefValue&gt;1&lt;/DefValue&gt;&lt;DefValue&gt;6&lt;/DefValue&gt;&lt;DefValue&gt;8&lt;/DefValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;10&lt;/DefValue&gt;&lt;DefValue&gt;11&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PPROJECTCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002-0001&lt;/DefValue&gt;&lt;DefValue&gt;TC0002-0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PBUCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002-0001&lt;/DefValue&gt;&lt;DefValue&gt;TC0002-0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PACTIVITYCODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002-0001&lt;/DefValue&gt;&lt;DefValue&gt;TC0002-0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIM1CODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002-0001&lt;/DefValue&gt;&lt;DefValue&gt;TC0002-0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;&lt;Param ID="PDIM2CODE"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;TC0002-0001&lt;/DefValue&gt;&lt;DefValue&gt;TC0002-0002&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESGLAccount\GLAccBalanceDet"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>90c9f85f-19ff-4e6b-8f25-da4922371499</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Check DataSet Column Values</Name>
+    <Description>Check DataSet Column Values</Description>
+    <fActionGID>15a89924-de84-4dca-be20-779f154c6640</fActionGID>
+    <Params>expectedDataSet="&lt;NewDataSet&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOProject_Code&gt;TC0002-0001&lt;/ESGOProject_Code&gt;
+    &lt;_ESGOProject_GID&gt;a46909f5-211a-413e-8280-0bfed2211069&lt;/_ESGOProject_GID&gt;
+    &lt;ESGOProject_Name&gt;Εργο1&lt;/ESGOProject_Name&gt;
+    &lt;ESGOSites_Code&gt;1&lt;/ESGOSites_Code&gt;
+    &lt;_ESGOSites_GID&gt;86947579-6885-4e86-914e-46378db3794f&lt;/_ESGOSites_GID&gt;
+    &lt;ESGOSites_Description&gt;ΚΕΝΤΡΙΚΑ ΕΔΡΑΣ&lt;/ESGOSites_Description&gt;
+    &lt;ESGLAccount_Code&gt;60.00.00.0000&lt;/ESGLAccount_Code&gt;
+    &lt;_ESGLAccount_GID&gt;5318e379-f760-4e36-a4e9-12dae59eab50&lt;/_ESGLAccount_GID&gt;
+    &lt;ESGLAccount_Name&gt;Τακτικές αποδοχές έμμισθου προσωπικού&lt;/ESGLAccount_Name&gt;
+    &lt;ESGLAccount_SummaryAccount&gt;0&lt;/ESGLAccount_SummaryAccount&gt;
+    &lt;_ESGOZBusinessUnit_Code&gt;TC0002-0001&lt;/_ESGOZBusinessUnit_Code&gt;
+    &lt;ESGOZBusinessUnit_Description&gt;TC0002-0001&lt;/ESGOZBusinessUnit_Description&gt;
+    &lt;_ESGOZBusinessActivity_Code&gt;TC0002-0001&lt;/_ESGOZBusinessActivity_Code&gt;
+    &lt;ESGOZBusinessActivity_Description&gt;TC0002-0001&lt;/ESGOZBusinessActivity_Description&gt;
+    &lt;_ESGOZDimension1_Code&gt;TC0002-0001&lt;/_ESGOZDimension1_Code&gt;
+    &lt;ESGOZDimension1_Description&gt;TC0002-0001&lt;/ESGOZDimension1_Description&gt;
+    &lt;_ESGOZDimension2_Code&gt;TC0002-0001&lt;/_ESGOZDimension2_Code&gt;
+    &lt;ESGOZDimension2_Description&gt;TC0002-0001&lt;/ESGOZDimension2_Description&gt;
+    &lt;ESGLAccountParent_Code&gt;60.00.00&lt;/ESGLAccountParent_Code&gt;
+    &lt;ESGLAccount_AccountLevel&gt;4&lt;/ESGLAccount_AccountLevel&gt;
+    &lt;ESGLAccount_fParentAccountGID&gt;3424fe62-e1d0-4627-ae0c-0351f14ab1dc&lt;/ESGLAccount_fParentAccountGID&gt;
+    &lt;ESGLAccount_PCode&gt;60.00.00&lt;/ESGLAccount_PCode&gt;
+    &lt;ESGOFiscalYear_BeginDate&gt;2012-01-01T00:00:00+02:00&lt;/ESGOFiscalYear_BeginDate&gt;
+    &lt;ESGOFiscalPeriod_BeginDate&gt;2012-06-01T00:00:00+03:00&lt;/ESGOFiscalPeriod_BeginDate&gt;
+    &lt;ESGLAccountPeriodics_DebitValue&gt;40.6500000000&lt;/ESGLAccountPeriodics_DebitValue&gt;
+    &lt;ESGLAccountPeriodics_CreditValue&gt;0.0000000000&lt;/ESGLAccountPeriodics_CreditValue&gt;
+    &lt;ESGLAccountPeriodics_Balance&gt;40.6500000000&lt;/ESGLAccountPeriodics_Balance&gt;
+    &lt;EKESGLAccountPeriodics_DebitValue&gt;0&lt;/EKESGLAccountPeriodics_DebitValue&gt;
+    &lt;APESGLAccountPeriodics_DebitValue&gt;0&lt;/APESGLAccountPeriodics_DebitValue&gt;
+    &lt;METESGLAccountPeriodics_DebitValue&gt;0&lt;/METESGLAccountPeriodics_DebitValue&gt;
+    &lt;EKESGLAccountPeriodics_CreditValue&gt;0&lt;/EKESGLAccountPeriodics_CreditValue&gt;
+    &lt;APESGLAccountPeriodics_CreditValue&gt;0&lt;/APESGLAccountPeriodics_CreditValue&gt;
+    &lt;METESGLAccountPeriodics_CreditValue&gt;0&lt;/METESGLAccountPeriodics_CreditValue&gt;
+    &lt;EKESGLAccountPeriodics_Balance&gt;0&lt;/EKESGLAccountPeriodics_Balance&gt;
+    &lt;APESGLAccountPeriodics_Balance&gt;0&lt;/APESGLAccountPeriodics_Balance&gt;
+    &lt;METESGLAccountPeriodics_Balance&gt;0&lt;/METESGLAccountPeriodics_Balance&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;DebitBalance&gt;40.6500000000&lt;/DebitBalance&gt;
+    &lt;CreditBalance&gt;0&lt;/CreditBalance&gt;
+    &lt;NPRTESGLAccountPeriodics_DebitValue&gt;40.6500000000&lt;/NPRTESGLAccountPeriodics_DebitValue&gt;
+    &lt;NPRTESGLAccountPeriodics_CreditValue&gt;0.0000000000&lt;/NPRTESGLAccountPeriodics_CreditValue&gt;
+    &lt;NPRTESGLAccountPeriodics_Balance&gt;40.6500000000&lt;/NPRTESGLAccountPeriodics_Balance&gt;
+    &lt;ESGLAccount_fBalanceSheetGroupCode /&gt;
+    &lt;ESGLZAccountClass_Code /&gt;
+    &lt;_ESGLZAccountClass_Code /&gt;
+    &lt;ESGLZAccountClass_Description /&gt;
+    &lt;ESGLZAlternativeAccount_Code /&gt;
+    &lt;_ESGLZAlternativeAccount_Code /&gt;
+    &lt;ESGLZAlternativeAccount_Name /&gt;
+    &lt;ESGLAccount_InternationalCode /&gt;
+    &lt;ESGLJournal_Code /&gt;
+    &lt;_ESGLJournal_GID&gt;00000000-0000-0000-0000-000000000000&lt;/_ESGLJournal_GID&gt;
+    &lt;ESGLJournal_Description /&gt;
+    &lt;ESGLAccountPeriodics_Documenttype /&gt;
+    &lt;Summable&gt;1&lt;/Summable&gt;
+  &lt;/CUMUL&gt;
+  &lt;CUMUL&gt;
+    &lt;ESGOProject_Code&gt;TC0002-0002&lt;/ESGOProject_Code&gt;
+    &lt;_ESGOProject_GID&gt;e6d9a7b2-e4e2-4f0a-81f0-6a0a5b623a54&lt;/_ESGOProject_GID&gt;
+    &lt;ESGOProject_Name&gt;Εργο 2&lt;/ESGOProject_Name&gt;
+    &lt;ESGOSites_Code&gt;1&lt;/ESGOSites_Code&gt;
+    &lt;_ESGOSites_GID&gt;86947579-6885-4e86-914e-46378db3794f&lt;/_ESGOSites_GID&gt;
+    &lt;ESGOSites_Description&gt;ΚΕΝΤΡΙΚΑ ΕΔΡΑΣ&lt;/ESGOSites_Description&gt;
+    &lt;ESGLAccount_Code&gt;60.00.00.0000&lt;/ESGLAccount_Code&gt;
+    &lt;_ESGLAccount_GID&gt;5318e379-f760-4e36-a4e9-12dae59eab50&lt;/_ESGLAccount_GID&gt;
+    &lt;ESGLAccount_Name&gt;Τακτικές αποδοχές έμμισθου προσωπικού&lt;/ESGLAccount_Name&gt;
+    &lt;ESGLAccount_SummaryAccount&gt;0&lt;/ESGLAccount_SummaryAccount&gt;
+    &lt;_ESGOZBusinessUnit_Code&gt;TC0002-0002&lt;/_ESGOZBusinessUnit_Code&gt;
+    &lt;ESGOZBusinessUnit_Description&gt;TC0002-0002&lt;/ESGOZBusinessUnit_Description&gt;
+    &lt;_ESGOZBusinessActivity_Code&gt;TC0002-0002&lt;/_ESGOZBusinessActivity_Code&gt;
+    &lt;ESGOZBusinessActivity_Description&gt;TC0002-0002&lt;/ESGOZBusinessActivity_Description&gt;
+    &lt;_ESGOZDimension1_Code&gt;TC0002-0002&lt;/_ESGOZDimension1_Code&gt;
+    &lt;ESGOZDimension1_Description&gt;TC0002-0002&lt;/ESGOZDimension1_Description&gt;
+    &lt;_ESGOZDimension2_Code&gt;TC0002-0002&lt;/_ESGOZDimension2_Code&gt;
+    &lt;ESGOZDimension2_Description&gt;TC0002-0002&lt;/ESGOZDimension2_Description&gt;
+    &lt;ESGLAccountParent_Code&gt;60.00.00&lt;/ESGLAccountParent_Code&gt;
+    &lt;ESGLAccount_AccountLevel&gt;4&lt;/ESGLAccount_AccountLevel&gt;
+    &lt;ESGLAccount_fParentAccountGID&gt;3424fe62-e1d0-4627-ae0c-0351f14ab1dc&lt;/ESGLAccount_fParentAccountGID&gt;
+    &lt;ESGLAccount_PCode&gt;60.00.00&lt;/ESGLAccount_PCode&gt;
+    &lt;ESGOFiscalYear_BeginDate&gt;2012-01-01T00:00:00+02:00&lt;/ESGOFiscalYear_BeginDate&gt;
+    &lt;ESGOFiscalPeriod_BeginDate&gt;2012-06-01T00:00:00+03:00&lt;/ESGOFiscalPeriod_BeginDate&gt;
+    &lt;ESGLAccountPeriodics_DebitValue&gt;40.6500000000&lt;/ESGLAccountPeriodics_DebitValue&gt;
+    &lt;ESGLAccountPeriodics_CreditValue&gt;0.0000000000&lt;/ESGLAccountPeriodics_CreditValue&gt;
+    &lt;ESGLAccountPeriodics_Balance&gt;40.6500000000&lt;/ESGLAccountPeriodics_Balance&gt;
+    &lt;EKESGLAccountPeriodics_DebitValue&gt;0&lt;/EKESGLAccountPeriodics_DebitValue&gt;
+    &lt;APESGLAccountPeriodics_DebitValue&gt;0&lt;/APESGLAccountPeriodics_DebitValue&gt;
+    &lt;METESGLAccountPeriodics_DebitValue&gt;0&lt;/METESGLAccountPeriodics_DebitValue&gt;
+    &lt;EKESGLAccountPeriodics_CreditValue&gt;0&lt;/EKESGLAccountPeriodics_CreditValue&gt;
+    &lt;APESGLAccountPeriodics_CreditValue&gt;0&lt;/APESGLAccountPeriodics_CreditValue&gt;
+    &lt;METESGLAccountPeriodics_CreditValue&gt;0&lt;/METESGLAccountPeriodics_CreditValue&gt;
+    &lt;EKESGLAccountPeriodics_Balance&gt;0&lt;/EKESGLAccountPeriodics_Balance&gt;
+    &lt;APESGLAccountPeriodics_Balance&gt;0&lt;/APESGLAccountPeriodics_Balance&gt;
+    &lt;METESGLAccountPeriodics_Balance&gt;0&lt;/METESGLAccountPeriodics_Balance&gt;
+    &lt;ALL_ZERO_FILTER_COLUMN_ZERO&gt;false&lt;/ALL_ZERO_FILTER_COLUMN_ZERO&gt;
+    &lt;DebitBalance&gt;40.6500000000&lt;/DebitBalance&gt;
+    &lt;CreditBalance&gt;0&lt;/CreditBalance&gt;
+    &lt;NPRTESGLAccountPeriodics_DebitValue&gt;40.6500000000&lt;/NPRTESGLAccountPeriodics_DebitValue&gt;
+    &lt;NPRTESGLAccountPeriodics_CreditValue&gt;0.0000000000&lt;/NPRTESGLAccountPeriodics_CreditValue&gt;
+    &lt;NPRTESGLAccountPeriodics_Balance&gt;40.6500000000&lt;/NPRTESGLAccountPeriodics_Balance&gt;
+    &lt;ESGLAccount_fBalanceSheetGroupCode /&gt;
+    &lt;ESGLZAccountClass_Code /&gt;
+    &lt;_ESGLZAccountClass_Code /&gt;
+    &lt;ESGLZAccountClass_Description /&gt;
+    &lt;ESGLZAlternativeAccount_Code /&gt;
+    &lt;_ESGLZAlternativeAccount_Code /&gt;
+    &lt;ESGLZAlternativeAccount_Name /&gt;
+    &lt;ESGLAccount_InternationalCode /&gt;
+    &lt;ESGLJournal_Code /&gt;
+    &lt;_ESGLJournal_GID&gt;00000000-0000-0000-0000-000000000000&lt;/_ESGLJournal_GID&gt;
+    &lt;ESGLJournal_Description /&gt;
+    &lt;ESGLAccountPeriodics_Documenttype /&gt;
+    &lt;Summable&gt;1&lt;/Summable&gt;
+  &lt;/CUMUL&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;APOGR&lt;/ID&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;EKMET&lt;/ID&gt;
+    &lt;DebitValue&gt;0&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;ENTRIES&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0.0000000000&lt;/CreditValue&gt;
+    &lt;Balance&gt;81.3000000000&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;RT&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0.0000000000&lt;/CreditValue&gt;
+    &lt;Balance&gt;81.3000000000&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+  &lt;GRANDTOTALS&gt;
+    &lt;ID&gt;BALANCE&lt;/ID&gt;
+    &lt;DebitValue&gt;81.3000000000&lt;/DebitValue&gt;
+    &lt;CreditValue&gt;0&lt;/CreditValue&gt;
+    &lt;Balance&gt;0&lt;/Balance&gt;
+  &lt;/GRANDTOTALS&gt;
+&lt;/NewDataSet&gt;";excludeGuidTypeColumns="1";excludeDateTypeColumns="1";excludeDateTimeTypeColumns="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>effd6eb3-c054-43d0-90f0-cbab60c6ca62</GID>
+    <fTestCaseGID>1947aa9e-d8b0-49bb-a3f9-a111a2dbd069</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>Delete Document</Name>
+    <Description>Delete Document vDoc1</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="vDoc1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

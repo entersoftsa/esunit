@@ -1,0 +1,713 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</GID>
+    <Name>TC0007-1002-002-Insert</Name>
+    <Description>Ελεγχος Τιμών &amp; Εκπτώσεων Γραμμής Είδους  - Κλίμακες Ποσοτήτων - Πελάτης με Τιμολογιακή Κατηγορία με Τιμοκατάλογο Τιμών</Description>
+  </TestCases>
+  <Actions>
+    <GID>8325d82b-90f0-4e49-bfec-5b00d80c9972</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4f117283-717a-4720-9aff-d7ab49be0e06</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-1002-002";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>505c58ad-4546-44de-a55d-79cddea20224</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1001-002</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1001-002";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>94e2f133-7ef1-4ed1-b82b-af647185c3c7</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 100</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="100";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e40db388-ccdb-48a6-98ce-2bfa1d94be90</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>da6f695c-6c79-4150-9d62-c66f634472ea</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7ce8403a-1b1c-4bb0-aff9-4e9ee78a8ec7</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7db013f5-4a0c-435c-baa5-df9542374520</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>faf51c11-b08e-41bb-bbb6-391c81ba1268</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>9</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-001";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>c54f1f4f-5860-47b7-8eb3-622f2b0eb016</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3f574ccf-5607-46be-84f6-0ab0f86ed227</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>11</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>df7976ea-c4b4-46ea-9c11-cd6107cdb2db</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>13b8f5c9-08de-4d5d-97ea-99d9aa162c55</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2ba3d58f-5aad-4d47-9b13-5432a61cb0f7</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>14</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-002</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-002";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0e24e7d0-af6f-49b6-8ca5-8012a002cc0f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>15</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5977ccc5-c1e5-45ac-b931-90a832ae0ddb</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>16</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>63ebc5ef-5239-42e2-b171-8e007572b577</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>17</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 =10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>dbc4ac52-d17f-44ce-bd8d-38dea99280f4</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>18</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>60578eb4-cf1f-4360-9e3b-dc21d9b9c400</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>34</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-005</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-005";Quantity="1";fColorCode="BL";fSizeCode="36"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>baeeece2-b505-4f5e-b636-8e29dc24a469</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>35</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8c93f0af-3582-4a53-910c-3d260085ee35</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>36</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>6958d8e0-22ab-459d-a4cc-2ed401569028</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>37</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3ba636df-32bc-44df-8db6-d8421e8b6f44</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>38</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>860fd16d-7fb8-4d99-9359-9fe7395a27d6</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>39</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-007";Quantity="1";fColorCode="BL";fSizeCode="35"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9cfab595-ea68-4460-b302-6714615be888</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>40</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e3b71e68-addb-4cd2-9b14-ae3b08145a2f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>41</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>707f1b1c-6e4f-4dbc-b331-aec4f5f4c5d3</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>42</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8abf13eb-cdd1-4b3e-998a-4b623f34c437</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>43</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>05d936d2-57bd-43eb-957b-71ff51a232ef</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>49</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-010</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-010";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>3218799e-dd11-46c6-9b8d-840ee6c8cf65</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>50</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>bc098f30-ed0c-4a4c-b75b-efb524da1089</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>51</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>75312c61-eb98-4f00-b0f2-9d9245377fad</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>52</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fd1b0809-6eb9-4275-855a-d13907cc63f9</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>53</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>00441aad-a7a0-4bda-9837-6faf1aa21cc7</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>54</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-011</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-011";Quantity="1";fColorCode="BL";fSizeCode="36"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>73e5754b-1d62-4583-8f85-af25000af61b</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>55</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 30</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="30";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>0d14d948-74d5-41c0-b208-11e7ef4110ea</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>4d01fa53-b22c-46a4-8a0f-337f92437844</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>57</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f5e92727-fe93-46af-bd0b-f3adf7eccb4f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>58</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>602b1475-9ec8-447f-940b-f6cc0178502a</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>61</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-001</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-001";Quantity="5";Price=""</Params>
+  </Actions>
+  <Actions>
+    <GID>07e6ecd9-f49d-485e-be70-e68e9a310170</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>62</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>6cfd86a3-3e92-41ea-aee2-99bf849ebab1</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>63</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>762c2263-45f4-4ed8-aab6-508071a6a2b8</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>64</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>6f67a583-2521-4178-9ae6-6ab1f94a701a</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>65</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>6a27b9b4-a1d5-4978-a6fe-bfab6f50c255</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>66</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-002</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-002";Quantity="5";Price=""</Params>
+  </Actions>
+  <Actions>
+    <GID>fab2678e-0b0a-4c6d-bd82-c6e7d36cbe28</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>67</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>5684703f-a496-4377-9fa8-fe734d7f6c9e</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>68</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>a2e07331-6697-4cc4-a96e-1c0efaaa140b</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>69</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>d3dc65f2-61d6-4736-b3ae-b735f05199fc</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>70</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>8801f24e-8e32-42e9-956d-6f9d1a2eeac7</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>73</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>7eca9a2a-30fb-4995-b85a-ccb57cba9c9f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>74</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>4bee4a2e-d0b1-466a-a90e-b0ac4a52c4bd</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>75</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>aa253ebe-f6be-4b87-ae12-cbe7dfd80eab</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>76</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>457cf66e-0994-4744-89ad-d6fa1a64efcd</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>72</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-005</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-005";Quantity="5";fColorCode="BL";fSizeCode="36"</Params>
+  </Actions>
+  <Actions>
+    <GID>8a275de5-3039-4d11-8390-a23f0375334a</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>77</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-007";Quantity="5";fColorCode="BL";fSizeCode="35"</Params>
+  </Actions>
+  <Actions>
+    <GID>c1a7ae43-3d60-4c90-b4cb-879a930c3155</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>78</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>95f385f7-4b15-4113-b9e6-58ff53eca770</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>79</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>b14c246b-3ed2-41b5-b4c4-42b7d190c460</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>80</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>825b500b-2ba7-41b3-8a8c-26fa91efc72f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>81</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>8a9ca017-60fb-4602-a65c-dfb3427272f4</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>82</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-010</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-010";Quantity="5";Price=""</Params>
+  </Actions>
+  <Actions>
+    <GID>e3dcc880-6b7c-4c3f-82e4-33ea20131f62</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>83</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>46a42cb6-53ca-4dd8-b63b-20e240a4f7b6</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>84</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>dc77a278-cf07-435f-8218-f37238c58cea</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>85</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>b13327b5-1c39-4693-8230-d91f1f6f943b</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>86</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>0d1f559e-b48b-47a1-b96d-d3666cf59e7d</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>87</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-1002-011</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-1002-011";Quantity="5";fColorCode="BL";fSizeCode="36"</Params>
+  </Actions>
+  <Actions>
+    <GID>769c6062-7078-4ad5-a35b-8e6bc1ba2a33</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>88</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Price = 20</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Price";columnValue="20";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>41ff22c6-f274-4ceb-9174-ad2ca028b11c</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>89</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount1 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount1";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>e478b3d1-5de2-499b-becb-c244f3bb4d63</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>90</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount2 = 10</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount2";columnValue="10";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>b0ac5f34-c191-4791-a8bc-19c17b32ac1f</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>91</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Discount3 = 0</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Discount3";columnValue="0";tableName="";variableName=""</Params>
+  </Actions>
+  <Actions>
+    <GID>226ce838-4f13-454e-98ea-fd59c626d538</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>92</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+  </Actions>
+  <Actions>
+    <GID>643c6422-5d49-48ea-ac58-1f118115da7a</GID>
+    <fTestCaseGID>367fcbf6-ba8e-40ec-8191-79c4f0c965cc</fTestCaseGID>
+    <SeqNum>93</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+  </Actions>
+</NewDataSet>

@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>d53dbc18-9b3d-455c-9a44-848d40395a15</GID>
+    <Name>TC0007-0*</Name>
+    <Description>Set BomHandling = 0 where DocumentClass &lt;&gt; 1 and BOMHandling=0</Description>
+  </TestCases>
+  <Actions>
+    <GID>51a3049c-eb7e-453e-a90c-bea8dfa72908</GID>
+    <fTestCaseGID>d53dbc18-9b3d-455c-9a44-848d40395a15</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e7e46cb3-2f02-40c4-9bab-6e1b22b30753</GID>
+    <fTestCaseGID>d53dbc18-9b3d-455c-9a44-848d40395a15</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>Execute SQL Action</Name>
+    <Description>Execute SQL Action Set BOMHandling = 0</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update ESFIDocumentType set BOMHandling = 0 where BOMHandling=3";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b1e8cb22-1dc3-4619-b1af-a180413d8a33</GID>
+    <fTestCaseGID>d53dbc18-9b3d-455c-9a44-848d40395a15</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Reset all caches</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

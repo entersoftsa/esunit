@@ -1,0 +1,151 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>3a0bdc17-6746-438a-b54f-f222b8e80836</GID>
+    <Name>TC0000-0005 err</Name>
+    <Description>Reset Cache - Αλλαγή Κατηγοριών ΦΠΑ</Description>
+    <Comment>IMP-06560
+</Comment>
+  </TestCases>
+  <Actions>
+    <GID>e8fe6a25-add1-4098-81fa-9eb9aee36679</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e6a926c7-24ff-444c-9f37-42dff129a329</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>ac5e2e81-eae9-4c16-b3e0-b5df5b1a4353</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b63e0021-153f-466a-88ee-725f39bbc277</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action Αλλαγή % Κατηγορίας ΦΠΑ 1 = 99</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update ESGOZVATCategory set Normal = 99 Where Code = '1'";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>b66c60fa-9d4e-47d3-b504-7ae6d6866ab9</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7dcbe1c7-51a6-4515-a298-e428b5c243c2</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>12</SeqNum>
+    <Name>AC-00035</Name>
+    <Description>Reset all caches</Description>
+    <fActionGID>b518fac2-187d-46ed-ad7e-a099d83d412e</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>57782d6c-b8ee-4552-bcfa-cc4bc28e7a5d</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00015</Name>
+    <Description>Execute SQL Scalar Αποθήκευση % Κατηγορίας ΦΠΑ 1</Description>
+    <fActionGID>7f189304-e836-4121-8ee4-15ed27b4e037</fActionGID>
+    <Params>variableName="VAT1";sqlBody="select Normal from ESGOZVatCategory where code = '1'";sqlParameterNames=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8a6ea4c0-1005-413f-8345-6af01d4a8858</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>8</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value VATValue = 99</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="VATValue";columnValue="99";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>5e21656f-61ba-4b95-8147-d9414133cf62</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>10</SeqNum>
+    <Name>AC-00034</Name>
+    <Description>Execute SQL Action Επαναφορά Κατηγορίας ΦΠΑ 1</Description>
+    <fActionGID>ba23e09a-cf32-49af-8351-158d91070153</fActionGID>
+    <Params>variableName="upd";sqlBody="update ESGOZVATCategory set Normal = 23 Where Code = '1'";sqlParameterNames="VAT1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>8d2527ca-12b1-4c7b-bd49-3ed98e1f20a7</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>33</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007";Quantity="1";Price="100"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>eaec2f8d-2338-4f91-9f5d-c4a7806b33f2</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>44</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check Column Value VATValue = 23</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="VATValue";columnValue="23";tableName="";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>a7d1f47b-5292-48e4-96a1-28bdb1ff6787</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>32</SeqNum>
+    <Name>AC-00001</Name>
+    <Description>Create New Trade Document ΤΔΑ</Description>
+    <fActionGID>6023b135-6e06-4c32-b671-328a5811b40c</fActionGID>
+    <Params>fADDocumentTypeGID="ΤΔΑ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>56153a17-1df8-4d24-aedf-2106d92a16a6</GID>
+    <fTestCaseGID>3a0bdc17-6746-438a-b54f-f222b8e80836</fTestCaseGID>
+    <SeqNum>13</SeqNum>
+    <Name>Sleep</Name>
+    <Description>Sleep 3sec</Description>
+    <fActionGID>b1b7120f-24c7-4cae-89fc-914b9c7a00bb</fActionGID>
+    <Params>sleepTimeInMilliSeconds="3000"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

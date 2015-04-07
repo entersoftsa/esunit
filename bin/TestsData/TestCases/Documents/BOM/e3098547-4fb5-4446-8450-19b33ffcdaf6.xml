@@ -1,0 +1,106 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>e3098547-4fb5-4446-8450-19b33ffcdaf6</GID>
+    <Name>TC0007-0013-02</Name>
+    <Description>Παραγωγή - Έλεγχος πρότασης συνταγής Πελάτη - Πελάτης με μία συνταγή χωρίς ημ/νία - Πρόταση συνταγής</Description>
+  </TestCases>
+  <Actions>
+    <GID>0358b235-6d95-4c5b-8957-b6891e26eec0</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>AC-00005</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="admin";pwdID="entersoft";companyID="001";branchID="1"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>acc42b55-59cc-4a85-a8b1-8d41fb406889</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>2</SeqNum>
+    <Name>AC-00022</Name>
+    <Description>Create New Trade Adjustemnt ΕΝΤ</Description>
+    <fActionGID>c12adb50-dcb2-4c99-ab3e-35de1bd72d5e</fActionGID>
+    <Params>fADDocumentTypeGID="ΕΝΤ";fADDocumentSeriesGID="TC0007";fCustomerGID="TC0007-0013-02";fSupplierGID="";fDebtorGID="";fCreditorGID=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>fd3a8782-6233-469e-aa91-c65e38dfcf7e</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>AC-00003</Name>
+    <Description>Add Line Item TC0007-0013-01</Description>
+    <fActionGID>f5cb8dba-3c16-4f0b-9149-fbda51123760</fActionGID>
+    <Params>LineType="6";fItemGID="TC0007-0013-01";Quantity="1";Price=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>f9ac3928-fce7-4d27-a282-9a776b5585f3</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>48</SeqNum>
+    <Name>AC-00007</Name>
+    <Description>Save Document</Description>
+    <fActionGID>1e51d878-796c-4891-84f2-c61373d27046</fActionGID>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>9e5bf626-2a9c-4276-aca5-76b2ab29c4d4</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap fSourceDocumentGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="GID";variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>2d34ffbc-7ac8-49f9-b903-fd9185ebfb93</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>5</SeqNum>
+    <Name>AC-00004</Name>
+    <Description>Assign Column Value Quantity = 2</Description>
+    <fActionGID>a5058fff-2ffc-4394-a412-e1a3d1b8caad</fActionGID>
+    <Params>columnName="Quantity";columnValue="2";variableName=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>d1512e1c-a5dc-4011-9e16-43e727840ea3</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>56</SeqNum>
+    <Name>AC-00008</Name>
+    <Description>Delete Document fSourceDocumentGID</Description>
+    <fActionGID>c2ee006e-dac0-4ea9-af61-3625239eb342</fActionGID>
+    <Params>variableName="fSourceDocumentGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>7cae03f0-b917-4ff4-97e0-344e8637a81f</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>7</SeqNum>
+    <Name>AC-00002</Name>
+    <Description>Check columnName="Code";columnValue="TC0007-0013-02";tableName="FK_ESFILineItem_ESMMBOM"</Description>
+    <fActionGID>cd15d1c7-7f32-4f1e-9dd6-61cde604ca0c</fActionGID>
+    <Params>columnName="Code";columnValue="TC0007-0013-02";tableName="FK_ESFILineItem_ESMMBOM";variableName="BOMGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>1f65ae8f-a6df-4972-886b-07c93c77d6f7</GID>
+    <fTestCaseGID>e3098547-4fb5-4446-8450-19b33ffcdaf6</fTestCaseGID>
+    <SeqNum>6</SeqNum>
+    <Name>AC-00009</Name>
+    <Description>Set Column Value In Heap BOMGID</Description>
+    <fActionGID>e57bb49d-92bd-4f95-bb47-104544baa409</fActionGID>
+    <Params>columnName="fBOMGID";variableName="BOMGID"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>

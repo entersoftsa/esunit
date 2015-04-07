@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestCases>
+    <GID>e20505d0-f8b5-4e5d-89bd-ac7fd579a37c</GID>
+    <Name>00044</Name>
+    <Description>Ισοζύγιο Σύγκρισης Ε.Λ.Π και Δ.Λ.Π. εισπρακτέων (ESFITradeAccount\Debtors\TADebBalanceIASandNAS)</Description>
+    <Comment>IMP-06824</Comment>
+  </TestCases>
+  <Actions>
+    <GID>a5547867-c434-49e0-b4dc-49197d70decc</GID>
+    <fTestCaseGID>e20505d0-f8b5-4e5d-89bd-ac7fd579a37c</fTestCaseGID>
+    <SeqNum>1</SeqNum>
+    <Name>Login</Name>
+    <Description>Login</Description>
+    <fActionGID>515d1da9-6251-4d95-9072-609f28352688</fActionGID>
+    <Params>appServerID="STD";dbID="ESTestCases";userID="esmaster";pwdID="entersoft";companyID="001";branchID="1";loginDate="";cacheSession="0";useLightSession="0";remoteSessionType=""</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>cbe3205e-717f-4d33-8ea1-d50a2940e2c2</GID>
+    <fTestCaseGID>e20505d0-f8b5-4e5d-89bd-ac7fd579a37c</fTestCaseGID>
+    <SeqNum>3</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT with default Params</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$|ESFITradeAccount\Debtors\TADebBalanceIASandNAS"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+  <Actions>
+    <GID>e88d53d0-ab58-4f53-8926-a7abcfe92fba</GID>
+    <fTestCaseGID>e20505d0-f8b5-4e5d-89bd-ac7fd579a37c</fTestCaseGID>
+    <SeqNum>4</SeqNum>
+    <Name>Execute BIT</Name>
+    <Description>Execute BIT group by categories BU, BA, Dim1, Dim2</Description>
+    <fActionGID>7ff7ae6d-4104-4596-8c54-96982a485ca6</fActionGID>
+    <Params>bitURL="bInvoke|Entersoft.Framework.Platform.ESBalanceSite, ESBalanceSrv|4,0$&lt;Param ID="PDIMFIELDS"&gt;&lt;DefaultValue&gt;&lt;DefValue&gt;9&lt;/DefValue&gt;&lt;DefValue&gt;16&lt;/DefValue&gt;&lt;DefValue&gt;12&lt;/DefValue&gt;&lt;DefValue&gt;17&lt;/DefValue&gt;&lt;DefValue&gt;13&lt;/DefValue&gt;&lt;DefValue&gt;18&lt;/DefValue&gt;&lt;DefValue&gt;14&lt;/DefValue&gt;&lt;DefValue&gt;19&lt;/DefValue&gt;&lt;DefValue&gt;15&lt;/DefValue&gt;&lt;/DefaultValue&gt;&lt;/Param&gt;|ESFITradeAccount\Debtors\TADebBalanceSimple"</Params>
+    <Inactive>false</Inactive>
+    <ExpectedException>false</ExpectedException>
+  </Actions>
+</NewDataSet>
