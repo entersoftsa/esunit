@@ -1,0 +1,949 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Esunit by entersoftsa</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Esunit</h1>
+        <p>A complete suite for Entersoft Automated Test platform based on NUnit</p>
+
+        <p class="view"><a href="https://github.com/entersoftsa/esunit">View the Project on GitHub <small>entersoftsa/esunit</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/entersoftsa/esunit/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/entersoftsa/esunit/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/entersoftsa/esunit">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="esunit-v124100" class="anchor" href="#esunit-v124100" aria-hidden="true"><span class="octicon octicon-link"></span></a>ESUnit v12.4.10.0</h1>
+
+<h2>
+<a id="session-actions" class="anchor" href="#session-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Session Actions</h2>
+
+<h3>
+<a id="login" class="anchor" href="#login" aria-hidden="true"><span class="octicon octicon-link"></span></a>Login</h3>
+
+<p>Επιλογή application server, database, company, branch που θέλουμε να συνδεθούμε, με τι user και password.
+Εάν δεν εισάγουμε login action στο test case μας τότε σαν current session θεωρείται όταν κάναμε login στο εργαλείο.</p>
+
+<p>Params</p>
+
+<pre><code>appServerID:  application server we want to connect, as it is set  to ESClientConnect.xml
+dbID: database we want to connect, as it is set  to ESDBDef.xml
+userID: username
+pwdID: password
+companyID: Company code
+branchID="1"
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>appServerID="STD"; dbID="ESTestCases"; userID="admin";pwdID="entersoft";companyID="001";branchID="1"
+</code></pre>
+
+<h3>
+<a id="logoff" class="anchor" href="#logoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logoff</h3>
+
+<p>from current session</p>
+
+<h3>
+<a id="reset--all--caches" class="anchor" href="#reset--all--caches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reset  all  caches</h3>
+
+<p>Execute Publish changes</p>
+
+<h2>
+<a id="document-actions" class="anchor" href="#document-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Document Actions</h2>
+
+<p>Actions σχετικά με την διαχείριση και επεξεργασία παραστατικών και λογιστικών άρθρων.</p>
+
+<h3>
+<a id="create-new-document-trade" class="anchor" href="#create-new-document-trade" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create New Document Trade</h3>
+
+<p>Εισαγωγή νέου παραστατικού εμπορικών συναλλαγών, συμπληρώνοντας στοιχεία του header.</p>
+
+<p>Params</p>
+
+<pre><code>Προτείνονται οι παρακάτω παράμετροι και επίσης μπορούν να συμπληρωθούν επιπλέον πεδίο του header του παραστατικού.
+fADDocumentTypeGID:  Document Type Code
+fADDocumentSeriesGID: Document Series Code
+fCustomerGID: Customer Code
+fSupplierGID: Supplier Code
+fDebtorGID: Debtor Code
+fCreditorGID: Creditor Code
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="A";fSupplierGID="0001";ADAlternativeCode="ΑΔ  0009";ADRegistrationDate="1/1"
+fADDocumentTypeGID="ΑΠΛ";fADDocumentSeriesGID="A";
+</code></pre>
+
+<h3>
+<a id="create-cash-document" class="anchor" href="#create-cash-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Cash Document</h3>
+
+<p>Εισαγωγή νέου παραστατικού χρηματικών συναλλαγών, συμπληρώνοντας στοιχεία του header.</p>
+
+<p>Params</p>
+
+<pre><code>Προτείνονται οι παρακάτω παράμετροι και επίσης μπορούν να συμπληρωθούν επιπλέον πεδίο του header του παραστατικού.
+fADDocumentTypeGID:  Document Type Code
+fADDocumentSeriesGID: Document Series Code
+fCustomerGID: Customer Code
+fSupplierGID: Supplier Code
+fDebtorGID: Debtor Code
+fCreditorGID: Creditor Code
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fADDocumentTypeGID="ΑΕΠ"; fADDocumentSeriesGID="A"; fCustomerGID="0004";ADReasoning=”Είσπραξη Πελάτη”
+</code></pre>
+
+<h3>
+<a id="create-adjustment-document" class="anchor" href="#create-adjustment-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Adjustment Document</h3>
+
+<p>Εισαγωγή νέου παραστατικού μεταφορών-συμψηφισμών, συμπληρώνοντας στοιχεία του header.</p>
+
+<p>Params</p>
+
+<pre><code>Προτείνονται οι παρακάτω παράμετροι και επίσης μπορούν να συμπληρωθούν επιπλέον πεδίο του header του παραστατικού.
+fADDocumentTypeGID: Document Type Code
+fADDocumentSeriesGID: Document Series Code
+fAccountGID: ESGLAccount Code
+fCustomerGID: Customer Code
+fSupplierGID: Supplier Code
+fDebtorGID: Debtor Code
+fCreditorGID: Creditor Code
+fAccountSiteGID
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fADDocumentTypeGID="ΓΠΤ"; fADDocumentSeriesGID="Α"; 
+fADDocumentTypeGID="ΕΝΤ"; fADDocumentSeriesGID="Α"; fCustomerGID=”00001”
+</code></pre>
+
+<h3>
+<a id="create-stock-document" class="anchor" href="#create-stock-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Stock Document</h3>
+
+<p>Εισαγωγή νέου παραστατικού διακινήσεων, συμπληρώνοντας στοιχεία του header.</p>
+
+<p>Params</p>
+
+<pre><code>Προτείνονται οι παρακάτω παράμετροι και επίσης μπορούν να συμπληρωθούν επιπλέον πεδίο του header του παραστατικού.
+fADDocumentTypeGID:     Document Type Code
+fADDocumentSeriesGID:;  Document Series Code
+fSourceGID:         Source Site Code
+fSourceCustomerGID: Source Customer Code
+fSourceSupplierGID: Source Supplier Code
+fSourceDebtorGID:       Source Debtor Code
+fSourceCreditorGID: Source Creditor Code
+fSourceSiteGID:     Source Site Branch Code
+fTargetGID:         Target Site Code
+fTargetCustomerGID: Target Customer Code
+fTargetSupplierGID:     Target Supplier  Code
+fTargetDebtorGID:       Target Debtor Code
+fTargetCreditorGID:     Target Creditor Code
+fTargetSiteGID:     Target Site Branch Code
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fADDocumentTypeGID="ΔΕΝ";fADDocumentSeriesGID="Α";fSourceGID="01";fSourceSiteGID="0101";fTargetGID="02";fTargetSiteGID="0201"
+</code></pre>
+
+<h3>
+<a id="add-line-item" class="anchor" href="#add-line-item" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Item</h3>
+
+<p>Εισαγωγή γραμμής είδους σε παραστατικό. Πρέπει να προηγηθεί Create or Load Document ώστε να βρισκόμαστε στο context του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους τα πεδία της γραμμής είδους του παραστατικού και παίζει ρόλο η σειρά ανάθεσης.
+Προτείνονται:
+LineType:   5-Γενικό είδος, 6-Είδος αποθήκης, 7-Αντίθεση είδους αποθήκης, 8-Πάγιο, 9-Αντίθετη γενικού είδους
+130-Αντίθετη παγίου
+fItemGID:   Κωδικός είδους αποθήκης
+Quantity:   Ποσότητα γραμμής
+Price:  Τιμή γραμμής
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>LineType="6";fItemGID="TC00001"
+LineType="6";fItemGID="TC00001";Quantity="10"
+LineType="6";fItemGID="TC00001";Quantity="10";Price="100";Discount1=”10”
+LineType="6";fItemGID="TC00001";Quantity="10";TotalValue="1000";StringField1="test"
+</code></pre>
+
+<h3>
+<a id="add-line-item-analysis" class="anchor" href="#add-line-item-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Item Analysis</h3>
+
+<p>Εισαγωγή γραμμής ανάλυσης είδους σε υπάρχουσα γραμμή είδους. Πρέπει να έχει προηγηθεί Add Line Item or Locate row ώστε να βρισκόμαστε σε  γραμμή είδους.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους πεδία της γραμμής ανάλυσης και παίζει ρόλο η σειρά ανάθεσης.
+Προτείνονται:
+fSerialNumberGID: Κωδικός serial number
+fLotGID:    Κωδικός παρτίδας
+fColorCode, fSizeCode: Χρώμα, Μέγεθος
+fStockDim1Code, fStockDim2Code: Διάσταση αποθήκης1, 2
+Quantity, QtyBaseMU, QtyAlternateMU, Weight, Volume: ποσοτικά πεδία γραμμής ανάλυσης
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fColorCode="BL";fSizeCode="35";Quantity="1"
+fColorCode="BL";fSizeCode="36";Quantity="5"
+</code></pre>
+
+<h3>
+<a id="add-line-item-allocation" class="anchor" href="#add-line-item-allocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Item Allocation</h3>
+
+<p>Εισαγωγή γραμμής κατανομής σε υπάρχουσα γραμμή είδους. Πρέπει να έχει προηγηθεί Add Line Item or Locate row ώστε να βρισκόμαστε σε  γραμμή είδους.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους πεδία της γραμμής κατανομής και παίζει ρόλο η σειρά ανάθεσης.
+Προτείνονται όλα τα πεδία της γραμμής κατανομής:
+fSiteGID="";fProjectGID="";fBusinessUnitCode="";fBusinessActivityCode="";fDimension1Code="";fDimension2Code="";CurrencyBaseValue="";CurrencyTradeDiscountValue="";CurrencyChargesValue="";CurrencyTaxesValue="";CurrencyNetValue="";CurrencyVATValue="";CurrencyTotalValue="";BaseValue="";TradeDiscountValue="";ChargesValue="";TaxesValue="";NetValue="";VATValue="";TotalValue=""
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Πχ σε γραμμή είδους με συνολική αξία 100 μπορούμε να προσθέσουμε τις παρακάτω γραμμές κατανομής:
+fBusinessUnitCode="TC0001";fBusinessActivityCode="TC0001";TotalValue="50"
+fBusinessUnitCode="TC0001";fBusinessActivityCode="TC0002";TotalValue="50"
+</code></pre>
+
+<h3>
+<a id="add-line-liquidity-account" class="anchor" href="#add-line-liquidity-account" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Liquidity Account</h3>
+
+<p>Εισαγωγή γραμμής χρηματικού λογαριασμού σε παραστατικό. Πρέπει να προηγηθεί Create or Load Document ώστε να βρισκόμαστε στο context του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους τα πεδία της γραμμής χρηματικού λογ/σμού του παραστατικού και παίζει ρόλο η σειρά ανάθεσης.
+Προτείνονται:
+LineType:            0-Πραγματική, 1-Πρόβλεψη, 2-Δέσμευση
+fLiquidityAccountGID:  Κωδικός  χρηματικού λογαριασμού
+CurrencyValue:       Αξία σε νόμισμα
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>LineType="0";fLiquidityAccountGID="ΤΑΜΕΙΟ-1";CurrencyValue="100"
+LineType="1";fLiquidityAccountGID=" ΠΡ-000";CurrencyValue="100";ValeurDate="31/3”
+</code></pre>
+
+<h3>
+<a id="add-line-special-account" class="anchor" href="#add-line-special-account" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Special Account</h3>
+
+<p>Εισαγωγή γραμμής βοηθητικού λογαριασμού σε παραστατικό. Πρέπει να προηγηθεί Create or Load Document ώστε να βρισκόμαστε στο context του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους τα πεδία της γραμμής βοηθητικού λογ/σμού του παραστατικού και παίζει ρόλο η σειρά ανάθεσης.
+Προτείνονται:
+fSpecialAccountGID: Κωδικός βοηθητικού λογ/σμού
+Percentage:       Ποσοστό
+CurrencyValue:    Αξία σε νόμισμα
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fSpecialAccountGID="ΠΚΦ";Percentage="20"
+fSpecialAccountGID="ΜΕΤ";CurrencyValue="51,56"
+</code></pre>
+
+<h3>
+<a id="add-document-note" class="anchor" href="#add-document-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Document Note</h3>
+
+<p>Εισαγωγή γραμμής αξιογράφου με ταυτόχρονη δημιουργία νέου αξιογράφου σε γραμμή παραστατικού.Πρέπει να προηγηθεί Create or Load Document ώστε να βρισκόμαστε στο context του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους τα πεδία του αξιογράφου που θα δημιουργηθεί.
+Προτείνονται:
+Code:       Κωδικός αξιογράφου
+fNoteTypeCode:  Τύπος αξιογράφου
+ReferenceNumber:    Αριθμός αξιογράφου
+IssueDate:      Ημ/νία έκδοσης
+DueDate:        Ημ/νία λήξης
+CurrencyValue:  Αξία σε νόμισμα
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Code="ΕΙΣ000001";fNoteTypeCode="ΕΠ.ΕΙΣΠΡΑΚΤΕΑ";ReferenceNumber="12121212";DueDate="31/3";CurrencyValue="1205,36"
+</code></pre>
+
+<h3>
+<a id="add-line-note" class="anchor" href="#add-line-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Note</h3>
+
+<p>Εισαγωγή γραμμής αξιογράφου με σύνδεση υπάρχοντος αξιογράφου. Η σύνδεση προϋποθέτει ότι γνωρίζουμε τον Κωδικό του αξιογράφου ή έχουμε φυλάξει σε μεταβλητή το GID. Πρέπει να προηγηθεί Create or Load Document ώστε να βρισκόμαστε στο context του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους πεδία της γραμμής αξιογράφου.
+fNoteGID:              Κωδικός αξιογράφου
+noteGIDVariableName: Όνομα μεταβλητής που περιέχει το GID του αξιογράφου που θέλουμε να προσθέσουμε.
+CurrencyValue          Αξία σε νόμισμα
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>πχ σενάριο εξόφλησης αξιογράφου όπου πρέπει να επιλέξουμε υπάρχον αξιόγραφο.
+fNoteGID="ΕΙΣ00001"
+noteGIDVariableName="vNoteGID"
+πχ αλλαγή αξίας γραμμής  για μερική εξόφληση
+fNoteGID="ΕΙΣ00001";CurrencyValue="500"  
+</code></pre>
+
+<h3>
+<a id="add-line-trade-account" class="anchor" href="#add-line-trade-account" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Line Trade Account</h3>
+
+<p>TBD</p>
+
+<h3>
+<a id="load-document" class="anchor" href="#load-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load document</h3>
+
+<p>Φόρτωμα παραστατικού. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>variableName: Συμπληρώνουμε την μεταβλητή που περιέχει το GID του παραστατικού που θέλουμε να φορτώσουμε.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vDocGID"
+</code></pre>
+
+<h3>
+<a id="save-document" class="anchor" href="#save-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Save Document</h3>
+
+<p>Αποθήκευση τρέχοντος παραστατικού.</p>
+
+<h3>
+<a id="delete-document" class="anchor" href="#delete-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete Document</h3>
+
+<p>Διαγραφή συγκεκριμένου παραστατικού.Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού.</p>
+
+<p>Params</p>
+
+<pre><code>variableName: Συμπληρώνουμε την μεταβλητή που περιέχει το GID του παραστατικού που θέλουμε να διαγράψουμε.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vDocGID"
+</code></pre>
+
+<h3>
+<a id="delete-documents-of-document-type" class="anchor" href="#delete-documents-of-document-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete Documents of Document Type</h3>
+
+<p>Διαγραφή παραστατικών βάσει τύπου παραστατικού για συγκεκριμένο ημ/κό διάστημα.</p>
+
+<p>Params</p>
+
+<pre><code>documentTypeCode: ESFIDocumentType Code
+fromDate:   optional
+toDate: optional
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>documentTypeCode="ΤΔΑ
+documentTypeCode="ΤΔΑ";fromDate="1/1";toDate="31/12"
+</code></pre>
+
+<h3>
+<a id="cancel-document" class="anchor" href="#cancel-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cancel Document</h3>
+
+<p>Ακύρωση παραστατικού. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού που θέλουμε να ακυρωθεί.</p>
+
+<p>Params</p>
+
+<pre><code>variableNameOfDocumentToCancel: Μεταβλητή με το GID του παραστατικού προς ακύρωση
+registrationDateOfCancelingDocument: Ημ/νία ακύρωσης
+cancelingSerieCode: Ακυρωτική Σειρά
+variableNameOfCancelingDocument: Όνομα Μεταβλητής όπου θα φυλαχθεί το GID του ακυρωτικού παρ/κού.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableNameOfDocumentToCancel="vSourceDoc";registrationDateOfCancelingDocument="17/2";cancelingSerieCode="A";variableNameOfCancelingDocument="vCancelDoc"
+</code></pre>
+
+<h3>
+<a id="print-document" class="anchor" href="#print-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Print Document</h3>
+
+<p>Εκτύπωση τρέχοντος παραστατικού. Προτείνεται να προηγείται Load Document για να επιλέξουμε ποιο παραστατικό θα εκτυπωθεί.</p>
+
+<p>Params</p>
+
+<pre><code>Από την εκτέλεση του action ενημερώνονται οι μεταβλητές που θα συμπληρώσουμε στις παρακάτω παραμέτρους, ώστε να ελέγξουμε τις τιμές τους (εάν το απαιτεί το σενάριο μας).
+emailFromVariableName:
+emailToVariableName:
+emailCCVariableName:
+emailSubjectVariableName:
+emailBodyVariableName:
+printerNameForReprint:
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>emailFromVariableName="vemailForm";emailToVariableName="vEmailTo";emailCCVariableName="vemailCC";emailSubjectVariableName="vemailSubject";emailBodyVariableName="vemailBody";printerNameForReprint="vPrinter"
+</code></pre>
+
+<h3>
+<a id="mark-document-as-printed--mark-document-as-not-printed" class="anchor" href="#mark-document-as-printed--mark-document-as-not-printed" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mark Document as Printed &amp; Mark Document as NOT Printed</h3>
+
+<p>Χαρακτηρισμός παραστατικού ως εκτυπωμένο ή ΜΗ εκτυπωμένο. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού </p>
+
+<p>Params</p>
+
+<pre><code>variableName: Μεταβλητή με το GID του παραστατικού
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vDoc1"
+</code></pre>
+
+<h3>
+<a id="move-document-to-state" class="anchor" href="#move-document-to-state" aria-hidden="true"><span class="octicon octicon-link"></span></a>Move Document To State</h3>
+
+<p>Προώθηση κατάστασης παραστατικού. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού που θέλουμε να αλλάξουμε κατάσταση.</p>
+
+<p>Params</p>
+
+<pre><code>variableName: Μεταβλητή με το GID του παραστατικού
+toState:             0-Προσωρινό, 1-Καταχωρημένο, 2-Λογιστικοποιημένο.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vDoc";toState="2"
+</code></pre>
+
+<h3>
+<a id="transit-document" class="anchor" href="#transit-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transit Document</h3>
+
+<p>Μετάβαση παραστατικού. Εκτελείται μετάβαση 1 προς 1 ολόκληρου του παραστατικού. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του source παραστατικού. Μπορεί να εκτελεστεί οποιοσδήποτε τύπος μετάβασης (κανονικά, διεταιρική κλπ)</p>
+
+<p>Params</p>
+
+<pre><code>variableName:       Μεταβλητή με το GID του source παραστατικού
+transitionCode:     Κωδικός Κανόνα Μετάβασης
+transitionDate:     Ημ/νία target παραστατικού
+transitionSerieCode:    Σειρά target παραστατικού
+variableNameOfTargetDocument:  Όνομα μεταβλητής όπου θα φυλαχθεί το GID του target παραστατικού.
+targetCompanyCode:  Target Εταιρεία για διεταιρική μετάβαση
+targetBranchCode:       Target υποκ/μα για διεταιρική μετάβαση
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName=”vSourceDoc";transitionCode=" 112. ΠΑΡ=&gt;ΤΔΑ";transitionSerieCode="A";variableNameOfTargetDocument="vTargetDoc"
+variableName=”vSourceDoc";transitionCode=" 112. ΠΑΡ=&gt;ΤΔΑ";transitionDate="10/1";transitionSerieCode="A";variableNameOfTargetDocument="vTargetDoc";targetCompanyCode="";targetBranchCode=""
+variableName=”vSourceDoc";transitionCode=" ΔΙΕΤ.ΑΤΔ=&gt;ΤΔΑ";transitionDate="10/1";transitionSerieCode="A";variableNameOfTargetDocument="vTargetDoc";targetCompanyCode="002";targetBranchCode="1"
+</code></pre>
+
+<h3>
+<a id="delete-document-fulfillment" class="anchor" href="#delete-document-fulfillment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete Document Fulfillment</h3>
+
+<p>Εκτελεί διαγραφή εκκρεμοτήτων ποσότητας παραστατικού (target) και «σπάει» την σύνδεση με το source. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του παραστατικού </p>
+
+<p>Params</p>
+
+<pre><code>variableName: Μεταβλητή με το GID του παραστατικού
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vDoc1"
+</code></pre>
+
+<h3>
+<a id="create--accounting-document" class="anchor" href="#create--accounting-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create  Accounting Document</h3>
+
+<p>Εισαγωγή νέου άρθρου λογιστικής, συμπληρώνοντας στοιχεία του header.</p>
+
+<p>Params</p>
+
+<pre><code>Προτείνονται οι παρακάτω παράμετροι και επίσης μπορούν να συμπληρωθούν επιπλέον πεδίο του header του παραστατικού.
+AccDocType="";      ESGLAccountingDocumentType Code
+RegistrationDate="";    Registration Date
+fJournalGID=""      Journal Code
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>AccDocType="ΛΣ"; RegistrationDate="20/1"; fJournalGID=""; DocumentType="1"
+</code></pre>
+
+<h3>
+<a id="add-ledger-entry" class="anchor" href="#add-ledger-entry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Ledger Entry</h3>
+
+<p>Εισαγωγή γραμμής λογιστικού άρθρου. Πρέπει να προηγηθεί Create or Load Accounting Document ώστε να βρισκόμαστε στο context του άρθρου.</p>
+
+<p>Params</p>
+
+<pre><code>Δέχεται σαν παραμέτρους πεδία της γραμμής του άρθρου.
+Προτείνονται:
+fAccountGID: Κωδικός Λογαριασμού λογιστικής
+Debit:     Ποσό Χρέωσης
+Credit:    Ποσό Πίστωσης
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>fAccountGID="30.00.00.0000";Debit="100";fBusinessUnitCode=”0001”
+fAccountGID="30.00.00.0000";Credit="100";fBusinessUnitCode=”0001”
+</code></pre>
+
+<h3>
+<a id="load-accounting-document" class="anchor" href="#load-accounting-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load Accounting Document</h3>
+
+<p>Φόρτωμα λογιστικού άρθρου. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του άρθρου.</p>
+
+<p>Params</p>
+
+<pre><code>variableName: Συμπληρώνουμε την μεταβλητή που περιέχει το GID του παραστατικού που θέλουμε να φορτώσουμε.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>variableName="vAccDocGID"
+</code></pre>
+
+<h3>
+<a id="cancel-accounting-document" class="anchor" href="#cancel-accounting-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cancel Accounting Document</h3>
+
+<p>Ακύρωση ή αντιλογισμός λογιστικού άρθρου. Προϋποθέτει μεταβλητή στην οποία έχουμε φυλάξει το GID του άρθρου που θέλουμε να ακυρωθεί.</p>
+
+<p>Params</p>
+
+<pre><code>accDocGID:            Ακύρωση άρθρου με συγκεκριμένο GID
+accDocVariableName:  Ακύρωση άρθρου δηλώνοντας όνομα μεταβλητής που περιέχει το GID του άρθρου
+newDocCode:      Κωδικός παραγόμενου άρθρου 
+newReasoning:        Αιτιολογία παραγόμενου άρθρου
+newRegDate:      Ημ/νία παραγόμενου άρθρου
+reversed="0"         0-Ακύρωση, 1-Αντιλογισμός.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>accDocVariableName="vGLDoc";newDocCode="";newReasoning="";newRegDate="1/2";reversed="0"
+accDocVariableName="vGLDoc";newDocCode="A1234";newReasoning="Αντιλογισμός άρθρου";newRegDate="1/2";reversed="1"
+</code></pre>
+
+<h2>
+<a id="dataset-actions" class="anchor" href="#dataset-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Actions</h2>
+
+<p>Τα συγκεκριμένα actions εκτελούνται επί κάποιου dataset που μπορεί να αφορά :</p>
+
+<ul>
+<li>  συγκεκριμένη οντότητα (παραστατικό, πελάτη κλπ) </li>
+<li>  dataset που έχει δημιουργηθεί ως αποτέλεσμα κάποιου report </li>
+<li>  dataset  που έχουμε δημιουργήσει εμείς πχ από κάποιο query.</li>
+</ul>
+
+<h3>
+<a id="locate-row" class="anchor" href="#locate-row" aria-hidden="true"><span class="octicon octicon-link"></span></a>Locate Row</h3>
+
+<p>Μας τοποθετεί σε συγκεκριμένη γραμμή ενός πίνακα του current dataset, για να ελέγξουμε και να αλλάξουμε τιμές πεδίων της ή να την διαγράψουμε.</p>
+
+<p>Params</p>
+
+<pre><code>tableName:      Όνομα πίνακα που θέλουμε να τοποθετηθούμε
+position:       Συγκεκριμένο row που θέλουμε να τοποθετηθούμε
+variableName:   Τοποθέτηση σε συγκεκριμένο row μέσω μίας μεταβλητής στην οποία έχουμε φυλάξει το GID του row.
+parentRelation: Για να μετακινηθούμε στο parent row του current row 
+πχ θέλουμε να μετακινηθούμε στην γραμμή είδους  που ανήκει η γραμμή ανάλυσης που βρισκόμαστε.
+childRelation:  Για να μετακινηθούμε σε ένα child row του current row 
+πχ θέλουμε να μετακινηθούμε σε συγκεκριμένη γραμμή ανάλυσης της γραμμής είδους που βρισκόμαστε.
+filterExpression:   Τοποθέτηση σε συγκεκριμένο row βάσει κάποιου φίλτρου 
+            πχ θέλουμε να μετακινηθούμε στην γραμμή που έχει συγκεκριμένο εμπορικό τομέα.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Μετακίνηση στην 1η γραμμή είδους του παραστατικού
+tableName="ESFILineItem";position="0"
+
+Μετακίνηση στη γραμμή είδους του παραστατικού που έχει BU:TC0001 &amp; BA:TC0002
+tableName="ESFILineItem"; ;filterExpression="fBusinessUnitCode=’TC0001’ and fActivityCode=’TC0002’"
+
+Μετακίνηση σε γραμμή ανάλυσης (BL,35) συγκεκριμένης γραμμής είδους
+tableName="ESMMLineItemAnalysis";childRelation="FK_ESFILineItem_ESMMLineItemAnalysis";filterExpression="fColorCode='BL' and fSizeCode='35'"
+</code></pre>
+
+<h3>
+<a id="assign-column-value" class="anchor" href="#assign-column-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assign Column Value</h3>
+
+<p>Ανάθεση τιμής σε κάποιο πεδίο του πίνακα του dataset στον οποίο βρισκόμαστε. Η ανάθεση μπορεί να γίνει απευθείας με κάποια τιμή ή μέσω μεταβλητής όπου έχουμε φυλαγμένη την τιμή που θέλουμε να αναθέσουμε.</p>
+
+<p>Params</p>
+
+<pre><code>columnName:     Το όνομα του πεδίου που θέλουμε να αναθέσουμε τιμή    
+columnValue:    Η τιμή που θέλουμε να αναθέσουμε.
+variableName:   Όνομα μεταβλητής όπου έχουμε φυλαγμένη την τιμή που θέλουμε να αναθέσουμε.
+treatEmptyColumnValueAsEmptyString: Εφόσον το columnValue="" τότε ελέγχεται η συγκεκριμένη παράμετρος   και 0 σημαίνει ότι αναθέτουμε NULL ενώ 1 ότι αναθέτουμε empty.string.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>columnName="Quantity";columnValue="20"
+columnName="TotalValue";columnValue="1250,56"
+columnName="fDepreciationItemGID";variableName="vDeprGID"  (ανάθεση αποσβεστέας κτήσης γραμμής)
+</code></pre>
+
+<h3>
+<a id="check-column-value" class="anchor" href="#check-column-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check Column Value</h3>
+
+<p>Έλεγχος τιμής κάποιου πεδίου του πίνακα του dataset στον οποίο βρισκόμαστε.</p>
+
+<p>Params</p>
+
+<pre><code>columnName:     Το όνομα του πεδίου που θέλουμε να ελέγξουμε
+columnValue:    Η τιμή που θέλουμε να έχει το πεδίο (expected value)
+tableName:  Συμπληρώνοντας σχέση μπορούμε να ελέγξουμε πεδία που ανήκουν σε parent table, χωρίς να χρειαστεί να μετακινηθούμε σε αυτό. 
+πχ πως θα ελέγξουμε τον κωδικό του είδους ενώ βρισκόμαστε στην γραμμή?
+variableName:
+treatEmptyColumnValueAsEmptyString: Εφόσον το columnValue="" τότε ελέγχεται η συγκεκριμένη παράμετρος   και 0 σημαίνει ότι ελέγξουμε για NULL ενώ 1 ότι ελέγχουμε για empty.string.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Έλεγχος ποσότητας γραμμής είδους
+columnName="Quantity";columnValue="50"
+
+Έλεγχος Κωδικού Πωλητή παραστατικού εμπορικών συναλλαγών
+columnName="Code";columnValue="Π001";tableName="FK_ESFIDocumentTrade_ESFISalesPerson"
+
+Έλεγχος Κωδικού Είδους γραμμής παραστατικού 
+columnName="Code";columnValue="Ε-0001";tableName="FK_ESFILineItem_ESFIItem "
+</code></pre>
+
+<h3>
+<a id="check-dataset-column-values" class="anchor" href="#check-dataset-column-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check Dataset Column Values</h3>
+
+<p>Έλεγχος πολλαπλών πεδίων κάποιου πίνακα  ενός dataset, με χρήση δομής XML.dataset. Η δομή του expectedDataSet είναι ίδια με την δομή του αρχείου xsd που δημιουργείται όταν κάνουμε Αποστολή σε Dataset από κάποια όψη ή bit. Με αυτόν τον τρόπο μπορούμε να ελέγξουμε τα αποτελέσματα οποιουδήποτε dataset, 
+είτε αυτό αφορά κάποια οντότητα, είτε είναι dataset που το έχουμε δημιουργήσει εμείς (βλ. Execute SQL Select), είτε είναι αποτέλεσμα της εκτέλεσης κάποιου report που επιστρέφει datasets.</p>
+
+<p>Params</p>
+
+<div class="highlight highlight-xml"><pre>expectedDataSet:        Το ζητούμενο xml dataset. Η δομή του πρέπει να είναι:
+                &lt;<span class="pl-ent">NewDataSet</span>&gt;
+                     &lt;<span class="pl-ent">TableName</span>&gt;
+                        &lt;<span class="pl-ent">Field1</span>&gt;expectedvalue&lt;/<span class="pl-ent">Field1</span>&gt;
+            &lt;<span class="pl-ent">Field2</span>&gt;expectedvalue&lt;/<span class="pl-ent">Field2</span>&gt;
+     &lt;/<span class="pl-ent">TableName</span>&gt;
+                     &lt;<span class="pl-ent">TableName</span>&gt;
+                        &lt;<span class="pl-ent">Field1</span>&gt;expectedvalue&lt;/<span class="pl-ent">Field1</span>&gt;
+            &lt;<span class="pl-ent">Field2</span>&gt;expectedvalue&lt;/<span class="pl-ent">Field2</span>&gt;
+     &lt;/<span class="pl-ent">TableName</span>&gt;
+&lt;/<span class="pl-ent">NewDataSet</span>&gt;
+excludeGuidTypeColumns: Δηλώνουμε με 1 εάν θέλουμε να εξαιρεθούν κολώνες GID από τον έλεγχο
+excludeDateTypeColumns: Δηλώνουμε με 1 εάν θέλουμε να εξαιρεθούν κολώνες Date από τον έλεγχο
+excludeDateTimeTypeColumns: Δηλώνουμε με 1 εάν θέλουμε να εξαιρεθούν κολώνες Datetime από τον έλεγχο</pre></div>
+
+<p>Examples</p>
+
+<div class="highlight highlight-xml"><pre>Έλεγχος γραμμών λογιστικού άρθρου (από query)
+expectedDataSet="&lt;<span class="pl-ent">NewDataSet</span>&gt;
+&lt;<span class="pl-ent">LedgerEntries</span>&gt;
+&lt;<span class="pl-ent">Code</span>&gt;04.06.18.0010&lt;/<span class="pl-ent">Code</span>&gt;
+&lt;<span class="pl-ent">Debit</span>&gt;12&lt;/<span class="pl-ent">Debit</span>&gt;
+&lt;<span class="pl-ent">Credit</span>&gt;0&lt;/<span class="pl-ent">Credit</span>&gt;
+&lt;/<span class="pl-ent">LedgerEntries</span>&gt;
+&lt;<span class="pl-ent">LedgerEntries</span>&gt;
+&lt;<span class="pl-ent">Code</span>&gt;08.06.00.0000&lt;/<span class="pl-ent">Code</span>&gt;
+&lt;<span class="pl-ent">Debit</span>&gt;0&lt;/<span class="pl-ent">Debit</span>&gt;
+&lt;<span class="pl-ent">Credit</span>&gt;12&lt;/<span class="pl-ent">Credit</span>&gt;
+&lt;/<span class="pl-ent">LedgerEntries</span>&gt;
+&lt;/<span class="pl-ent">NewDataSet</span>&gt;"</pre></div>
+
+<h3>
+<a id="delete-row" class="anchor" href="#delete-row" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete Row</h3>
+
+<p>Διαγραφή τρέχουσας γραμμής του πίνακα του dataset. Πρέπει προηγουμένως να έχουμε τοποθετηθεί στην γραμμή (πχ με Locate Row).</p>
+
+<h2>
+<a id="heap-actions" class="anchor" href="#heap-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Heap Actions</h2>
+
+<p>Set column value in Heap
+Με το συγκεκριμένο action αποθηκεύουμε την τιμή ενός πεδίου του dataset σε μία μεταβλητή στη μνήμη με σκοπό να την χρησιμοποιήσουμε σε επόμενο action το οποίο δέχεται σαν παράμετρο μεταβλητή (συνήθως με ονομασία variableName). </p>
+
+<p>Params</p>
+
+<pre><code>columnName: Συμπληρώνουμε το όνομα του πεδίου που θέλουμε να φυλάξουμε την τιμή του.
+variableName:   Δίνουμε το όνομα της μεταβλητής που θα αποθηκευτεί η τιμή.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Έστω ότι δημιουργούμε ένα νέο παραστατικό εμπορικών συναλλαγών και κατόπιν θέλουμε να το φορτώσουμε ή να το διαγράψουμε:
+Create new document trade ( fADDocumentTypeGID="ΑΤΔ";fADDocumentSeriesGID="A";fSupplierGID="0001")
+Set column value in Heap (columnName="GID";variableName="vDoc1GID")
+Load Document (variableName="vDoc1GID")
+Delete Document (variableName="vDoc1GID")
+</code></pre>
+
+<h3>
+<a id="check-variable-value" class="anchor" href="#check-variable-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check variable value</h3>
+
+<p>Με το συγκεκριμένο action ελέγχουμε την τιμή που έχουμε αποθηκεύσει σε μία μεταβλητή στη μνήμη.
+Εδώ να σημειώσουμε ότι μπορούμε να αποθηκεύσουμε μία τιμή σε μεταβλητή με το action Set column value in Heap ή μέσω άλλου action που αποθηκεύει το αποτέλεσμα του σε μεταβλητή.</p>
+
+<p>Params</p>
+
+<pre><code>variableName:   Όνομα μεταβλητής που θέλουμε να ελέγξουμε το περιεχόμενο της
+variableValue:  Τιμή που αναμένουμε να έχει η μεταβλητή (expected value)
+operator:       Είδος ελέγχου =,&gt;,&lt;,&lt;&gt;, default είναι το equals.
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>Έστω ότι έχουμε φυλάξει σε μία μεταβλητή με όνομα vNoteCode τον κωδικό ενός αξιογράφου και θέλουμε να ελέγξουμε το περιεχόμενο:
+Check variable value (variableName="vNoteCode";variableValue="ΕΙΣ00000001")
+</code></pre>
+
+<h3>
+<a id="execute-single-operation" class="anchor" href="#execute-single-operation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute single operation</h3>
+
+<h3>
+<a id="set-time-in-heap" class="anchor" href="#set-time-in-heap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set time in heap</h3>
+
+<h3>
+<a id="check-exception-message" class="anchor" href="#check-exception-message" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check exception message</h3>
+
+<h2>
+<a id="database-actions" class="anchor" href="#database-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Actions</h2>
+
+<h3>
+<a id="execute-sql-scalar--save-result-to-variable" class="anchor" href="#execute-sql-scalar--save-result-to-variable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute SQL Scalar =&gt; save result to variable</h3>
+
+<h3>
+<a id="execute-sql-select--returned-dataset" class="anchor" href="#execute-sql-select--returned-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute SQL Select =&gt; returned dataset</h3>
+
+<h3>
+<a id="execute-sql-action-insert-update-delete" class="anchor" href="#execute-sql-action-insert-update-delete" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute SQL Action (insert, update, delete)</h3>
+
+<h2>
+<a id="entity-actions-general" class="anchor" href="#entity-actions-general" aria-hidden="true"><span class="octicon octicon-link"></span></a>Entity Actions (general)</h2>
+
+<h3>
+<a id="create-entity" class="anchor" href="#create-entity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create entity</h3>
+
+<p>Δημιουργία συγκεκριμένης οντότητας.</p>
+
+<h3>
+<a id="load-entity" class="anchor" href="#load-entity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load entity</h3>
+
+<p>Φόρτωμα συγκεκριμένης οντότητας.</p>
+
+<h3>
+<a id="delete-entity" class="anchor" href="#delete-entity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete entity</h3>
+
+<p>Διαγραφή συγκεκριμένης οντότητας.</p>
+
+<h3>
+<a id="add-detail" class="anchor" href="#add-detail" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add detail</h3>
+
+<p>Προσθήκης detail σε οντότητα.</p>
+
+<h3>
+<a id="use-cases-actions" class="anchor" href="#use-cases-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Cases Actions</h3>
+
+<h3>
+<a id="calculate-depreciations" class="anchor" href="#calculate-depreciations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculate depreciations</h3>
+
+<p>Εκτέλεση διαδικασίας αποσβέσεωνμεταφοράς υπολοίπων για το υποσύστημα που θα επιλέξουμε. Δίνουμε μέσω μεταβλητής το GID της περιόδου ανοίγματος της επόμενης χρήσης και συμπληρώνουμε τις παρακάτω παραμέτρους.</p>
+
+<p>Params</p>
+
+<pre><code>itemCodes:  Comma separated λίστα με τους κωδικούς παγίων που θα εκτελεστούν αποσβέσεις (* = όλα)
+fromDate:   Από ημερομηνία
+toDate: Έως ημερομηνία
+official:   Εκτέλεση τακτικών αποσβέσεων (default 1 = true)
+alternative:    Εκτέλεση εναλλακτικών αποσβέσεων (default 1 = true)
+informative: Εκτέλεση εξωλογιστικών αποσβέσεων (default 1 = true)
+sponsorship: Εκτέλεση αποσβέσεων επιχορηγήσεων (default 1 = true)
+recalculate:      Επανυπολογισμός υπαρκτών (0=ΟΧΙ, 1=με ακυρωτικά, 2=με διαγραφή DEFAULT)
+isBudgetary: Λογιστικοποίηση Default 0 = Κανονικές, 1 = Προυπολογισμένες
+</code></pre>
+
+<p>Examples</p>
+
+<pre><code>CalculateDepreciations(ItemCodes="FA001,FA002,FA003";fromDate="1/1";toDate="31/12";official="1";alternative="1";informative="0";sponsorship="0";recalculate="2";isBudgetary="0")
+</code></pre>
+
+<h3>
+<a id="fiscal-year-closing--closing-flag-a" class="anchor" href="#fiscal-year-closing--closing-flag-a" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fiscal Year Closing / Closing flag A</h3>
+
+<p>Κλείσιμο Α’ φάσης.</p>
+
+<p>Params</p>
+
+<pre><code>closingPeriodGID=""
+closingPeriodVariableName=""
+openingPeriodGID=""
+openingPeriodVariableName=""
+flagValue="1"
+</code></pre>
+
+<h3>
+<a id="fiscal-year-closing--close-subsystems" class="anchor" href="#fiscal-year-closing--close-subsystems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fiscal Year Closing / Close subSystems</h3>
+
+<p>Εκτέλεση διαδικασίας μεταφοράς υπολοίπων για το υποσύστημα που θα επιλέξουμε. Δίνουμε μέσω μεταβλητής το GID της περιόδου ανοίγματος της επόμενης χρήσης και συμπληρώνουμε τις παρακάτω παραμέτρους.</p>
+
+<p>Params</p>
+
+<pre><code>openingPeriodGID:            GID περιόδου Ανοίγματος της επόμενης χρήσης.
+openingPeriodVariableName:  Μεταβλητή που περιέχει το GID της περιόδου Ανοίγματος της επόμενης χρήσης.
+specs:               Επιλογή υποσυστήματος για μεταφορά υπολοίπων :
+FixedAssets: Απογραφή Παγίων (Ποσοτική και Αξιακή)
+QuantitativeFixedAssets: Απογραφή Παγίων (Ποσοτική)
+ValuativeFixedAssets: Απογραφή Παγίων (Αξιακή)
+GeneralLedger: Απογραφή Λογιστικής
+LiquidityAccounts: Απογραφή Χρημ/κών Λογ/μών
+Notes: Απογραφή Αξιογράφων
+SpecialAccounts: Απογραφή Ειδικών Λογ/μών
+TradeAccounts: Απογραφή Συναλλασσομένων
+Stock: Απογραφή Αποθήκης (Ποσοτική και Αξιακή)
+QtyStock: Απογραφή Αποθήκης (Ποσοτική)
+CostStock: Απογραφή Αποθήκης (Αξιακή)
+CustomerOrders: Απογραφή Παραγγελιών Πελατών
+SupplierOrders: Απογραφή Παραγγελιών Προμηθευτών
+SupplierOpenVouchers: Απογραφή Ανοικτών Δελτίων Προμηθευτών
+SponsionTradeAccounts: Απογραφή Εγγυοδοσιών
+CustomerBonus: Απογραφή Πόντων 
+deleteManualDocs:       Διαγραφή χειρόγραφων απογραφών (default 0 = false)
+manualExecuted:     Μη αυτόματη απογραφή (default 0 = false)
+bySite:         Μεταφορά ανά Υποκατάστημα (default 0 = false)
+byProject:          Μεταφορά ανά Έργο (default 0 = false)
+byActivity:         Μεταφορά ανά Δραστηριότητα (default 0 = false)
+byBusinessUnit:     Μεταφορά ανά Εμπορικό Τομέα (default 0 = false)
+byDimension1:       Μεταφορά ανά Διάσταση 1 (default 0 = false)
+byDimension2:       Μεταφορά ανά Διάσταση 2 (default 0 = false)
+</code></pre>
+
+<h3>
+<a id="fiscal-year-closing--closing-flag-b" class="anchor" href="#fiscal-year-closing--closing-flag-b" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fiscal Year Closing / Closing flag B</h3>
+
+<p>Κλείσιμο Β’ φάσης.</p>
+
+<p>Params</p>
+
+<pre><code>closingPeriodGID=""
+closingPeriodVariableName=""
+openingPeriodGID=""
+openingPeriodVariableName=""
+flagValue="1"
+</code></pre>
+
+<h3>
+<a id="close-purchases-folder" class="anchor" href="#close-purchases-folder" aria-hidden="true"><span class="octicon octicon-link"></span></a>Close purchases folder</h3>
+
+<p>Κλείσιμο Φακέλου Κοστολόγησης.</p>
+
+<p>Params</p>
+
+<pre><code>variableName=""
+closingDate=""
+actionForTemporaryDocuments="1"
+actionForDefiniteDocuments="1"
+closingAction="1"
+</code></pre>
+
+<h3>
+<a id="create-tax-differences-entries" class="anchor" href="#create-tax-differences-entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Tax Differences Entries</h3>
+
+<p>Εκτέλεση διαδικασία ενημέρωσης Φορολογικών διαφορών.</p>
+
+<p>Params</p>
+
+<pre><code>beginDate=""
+endDate=""
+includeClosing="0"
+journalCode=""
+accountSpecs=""
+createNewEntries="1"
+deleteOldEntries="1"    
+</code></pre>
+
+<h3>
+<a id="stock-valuate" class="anchor" href="#stock-valuate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stock Valuate</h3>
+
+<p>Εκτέλεση διαδικασίας αποτίμησης αποθεμάτων.</p>
+
+<p>Params</p>
+
+<pre><code>fromDate: Από ημ/νία
+toDate: Έως ημ/νία
+includeClosingPeriod: Περιλαμβάνεται η περίοδος κλεισίματος (default 0 false)
+cancelIntermediateDocuments: Ακύρωση (default 1 true) ή Διαγραφή 0 ενδιάμεσων παραστατικών αποτίμησης
+createReversalsOfPreviousCostingPeriod: Αντιλογισμός παραστατικών προηγούμενης κοστολογικής περιόδου 
+(default 1 true)
+createReversalsOfPreviousCostingPeriodForStockItemsValuatedPerPeriod:  Ίδιο με το προηγούμενο για είδη που αποτιμώνται ανά περίοδο.
+createBudgetDocuments: Παραγωγή Προυπολογιστικών εγγραφών (default 1 true)
+valuesAllocation: Επιμερισμός Αξιών (default 1 true)
+transportCosting: Κοστολόγηση φακέλων διακινήσεων (default 1 true)
+productionCosting: Κοστολόγηση Παραγωγής (default 1 true)
+updateCustomersMixedEarnings: Ενημέρωση μικτού κέρδους πελατών (default 0 false)
+</code></pre>
+
+<h2>
+<a id="reporting-actions" class="anchor" href="#reporting-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reporting Actions</h2>
+
+<h3>
+<a id="execute-bit" class="anchor" href="#execute-bit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute Bit</h3>
+
+<p>Εκτέλεση Bit μέσω bInvoke copy/paste από συντόμευση.</p>
+
+<h3>
+<a id="execute-scroller" class="anchor" href="#execute-scroller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execute scroller</h3>
+
+<p>Εκτέλεση Scroller μέσω bInvoke copy/paste από συντόμευση.</p>
+
+<h2>
+<a id="ui-actions" class="anchor" href="#ui-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>UI Actions</h2>
+
+<h3>
+<a id="load-entity-form" class="anchor" href="#load-entity-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load entity form</h3>
+
+<p>Φόρτωμα/Εμφάνιση στο UI φόρμας οντότητας.</p>
+
+<h3>
+<a id="close-entity-form" class="anchor" href="#close-entity-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Close entity form</h3>
+
+<p>Κλείσιμο φόρμας οντότητας που έχει ανοίξει με Load entity form.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/entersoftsa">entersoftsa</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
